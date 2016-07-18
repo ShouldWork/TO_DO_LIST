@@ -1,3 +1,6 @@
-/**
- * Created by Krysp on 7/18/16.
- */
+(function(){
+    angular.module("toDoApp")
+        .component('pageHeader', {
+            templateUrl: "page-header/page-header.component.html"
+        })
+})();

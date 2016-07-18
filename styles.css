@@ -1,0 +1,60 @@
+*{
+    font-family: 'Waiting for the Sunrise', cursive;
+    box-sizing: border-box;
+}
+
+.header{
+    font-size: 250%;
+    height: 150px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    color: ghostWhite;
+    background-color: rgba(0,0,0,0.80);
+    padding: 5px;
+}
+
+.list_body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 400px;
+    min-width: 400px;
+    margin: 10px 5%;
+    padding: 20px;
+    /*box-shadow: 2px 5px 10px black;*/
+    background: transparent url("resources/paper.jpg") center;
+    background-size: cover;
+    transition: all 1s ease-in;
+}
+
+.list_tile{
+    text-align: end;
+    height: 80px;
+    min-width: 100px;
+    max-width: 250px;
+    background-color: rgba(0,0,0,0.60);
+    color: ghostWhite;
+    text-shadow: 0 0 1px black;
+    text-decoration: underline;
+    margin: 5px;
+    /*line-height: 0px;*/
+    box-shadow: 2px 5px 5px rgba(255,127,80,0.70), 2px 5px 10px black;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+    transition: all 1s ease-in;
+}
+
+
+.list_body_active{
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
