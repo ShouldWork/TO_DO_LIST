@@ -1,5 +1,7 @@
 (function() {
     
-    angular.module('toDoApp',[]);
-    
+    angular.module('toDoApp',["ui.router"])
+        .config(function($urlRouterProvider){
+            $urlRouterProvider.otherwise("/")
+        });
 }());

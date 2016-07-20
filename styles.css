@@ -25,28 +25,36 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    min-height: 400px;
-    min-width: 400px;
-    margin: 10px 5%;
+    align-items: stretch;
+    width: auto;
+    /*min-height: 400px;*/
+    /*min-width: 400px;*/
+    margin: 10px 10%;
     padding: 20px;
     /*box-shadow: 2px 5px 10px black;*/
-    background: transparent url("resources/paper.jpg") center;
-    background-size: cover;
+    /*background: transparent url("resources/paper.jpg") center;*/
+    /*background-size: cover;*/
     transition: all 1s ease-in;
 }
+.list_body div:nth-of-type(1) {-webkit-flex-grow: 3;}
+/*#main div:nth-of-type(2) {-webkit-flex-grow: 3;}*/
+/*#main div:nth-of-type(3) {-webkit-flex-grow: 1;}*/
+/*#main div:nth-of-type(4) {-webkit-flex-grow: 1;}*/
+/*#main div:nth-of-type(5) {-webkit-flex-grow: 1;}*/
+
 
 .list_tile{
     text-align: end;
-    height: 80px;
-    min-width: 100px;
-    max-width: 250px;
+    height:240px;
+    min-width: 300px;
+    max-width: 650px;
     background-color: rgba(0,0,0,0.60);
     color: ghostWhite;
     text-shadow: 0 0 1px black;
-    text-decoration: underline;
-    margin: 5px;
-    /*line-height: 0px;*/
-    box-shadow: 2px 5px 5px rgba(255,127,80,0.70), 2px 5px 10px black;
+    /*text-decoration: underline;*/
+    /*margin: 5px;*/
+    line-height: 100px;
+    box-shadow:  2px 5px 10px black; /* 2px 5px 5px rgba(255,127,80,0.70), */
     cursor: pointer;
     overflow: hidden;
     padding: 10px;
@@ -57,4 +65,20 @@
 .list_body_active{
     flex-flow: column wrap;
     justify-content: flex-start;
+}
+
+.list_tile_large{
+    flex-grow: 3;
+}
+
+.add_button{
+    height: 200px;
+    width: 200px;
+    background: transparent url('resources/add-mark.svg') center;
+    background-size: contain;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 150px;
+    /*display: inline; */
 }

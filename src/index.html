@@ -5,16 +5,22 @@
     <title>To do list</title>
     <link href='https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
     <page-header></page-header>
-    <list-body></list-body>
+    <!--<a ui-sref="blank">blank page</a>-->
+    <div ui-view></div>
     <page-footer></page-footer>
+
+
+
     <script src="apps.js"></script>
     <script src="page-header/page-header.component.js"></script>
     <script src="page-footer/page-footer.component.js"></script>
+    <script src="blank-page/blank-page.component.js"></script>
     <script src="list-body/list-body.component.js"></script>
     <script src="list-tile/list-tile.component.js"></script>
 </body>
