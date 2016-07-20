@@ -1,0 +1,9 @@
+<div class="list_container">
+    <div>
+         <span><h1 class="list_title">List title</h1></span>
+    </div>
+    <div id="taskList" ng-repeat="x in $ctrl.todoList">
+        <span class="task" id="newTask" ng-bind="x.taskText"></span>
+        <div class="category_button"></div>
+    </div>
+</div>
