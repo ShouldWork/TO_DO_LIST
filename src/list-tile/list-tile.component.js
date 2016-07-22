@@ -4,7 +4,8 @@
             templateUrl: "list-tile/list-tile.component.html",
             controller: activeListController,
             bindings:{
-                selectList: "&"
+                selectList: "&",
+                list: "<"
             }
         });
     function activeListController (){

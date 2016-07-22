@@ -11,12 +11,11 @@
             })
         });
     
-    function tasklistController(){
-        var self = this; 
-        this.newList = function(title){
-            console.log("this is a new list " + title); 
-        };
-        this.todoList = [{taskText: "Do that thing", done: false},{taskText: "Another thing", done: false}];
+    function tasklistController(taskListService){
+        var self = this;
+        self.lists = taskListService.lists; 
+        self.addList = taskListService.addList;
+        self.listTitle = taskListService.title;
+        self.activeList = taskListService.activeList;
     }
-    
 })();

@@ -1,9 +1,8 @@
 <div class="list_container">
     <div>
-         <span><h1 class="list_title">List title</h1></span>
+         <span><h1 class="list_title"> {{ $ctrl.lists[$ctrl.activeList].title }}</h1></span>
     </div>
-    <div id="taskList" ng-repeat="x in $ctrl.todoList">
-        <span class="task" id="newTask" ng-bind="x.taskText"></span>
-        <div class="category_button"></div>
+    <div id="taskList" ng-repeat="task in $ctrl.lists[$ctrl.activeList].taskList">
+        <span class="task" ng-bind="task.name"></span>
     </div>
 </div>

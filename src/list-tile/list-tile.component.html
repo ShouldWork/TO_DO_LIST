@@ -1,3 +1,5 @@
 <div class="list_tile" ng-click="$ctrl.selectList()" ui-sref="tasklist">
-    <h2>{{ listName }}</h2>
+    <ul>{{ $ctrl.list.title }}
+        <li ng-repeat="task in $ctrl.list.taskList">  {{ task.name }}</li>
+    </ul>
 </div>
