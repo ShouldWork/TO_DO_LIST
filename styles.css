@@ -64,6 +64,8 @@
     margin: auto;
     overflow: hidden;
     cursor: pointer;
+
+    margin-bottom: 300px;
     /*display: inline; */
 }
 
