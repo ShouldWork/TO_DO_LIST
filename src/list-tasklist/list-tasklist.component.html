@@ -1,4 +1,5 @@
 <div class="list_container">
+    <div class="lists_button" ui-sref="list-body">Lists</div>
     <div>
         <span id="title_container"><h1 id="listTitle" class="list_title" ng-bind="$ctrl.lists[$ctrl.activeList].title"></h1></span>
         <div class="edit_button" ng-click="$ctrl.editListTitle()"></div>
@@ -8,5 +9,5 @@
     <div id="taskList" ng-repeat="task in $ctrl.lists[$ctrl.activeList].taskList">
         <span class="task" ng-bind="task.name"></span>
     </div>
-    <div class="lists_button" ui-sref="list-body">Lists</div>
+    
 </div>
