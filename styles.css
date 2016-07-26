@@ -164,6 +164,8 @@
     width: 100px;
     border: 1px solid black;
     cursor: pointer;
+    background: transparent url("resources/back.svg") center no-repeat;
+    background-size: cover;
 }
 
 .list_container{
