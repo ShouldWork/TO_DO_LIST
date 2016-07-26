@@ -7,6 +7,12 @@
                 selectList: "&",
                 list: "<"
             }
+        })
+        .config(function($stateProvider){
+            $stateProvider.state("list-body",{
+                template: "<list-tile></list-tile>",
+                url: "/lists"
+            })
         });
     function activeListController (taskListService){
         var self = this; 
@@ -17,5 +23,7 @@
             console.log(list);
             taskListService.activeList = list;
         };
+        self.testIndex = 0;
+
     }
 })(); 

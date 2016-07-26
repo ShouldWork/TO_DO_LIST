@@ -19,32 +19,11 @@
         self.updateName = updateName;
 
         function addList(Title) {
-            console.log(self.index);
             self.lists.push({
                 index: self.listIndex,
                 title: Title || "New List",
                 taskList: []
             });
-            //     taskList: [{
-            //         name: "New task",
-            //         done: false,
-            //         category: "",
-            //         highPriority: false
-            //     },
-            //         {
-            //             name: "New task",
-            //             done: false,
-            //             category: "",
-            //             highPriority: false
-            //         },
-            //         {
-            //             name: "New task",
-            //             done: false,
-            //             category: "",
-            //             highPriority: false
-            //         }]
-            // });
-            // localStorage.storedLists = self.lists;
             self.activeList = self.listIndex;
             self.listIndex++;
         }
@@ -69,6 +48,18 @@
             done_button.hide();
             edit_button.show();
         }
+        addList("First list");
+        addList("Second list");
+        addList("Third list");
+        addList("Fourth list");
+        addList("Fifth list");
+        addList("Sixth list");
+        addList("Sixth list");
+        addList("Sixth list");
+        addList("Sixth list");
+        addList("Sixth list");
+        addList("Sixth list");
+        addList("Sixth list");
     }
     function editListTitle(){
         var title = $("#listTitle"),
