@@ -151,3 +151,22 @@
     text-align: center;
     margin: 100px 10px;
 }
+
+.new_title , .new_title:focus{
+    display: none;
+    border: none;
+    outline: 0;
+    /*background: transparent;*/
+    color: black;
+    border-bottom: 2px solid black;
+    font-size: 300%;
+    align-text: center;
+}
+
+
+.edit_button , .done_button {
+    float: right;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}

@@ -8,8 +8,14 @@
                 list: "<"
             }
         });
-    function activeListController (){
+    function activeListController (taskListService){
         var self = this; 
+        self.lists = taskListService.lists; 
         self.isActive = false;
+        self.activeList = taskListService.activeList;
+        self.selectList = function(list){
+            console.log(list);
+            taskListService.activeList = list;
+        };
     }
 })(); 

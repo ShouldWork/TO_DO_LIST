@@ -2,7 +2,7 @@
     angular.module("toDoApp")
         .component('blankPage', {
             templateUrl: "blank-page/blank-page.component.html",
-            controller: aboutController
+            controller: blankListController
         })
         .config(function($stateProvider){
             $stateProvider.state("blank",{
@@ -11,7 +11,7 @@
             })
         });
 
-    function aboutController(taskListService){
+    function blankListController(taskListService){
         self.click = taskListService.addList();
     }
 })();
