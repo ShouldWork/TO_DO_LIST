@@ -161,7 +161,8 @@
 }
 
 .lists_button{
-    width: 100px;
+    width: 50px;
+    height: 50px;
     border: 1px solid black;
     cursor: pointer;
     background: transparent url("resources/back.svg") center no-repeat;
