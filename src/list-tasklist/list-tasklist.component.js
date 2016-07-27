@@ -25,6 +25,7 @@
 
         function buttonDisplay(){
             $("#title_container").on("mouseenter",function(){
+                console.log("entered")
                 $("#edit_button").show();
             })
             $("#title_container").on("mouseleave",function(){
