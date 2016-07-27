@@ -114,7 +114,7 @@
     background-size: cover;
     z-index: 100;
 
-    float: left;
+    float: right;
 }
 
 .done_button{
@@ -128,7 +128,7 @@
     display: none;
     background-size: contain;
     background: transparent url("resources/check-sign.svg") center no-repeat;
-    float: left;
+    float: right;
 }
 
 .lists_button{
