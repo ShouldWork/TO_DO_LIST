@@ -187,7 +187,7 @@
 
 #listTitle{
     display: block;
-    width: 500px;
+    width: 300px;
 }
 
 
@@ -198,3 +198,6 @@
 #main div:nth-of-type(13) {flex-grow: 1;}
 
 
+.page-container{
+    width: 1500px;
+}
