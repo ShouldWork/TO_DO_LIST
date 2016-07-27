@@ -150,14 +150,13 @@
     top: 50px;
     left: 200px;
     text-align: center;
-}
-
-.edit_button{
     background: transparent url("resources/edit.svg") center no-repeat;
     background-size: cover;
+    z-index: 100;
 }
 
 .done_button{
+    z-index: 150;
     width: 20px;
     height: 20px;
 
