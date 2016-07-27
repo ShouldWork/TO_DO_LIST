@@ -3,13 +3,16 @@
 
     <div id="title_container" ng-init="$ctrl.buttonDisplay">
 
-        <h1 id="listTitle" class="list_title" ng-bind="$ctrl.lists[$ctrl.activeList].title" ></h1>
+        <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title"></span>
         <div class="edit_button" ng-click="$ctrl.editListTitle()"></div>
         <div class="done_button" ng-click="$ctrl.updateName()"></div>
         <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} " id='newTitle'/>
+
     </div>
 
     <div id="taskList" ng-repeat="task in $ctrl.lists[$ctrl.activeList].taskList">
         <span class="task" ng-bind="task.name"></span>
     </div>
-</div>
+</div>    position: absolute;
+    top: 65px;
+    left: 500px;
