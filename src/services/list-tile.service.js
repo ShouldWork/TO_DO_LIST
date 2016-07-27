@@ -54,12 +54,6 @@
         addList("Fourth list");
         addList("Fifth list");
         addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
     }
     function editListTitle(){
         var title = $("#listTitle"),
