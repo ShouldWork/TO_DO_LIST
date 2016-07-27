@@ -2,9 +2,10 @@
     <div class="lists_button" ui-sref="list-body"></div>
 
     <div id="title_container" ng-init="$ctrl.buttonDisplay">
+
+        <h1 id="listTitle" class="list_title" ng-bind="$ctrl.lists[$ctrl.activeList].title" ></h1>
         <div class="edit_button" ng-click="$ctrl.editListTitle()"></div>
         <div class="done_button" ng-click="$ctrl.updateName()"></div>
-        <h1 id="listTitle" class="list_title" ng-bind="$ctrl.lists[$ctrl.activeList].title" ></h1>
         <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} " id='newTitle'/>
     </div>
 
