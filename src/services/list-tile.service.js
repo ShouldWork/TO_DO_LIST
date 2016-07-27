@@ -17,6 +17,7 @@
         self.activeList = 0;
         self.checkStorage = checkStorage;
         self.updateName = updateName;
+        self.addTask = addTask; 
 
         function addList(Title) {
             self.lists.push({
@@ -48,6 +49,12 @@
             done_button.hide();
             edit_button.show();
         }
+        function addTask(){
+            if (keyEvent.which === 13){
+                alert("I am here!");
+            }
+        }
+
         addList("First list");
         addList("Second list");
         addList("Third list");

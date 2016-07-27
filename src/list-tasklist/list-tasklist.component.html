@@ -15,6 +15,6 @@
     </div>
     <div id="newTaskContainer">
     <label for="newTask">
-        <input id="newTask" ng-keyup=" count = count + 1 ">
+        <input id="newTask" ng-keyup=" $ctrl.addTask() ">
     </label> {{ count || "0"}}
 </div>   
