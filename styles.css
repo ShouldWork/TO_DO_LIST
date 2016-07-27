@@ -144,7 +144,7 @@
     cursor: pointer;
 
     position: absolute;
-    top: 65px;
+    top: 50px;
     left: 200px;
     text-align: center;
 }
@@ -162,7 +162,7 @@
     position: absolute;
     top: 65px;
     left: 500px;
-    
+
     display: none;
     background-size: contain;
     background: transparent url("resources/check-sign.svg") center no-repeat;
