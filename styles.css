@@ -116,6 +116,8 @@
     z-index: 100;
 
     float: right;
+
+    margin: 0;
 }
 
 .done_button{
