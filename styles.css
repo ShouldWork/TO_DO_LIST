@@ -145,6 +145,8 @@
     position: relative;
     margin: auto;
     text-align: center;
+    width: 500px;
+
 }
 
 #listTitle{
