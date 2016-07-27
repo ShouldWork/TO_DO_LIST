@@ -111,7 +111,7 @@
 
 
     text-align: center;
-    background: transparent url("resources/edit.svg") center no-repeat;
+    background: transparent url("resources/check-sign.svg") center no-repeat;
     background-size: cover;
     z-index: 100;
 
@@ -130,7 +130,7 @@
 
     display: none;
     background-size: contain;
-    background: transparent url("resources/check-sign.svg") center no-repeat;
+    background: transparent url("resources/edit.svg") center no-repeat;
     float: right;
 }
 
