@@ -146,13 +146,13 @@
 
     cursor: pointer;
 
-    position: absolute;
-    top: 50px;
-    left: 200px;
+
     text-align: center;
     background: transparent url("resources/edit.svg") center no-repeat;
     background-size: cover;
     z-index: 100;
+
+    float: left;
 }
 
 .done_button{
@@ -161,13 +161,12 @@
     height: 20px;
 
     cursor: pointer;
-    position: absolute;
-    top: 65px;
-    left: 500px;
+
 
     display: none;
     background-size: contain;
     background: transparent url("resources/check-sign.svg") center no-repeat;
+    float: left;
 }
 
 .lists_button{
