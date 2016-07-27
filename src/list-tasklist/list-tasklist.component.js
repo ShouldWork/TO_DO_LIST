@@ -24,7 +24,7 @@
         self.buttonDisplay = buttonDisplay(); 
 
         function buttonDisplay(){
-            $("#listTitle").on("mouseenter",function(){
+            $("#title_container").on("mouseenter",function(){
                 console.log("entered")
                 $(".edit_button").show();
             })
