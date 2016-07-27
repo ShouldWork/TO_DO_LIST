@@ -21,7 +21,7 @@
         self.activeList = taskListService.activeList;
         self.editListTitle = taskListService.editListTitle;
         self.updateName = taskListService.updateName;
-        self.buttonDisplay = buttonDisplay; 
+        self.buttonDisplay = buttonDisplay(); 
 
         function buttonDisplay(){
             $("#title_container").on("mouseenter",function(){
