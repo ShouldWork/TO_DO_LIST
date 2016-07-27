@@ -138,6 +138,7 @@
 
 
 .edit_button {
+    display: none;
     width: 20px;
     height: 20px;
 

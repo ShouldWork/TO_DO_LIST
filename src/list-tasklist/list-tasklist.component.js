@@ -21,5 +21,15 @@
         self.activeList = taskListService.activeList;
         self.editListTitle = taskListService.editListTitle;
         self.updateName = taskListService.updateName;
+        self.buttonDisplay = buttonDisplay; 
+
+        function buttonDisplay(){
+            $("#title_container").on("mouseenter",function(){
+                $("#edit_button").show();
+            })
+            $("#title_container").on("mouseleave",function(){
+                $("#edit_button").hide();
+            })
+        }
     }
 })();
