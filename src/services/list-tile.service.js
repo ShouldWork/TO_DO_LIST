@@ -7,7 +7,7 @@
     angular.module('toDoApp')
         .service('taskListService',taskListService);
     
-    function taskListService() {
+    function taskListService($log) {
         var self = this;
         self.listIndex = 0;
         self.addList = addList;
@@ -75,6 +75,7 @@
 
     function checkStorage(){
         {
+            $log("This though")
             console.log(localStorage.getItem('storedLists'));
             return localStorage.getItem('storedLists') !== null;
         }
