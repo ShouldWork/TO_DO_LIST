@@ -24,6 +24,7 @@
             $urlRouterProvider.otherwise(function($injector){
                 var $state = $injector.get('$state');
                 var storedLists = localStorage.storedLists;
+                console.log(storedLists);
                 if (storedLists !== null){
                     console.log("Stored lists: " + storedLists);
                     $state.go("list-body")
