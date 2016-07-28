@@ -5,9 +5,9 @@
     //
 
     angular.module('toDoApp')
-        .service('taskListService',taskListService);
+        .service('taskListService',taskListService,$log);
     
-    function taskListService($log) {
+    function taskListService() {
         var self = this;
         self.listIndex = 0;
         self.addList = addList;
