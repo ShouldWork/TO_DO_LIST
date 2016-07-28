@@ -50,7 +50,7 @@
             edit_button.show();
         }
         function addTask(){
-            alert("This is happening")
+            console.log("this is happening now")
         }
 
         addList("First list");
