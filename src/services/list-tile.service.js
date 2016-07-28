@@ -50,9 +50,7 @@
             edit_button.show();
         }
         function addTask(){
-            if (keyEvent.which === 13){
-                alert("I am here!");
-            }
+            alert("This is happening")
         }
 
         addList("First list");
@@ -61,6 +59,7 @@
         addList("Fourth list");
         addList("Fifth list");
         addList("Sixth list");
+        checkStorage();
     }
     function editListTitle(){
         var title = $("#listTitle"),
