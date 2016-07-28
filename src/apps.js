@@ -20,19 +20,18 @@
 
 (function(){
     angular.module("toDoApp",["ui.router"])
-        .config(function($urlRouterProvider,$log){
+        .config(function($urlRouterProvider){
             $urlRouterProvider.otherwise(function($injector){
                 var $state = $injector.get('$state');
                 var storedLists = localStorage.storedLists;
 
                 if (storedLists !== undefined){
-                    console.log(storedLists[0]);
+                    console.log("Stored lists: " + storedLists);
                     $state.go("list-body")
                 } else {
                     $state.go("blank");
-                    console.log(storedLists)
+                    console.log("No lists: " + storedLists)
                 }
-                $log("This though")
             })
         })
 }());
