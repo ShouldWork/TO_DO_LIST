@@ -20,7 +20,7 @@
 
 (function(){
     angular.module("toDoApp",["ui.router"])
-        .config(function($urlRouterProvider){
+        .config(function($urlRouterProvider,$log){
             $urlRouterProvider.otherwise(function($injector){
                 var $state = $injector.get('$state');
                 var storedLists = localStorage.storedLists;
@@ -32,6 +32,7 @@
                     $state.go("blank");
                     console.log(storedLists)
                 }
+                $log("This though")
             })
         })
 }());
