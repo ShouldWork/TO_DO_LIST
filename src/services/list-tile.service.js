@@ -17,6 +17,7 @@
         self.activeList = 0;
         self.checkStorage = checkStorage;
         self.updateName = updateName;
+        self.addTask = addTask; 
 
         function addList(Title) {
             self.lists.push({
@@ -48,18 +49,17 @@
             done_button.hide();
             edit_button.show();
         }
+        function addTask(){
+            console.log("this is happening now")
+        }
+
         addList("First list");
         addList("Second list");
         addList("Third list");
         addList("Fourth list");
         addList("Fifth list");
         addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
-        addList("Sixth list");
+        checkStorage();
     }
     function editListTitle(){
         var title = $("#listTitle"),
@@ -75,6 +75,7 @@
 
     function checkStorage(){
         {
+            console.log("Not this though")
             console.log(localStorage.getItem('storedLists'));
             return localStorage.getItem('storedLists') !== null;
         }

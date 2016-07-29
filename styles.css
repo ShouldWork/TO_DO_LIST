@@ -11,50 +11,19 @@
 }
 
 .footer{
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: right;
     color: ghostWhite;
-    background-color: rgba(255,155,0,0.70);
+    background-color: rgba(255,55,0,0.70);
     padding: 5px;
     text-shadow: 0 0 1px black;
 }
 
-.list_tile{
 
-
-    position: relative;
-    top: 0;
-    text-align: center;
-    height:auto;
-    width: 200px;
-    background-color: rgba(255,155,0,0.60);
-    color: ghostWhite;
-    text-shadow: 0 0 1px black;
-    box-shadow: none;
-    cursor: pointer;
-    overflow: hidden;
-    padding: 10px;
-    transition: all .25s ease-in;
-
-    border: 2px white solid;
-}
-
-
-
-.list_tile:hover{
-    top: -15px;
-    border: 2px black solid;
-    box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
-}
-
-.list_tile ul{
-    text-decoration: none;
-    list-style: circle;
-}
 
 .add_button{
     height: 200px;
@@ -90,13 +59,6 @@
     text-shadow: 0 0 1px white, 2px 15px 1px rgba(0,0,0,0.60);
 }
 
-.list_title{
-    position: relative;
-    font-size: 300%;
-    text-decoration: double;
-    text-align: center;
-}
-
 #main{
     /*margin-left: 350px;*/
     position: relative;
@@ -105,12 +67,13 @@
 
     width: 650px;
     margin: auto;
-    margin-bottom: 300px;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+
+    background-color: rgba(0,0,0,0.30);
 }
 
 
@@ -138,44 +101,106 @@
 }
 
 
-.edit_button , .done_button {
+.edit_button {
+
+    display: none;
     width: 20px;
     height: 20px;
 
     cursor: pointer;
 
-    position: absolute;
-    top: 0;
-    left: 250px;
-    text-align: center;
-}
 
-.edit_button{
+    text-align: center;
     background: transparent url("resources/check-sign.svg") center no-repeat;
     background-size: cover;
+    z-index: 100;
+
+    float: right;
+
+    margin: 0;
 }
 
 .done_button{
+    z-index: 150;
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+
     display: none;
     background-size: contain;
     background: transparent url("resources/edit.svg") center no-repeat;
+    float: right;
 }
 
 .lists_button{
-    width: 100px;
-    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border: none;
     cursor: pointer;
+    background: transparent url("resources/back.svg") center no-repeat;
+    background-size: cover;
 }
 
 .list_container{
     position: relative;
     margin: auto;
-    width: 650px;
-    height: auto;
+    text-align: center;
+    width: 500px;
+
+}
+
+#listTitle{
+
+    margin: auto;
+    max-width: 500px;
+    position: relative;
+    font-size: 300%;
+    text-decoration: double;
+    text-align: center;
+
+    font-size: 300%;
+}
+
+.list_tile{
+    position: relative;
+    top: 0;
+    text-align: center;
+    height:auto;
+    width: 200px;
+    background-color: rgba(255,155,0,0.60);
+    color: ghostWhite;
+    text-shadow: 0 0 1px black;
+    box-shadow: none;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+    transition: all .25s ease-in;
+
+    border: 2px white solid;
 }
 
 
+.list_tile ul{
+    text-decoration: none;
+    list-style: circle;
+}
 
+.list_tile:hover{
+    top: -15px;
+    border: 2px black solid;
+    box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
+}
+
+
+#newTask , #newTask:active , #newTask:focus{
+    border: none;
+    outline: 0;
+    background-color: transparent;
+
+    border-bottom: 1px black solid;
+}
 
 #main div:nth-of-type(1) {flex-grow: 3;}
 #main div:nth-of-type(6) {flex-grow: 1;}
@@ -184,3 +209,7 @@
 #main div:nth-of-type(13) {flex-grow: 1;}
 
 
+.page-container{
+    max-width: 1500px;
+    margin: auto;
+}

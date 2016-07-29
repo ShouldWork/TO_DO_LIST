@@ -25,13 +25,22 @@
                 var $state = $injector.get('$state');
                 var storedLists = localStorage.storedLists;
 
-                if (storedLists !== undefined){
-                    console.log(storedLists[0]);
-                    $state.go("list-body")
-                } else {
-                    $state.go("blank");
-                    console.log(storedLists)
-                }
             })
         })
 }());
+
+
+/*
+
+                console.log(storedLists);
+                if (storedLists !== null){
+                    console.log("Stored lists: " + storedLists);
+                    $state.go("list-body")
+                } else {
+                    $state.go("blank");
+                    console.log("No lists: " + storedLists)
+                }
+
+
+                */
+                
