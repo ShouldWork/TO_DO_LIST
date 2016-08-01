@@ -7,31 +7,47 @@
     angular.module('toDoApp')
         .service('taskListService',taskListService);
     
-    function taskListService($q, $log, $sessionStorage) {
+    function taskListService($q, $log, $sessionStorage, $localStorage) {
         var self = this;
         self.listIndex = 0;
-        self.selectedTask = 0;
         self.addList = addList;
         self.editListTitle = editListTitle;
-        self.lists = [];
+        self.getLists = getLists;
         self.listCount = 0;
         self.activeList = 0;
-        self.checkStorage = checkStorage;
         self.updateName = updateName;
         self.addTask = addTask;
         self.editTask = editTask;
         self.finishTask = finishTask;
         self.flagTask = flagTask;
         self.clearAll = clearAll;
+        self.deleteList = deleteList;
+        self.deleteTask = deleteTask;
         self.selectTask = function(task){
             console.log(task);
             self.selectedTask = task;
         };
+
+        function getLists() {
+            if ($localStorage.lists !== undefined) {
+                console.log("Found in storage " + $localStorage.lists);
+                self.lists = $localStorage.lists;
+            } else {
+                console.log("Didn't find any in storage");
+                self.lists = [];
+            }
+        }
+
         function finishTask(target){
-            var target = target.path[2];
+            var target = target.path[2],
+                checked = self.lists[self.activeList].taskList[self.selectedTask].checked;
             $(target).find("span").toggleClass("task_done");
             $(target).find(".flex-center").removeClass("flex-center");
-            console.log(self.lists[self.activeList].taskList[self.selectedTask].checked = true);
+            if (!checked){
+                self.lists[self.activeList].taskList[self.selectedTask].checked = true;
+            } else {
+                self.lists[self.activeList].taskList[self.selectedTask].checked = false;
+            }
         }
         function editTask(target){
             self.lists[self.activeList].taskList[self.selectedTask].title = "New title";
@@ -49,7 +65,21 @@
                 }
             }
         }
+
+        function deleteList(){
+            console.log(self.lists.splice(self.activeList,1));
+            $sessionStorage.list = self.lists;
+        }
+
+        function deleteTask(){
+            console.log(self.lists[self.activeList].taskList.splice([self.selectedTask],1));
+            self.lists[self.activeList].totalTasks--;
+            self.lists[self.activeList].totalTasks--;
+            $sessionStorage.list = self.lists;
+        }
+
         function addList() {
+            console.log("THis is adding a list");
             var newList = {
                 index: self.listIndex,
                 title: "New List",
@@ -57,10 +87,10 @@
                 totalTasks: 0
             };
             self.lists.push(newList);
-            console.log(self.lists);
+            console.log("New list");
+            $localStorage.lists = self.lists;
             self.activeList = self.listIndex;
             self.listIndex++;
-            console.log("adding " + newList + " to " + self.lists[self.activeList].totalTasks);
         }
         function updateName(keyEvent){
             if (keyEvent.which === 13) {
@@ -73,7 +103,8 @@
                     self.lists[self.activeList] = {
                         title: newTitle.val(),
                         index: self.lists[self.activeList].index,
-                        taskList: self.lists[self.activeList].taskList
+                        taskList: self.lists[self.activeList].taskList,
+                        totalTasks: self.lists[self.activeList].totalTasks
                     };
                 }
                 newTitle.val("");
@@ -85,20 +116,20 @@
         }
         function addTask(keyEvent){
             if (keyEvent.which === 13){
+                console.log("this though");
                 var task = {
                     taskIndex: self.lists[self.activeList].totalTasks,
                     title: $("#newTask").val(),
                     done: false,
                     checked: false,
-                    index: self.lists[self.activeList].totalTasks || 0
                 };
                 $("#newTask").val("");
                 self.lists[self.activeList].taskList.push(task);
-                self.selectedTask = self.lists[self.activeList].totalTasks++;
-
+                console.log(self.selectedTask = self.lists[self.activeList].totalTasks++);
+                console.log("adding");
             }
         }
-        checkStorage();
+        getLists();
     }
     function editListTitle(){
         var title = $("#listTitle"),
@@ -110,12 +141,6 @@
         newTitle.show();
         done_button.show();
         newTitle.focus();
-    }
-
-    function checkStorage(){
-        {
-            return localStorage.getItem('storedLists') !== null;
-        }
     }
 }());
 

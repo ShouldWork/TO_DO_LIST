@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b9a1102c-be2c-4ec2-a022-062fe012e444" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/blank-page/blank-page.component.js" afterPath="$PROJECT_DIR$/src/blank-page/blank-page.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/list-tile/list-tile.component.js" afterPath="$PROJECT_DIR$/src/list-tile/list-tile.component.js" />
 >>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/list-tile.service.js" afterPath="$PROJECT_DIR$/src/services/list-tile.service.js" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
     </list>
     <ignored path="TO_DO_LIST.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,9 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list-tile.service.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="list-tile.service.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/services/list-tile.service.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="420">
               <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
@@ -38,46 +43,20 @@
             <state relative-caret-position="360">
               <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
 >>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+=======
+            <state relative-caret-position="285">
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blank-page.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blank-page/blank-page.component.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="470" column="33" selection-start-line="470" selection-start-column="33" selection-end-line="470" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list-tasklist.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            <state relative-caret-position="60">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -86,18 +65,38 @@
       <file leaf-file-name="list-tasklist.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="133" selection-start-line="22" selection-start-column="133" selection-end-line="22" selection-end-column="133" />
+            <state relative-caret-position="360">
+              <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav-bar.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nav-bar/nav-bar.component.js">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="628">
+              <caret line="468" column="18" selection-start-line="468" selection-start-column="18" selection-end-line="468" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-tasklist.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-tile.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/list-tile/list-tile.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -106,6 +105,7 @@
       <file leaf-file-name="list-tile.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/list-tile/list-tile.component.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="3720">
               <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="252" selection-end-column="36" />
@@ -133,6 +133,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+=======
+            <state relative-caret-position="75">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
               <folding />
             </state>
           </provider>
@@ -167,16 +171,17 @@
         <option value="$PROJECT_DIR$/src/page-footer/page-footer.component.html" />
         <option value="$PROJECT_DIR$/src/about/about.component.js" />
         <option value="$PROJECT_DIR$/src/about/about.component.html" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/nav-bar/nav-bar.component.html" />
-        <option value="$PROJECT_DIR$/src/list-tile/list-tile.component.html" />
-        <option value="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js" />
-        <option value="$PROJECT_DIR$/src/nav-bar/nav-bar.component.js" />
-        <option value="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html" />
-        <option value="$PROJECT_DIR$/styles.css" />
-        <option value="$PROJECT_DIR$/src/services/list-tile.service.js" />
         <option value="$PROJECT_DIR$/src/blank-page/blank-page.component.js" />
         <option value="$PROJECT_DIR$/src/list-tile/list-tile.component.js" />
+        <option value="$PROJECT_DIR$/src/nav-bar/nav-bar.component.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/services/list-tile.factory.js" />
+        <option value="$PROJECT_DIR$/src/list-tile/list-tile.component.html" />
+        <option value="$PROJECT_DIR$/styles.css" />
+        <option value="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html" />
+        <option value="$PROJECT_DIR$/src/nav-bar/nav-bar.component.js" />
+        <option value="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js" />
+        <option value="$PROJECT_DIR$/src/services/list-tile.service.js" />
       </list>
     </option>
   </component>
@@ -187,7 +192,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1739" />
+    <option name="width" value="1856" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -218,7 +223,11 @@
 <<<<<<< HEAD
 =======
       <pane id="Scope" />
+<<<<<<< HEAD
 >>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+=======
+      <pane id="Scratches" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -412,10 +421,13 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope" />
 =======
 >>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
       <pane id="Scratches" />
+=======
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,7 +437,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Angular-1.5" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
@@ -516,7 +528,11 @@
 =======
       <workItem from="1469919199096" duration="27103000" />
       <workItem from="1470038051537" duration="7872000" />
+<<<<<<< HEAD
 >>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+=======
+      <workItem from="1470059129375" duration="6588000" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
     </task>
     <task id="LOCAL-00001" summary="First Commit for testing">
       <created>1468852205193</created>
@@ -579,6 +595,7 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="77265000" />
 =======
     <option name="totallyTimeSpent" value="99227000" />
@@ -589,6 +606,15 @@
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26833528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="105815000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1856" height="1057" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25122616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -632,14 +658,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/list-tile.service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -916,84 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/resources/coark.jpeg" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/nav-bar/nav-bar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
->>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
-    <entry file="file://$PROJECT_DIR$/src/list-tile/list-tile.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="119" selection-start-line="2" selection-start-column="119" selection-end-line="2" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="420">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-=======
-        <state relative-caret-position="510">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
->>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nav-bar/nav-bar.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="133" selection-start-line="22" selection-start-column="133" selection-end-line="22" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="3720">
-          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="252" selection-end-column="36" />
-=======
-        <state relative-caret-position="695">
-          <caret line="470" column="33" selection-start-line="470" selection-start-column="33" selection-end-line="470" selection-end-column="33" />
->>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/list-tile.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1002,7 +942,27 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/resources/coark.jpeg" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/nav-bar/nav-bar.component.html">
+=======
+    <entry file="file://$PROJECT_DIR$/src/services/list-tile.factory.js">
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+>>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+    <entry file="file://$PROJECT_DIR$/src/list-tile/list-tile.component.html">
+=======
     <entry file="file://$PROJECT_DIR$/src/blank-page/blank-page.component.js">
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
@@ -1010,10 +970,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="420">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+=======
+        <state relative-caret-position="510">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+>>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+=======
+        <state relative-caret-position="60">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="468" column="18" selection-start-line="468" selection-start-column="18" selection-end-line="468" selection-end-column="18" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nav-bar/nav-bar.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="190" selection-start-line="12" selection-start-column="190" selection-end-line="12" selection-end-column="190" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/list-tile/list-tile.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="480">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nav-bar/nav-bar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="3720">
+          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="252" selection-end-column="36" />
+=======
+        <state relative-caret-position="695">
+          <caret line="470" column="33" selection-start-line="470" selection-start-column="33" selection-end-line="470" selection-end-column="33" />
+>>>>>>> fc76b354bbbd7b241c2e89906f7c623c772ce042
+=======
+        <state relative-caret-position="45">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+>>>>>>> f5f4cc7913e4c3da6a965e9043d6d8b86bf858aa
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/list-tile/list-tile.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/list-tile.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
           <folding />
         </state>
       </provider>

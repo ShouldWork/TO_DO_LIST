@@ -29,10 +29,12 @@
         self.flagTask = taskListService.flagTask;
         self.editTask = taskListService.editTask;
         self.finishTask = taskListService.finishTask;
-        self.taskIconList = [{title: "Fin.", doThis: self.finishTask },{title: "Edit", doThis: self.editTask },{title: "Flag", doThis: self.flagTask }];
         self.showOptions = showOptions;
         self.selectTask = taskListService.selectTask;
         self.clearAll = taskListService.clearAll;
+        self.deleteList = taskListService.deleteList;
+        self.deleteTask = taskListService.deleteTask;
+        self.taskIconList = [{title: "Fin.", doThis: self.finishTask },{title: "Edit", doThis: self.editTask },{title: "Flag", doThis: self.flagTask },{title: "Delete", doThis: self.deleteTask}];
         function buttonDisplay(){
             var tc = $("#title_container");
             tc.on("click",function(){
