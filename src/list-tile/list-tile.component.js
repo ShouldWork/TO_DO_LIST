@@ -11,7 +11,7 @@
         .config(function($stateProvider){
             $stateProvider.state("list-tile",{
                 template: "<list-tile></list-tile>",
-                url: "/lists"
+                url: "/"
             })
         });
     function activeListController (taskListService){
