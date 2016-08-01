@@ -446,7 +446,7 @@
     margin-bottom: 10%;
 
     background: transparent url(resources/paper.jpg) center no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .tasklist_container h1{
