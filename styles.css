@@ -445,7 +445,7 @@
     align-items: center;
     margin-bottom: 10%;
 
-    background: transparent url(resources/paper.jpg) center no-repeat;
+    background: transparent url(resources/paper.jpg) center repeat;
     background-size: cover;
 }
 
