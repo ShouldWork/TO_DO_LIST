@@ -75,8 +75,9 @@
         }
 
         function deleteTask(){
-            console.log(self.lists[self.activeList].taskList[slef.selectedTask].done = true);
+            console.log(self.lists[self.activeList].taskList[self.selectedTask].done = true);
             $sessionStorage.list = self.lists;
+
         }
 
         function addList() {
