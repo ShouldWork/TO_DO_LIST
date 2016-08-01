@@ -1,6 +1,6 @@
 
 <div id="main" class="list_container">
-    <div ng-repeat=" list in $ctrl.lists " class="list_tile" ng-click="$ctrl.selectList(list.index)" ui-sref="tasklist"  list="list" ng-init="$ctrl.stylize()">
+    <div ng-repeat=" list in $ctrl.lists " class="list_tile" ng-click="$ctrl.selectList(list.index)" ui-sref="tasklist" ng-init="$ctrl.stylize()">
         <h1>{{  list.title }}</h1>
     </div>
 </div>

@@ -10,6 +10,7 @@
     function taskListService($q, $log, $sessionStorage) {
         var self = this;
         self.listIndex = 0;
+        self.selectedTask = 0;
         self.addList = addList;
         self.editListTitle = editListTitle;
         self.lists = [];
@@ -21,22 +22,45 @@
         self.editTask = editTask;
         self.finishTask = finishTask;
         self.flagTask = flagTask;
-
-        function finishTask(task){
-            
+        self.clearAll = clearAll;
+        self.selectTask = function(task){
+            console.log(task);
+            self.selectedTask = task;
+        };
+        function finishTask(target){
+            var target = target.path[2];
+            $(target).find("span").toggleClass("task_done");
+            $(target).find(".flex-center").removeClass("flex-center");
+            self.lists[self.activeList].taskList[self.selectedTask].checked = true;
         }
+        function editTask(target){
+            self.lists[self.activeList].taskList[self.selectedTask].title = "New title";
+            console.log("This though Edit");
+        }
+        function flagTask(target){
 
+        }
+        function clearAll(){
+            for (var p = 0; p < self.lists.length; p++){
+                for (var t = 0; t < self.lists[p].taskList.length; t++){
+                    if (self.lists[p].taskList[t].checked){
+                        self.lists[p].taskList[t].done = true;
+                    }
+                }
+            }
+        }
         function addList() {
             var newList = {
                 index: self.listIndex,
                 title: "New List",
-                taskList:[]
+                taskList:[],
+                totalTasks: 0
             };
             self.lists.push(newList);
             console.log(self.lists);
             self.activeList = self.listIndex;
             self.listIndex++;
-            console.log("adding " + newList + " to " + self.lists[self.activeList].title);
+            console.log("adding " + newList + " to " + self.lists[self.activeList].totalTasks);
         }
         function updateName(keyEvent){
             if (keyEvent.which === 13) {
@@ -50,7 +74,7 @@
                         title: newTitle.val(),
                         index: self.lists[self.activeList].index,
                         taskList: self.lists[self.activeList].taskList
-                    };;
+                    };
                 }
                 newTitle.val("");
                 newTitle.hide();
@@ -62,11 +86,16 @@
         function addTask(keyEvent){
             if (keyEvent.which === 13){
                 var task = {
+                    taskIndex: self.lists[self.activeList].totalTasks,
                     title: $("#newTask").val(),
-                    done: false
+                    done: false,
+                    checked: false,
+                    index: self.lists[self.activeList].totalTasks || 0
                 };
                 $("#newTask").val("");
                 self.lists[self.activeList].taskList.push(task);
+                self.selectedTask = self.lists[self.activeList].totalTasks++;
+
             }
         }
         checkStorage();

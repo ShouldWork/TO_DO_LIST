@@ -2,26 +2,23 @@
 <div class="tasklist_container">
 
     <div class="flex-center" ng-init="$ctrl.buttonDisplay">
-
         <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-click="$ctrl.editListTitle()"></span>
-        <span class="edit_button" ng-click="$ctrl.editListTitle()"></span>
         <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)" id='newTitle'/>
-
     </div>
+
     <div class="flex-col">
 
         <div class="taskContainer" ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList" ng-click="$ctrl.showOptions($event)">
-
-            <span  class="task" ng-bind="tasks.title"></span>
-
+            <span  class="task" ng-if="tasks.done === false" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.index)"></span>
             <div class="iconContainer">
-                <div ng-repeat="icons in $ctrl.taskIconList" class="icon" ng-bind="icons" ng-click="icons.doThis()" ></div>
+                <div ng-repeat="icons in $ctrl.taskIconList" class="icon" ng-bind="icons.title" ng-click="icons.doThis($event)" ></div>
+                <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)"/>
             </div>
-
         </div>
-
         <label for="newTask">
             <input id="newTask" ng-keypress="$ctrl.addTask($event)" placeholder="Add task...">
         </label>
     </div>
+
+    <div style="float: right; cursor: pointer; padding: 10px;" ng-click="$ctrl.clearAll()" class="about_link">Clear done</div>
 </div>

@@ -450,3 +450,9 @@
     padding: 0;
     margin: 0;
 }
+
+.task_done{
+    text-decoration: line-through;
+    font-style: italic;
+    color: rgba(0,0,0,0.60);
+}

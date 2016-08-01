@@ -3,7 +3,10 @@
         .component('tasklist', {
             
             templateUrl: "list-tasklist/list-tasklist.component.html",
-            controller: tasklistController
+            controller: tasklistController,
+            bindings:{
+                task: "<"
+            }
         })
         .config(function($stateProvider){
             $stateProvider.state("tasklist",{
@@ -26,9 +29,10 @@
         self.flagTask = taskListService.flagTask;
         self.editTask = taskListService.editTask;
         self.finishTask = taskListService.finishTask;
-        self.taskIconList = [{title: "Fin.", doThis: self.finishTask},{title: "Edit", dothis: self.editTask},{title: "Flag", doThis: self.flagTask];
+        self.taskIconList = [{title: "Fin.", doThis: self.finishTask },{title: "Edit", doThis: self.editTask },{title: "Flag", doThis: self.flagTask }];
         self.showOptions = showOptions;
-
+        self.selectTask = taskListService.selectTask;
+        self.clearAll = taskListService.clearAll;
         function buttonDisplay(){
             var tc = $("#title_container");
             tc.on("click",function(){
@@ -41,8 +45,9 @@
             });
         }
         function showOptions(task){
-            var icons = task.target.nextSibling.nextSibling;
+            var icons = task.target.nextSibling.nextSibling.nextSibling;
             $(icons).toggleClass("flex-center");
         }
+
     }
 })();
