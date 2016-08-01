@@ -466,11 +466,21 @@
     cursor: pointer;
 
     padding: 10px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 2% 1%;
     transition: all .25s ease-in;
 }
 
 .clear_button:hover{
     background-color: rgba(255,155,0,0.70);
+}
+
+.list_button_container{
+    width: 90%;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }

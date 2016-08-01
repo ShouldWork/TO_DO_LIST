@@ -21,6 +21,8 @@
         self.finishTask = finishTask;
         self.flagTask = flagTask;
         self.clearAll = clearAll;
+        self.deleteList = deleteList;
+        self.deleteTask = deleteTask;
         self.selectTask = function(task){
             console.log(task);
             self.selectedTask = task;
@@ -63,6 +65,18 @@
                 }
             }
         }
+
+        function deleteList(){
+            console.log(self.lists.splice(self.activeList,1));
+            $sessionStorage.list = self.lists;
+        }
+
+        function deleteTask(){
+            console.log(self.lists[self.activeList].taskList.splice([self.selectedTask],1));
+            console.log(self.lists[self.activeList].totalTasks--);
+            $sessionStorage.list = self.lists;
+        }
+
         function addList() {
             console.log("THis is adding a list");
             var newList = {
@@ -88,7 +102,8 @@
                     self.lists[self.activeList] = {
                         title: newTitle.val(),
                         index: self.lists[self.activeList].index,
-                        taskList: self.lists[self.activeList].taskList
+                        taskList: self.lists[self.activeList].taskList,
+                        totalTasks: self.lists[self.activeList].totalTasks
                     };
                 }
                 newTitle.val("");

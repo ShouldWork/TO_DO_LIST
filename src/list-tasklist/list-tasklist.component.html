@@ -20,5 +20,9 @@
         </label>
     </div>
 
-    <div ng-click="$ctrl.clearAll()" ng-if="$ctrl.lists[$ctrl.activeList].taskList.length > 0 " class="clear_button">Clear done</div>
+    <div class="list_button_container">
+        <div ng-click="$ctrl.clearAll()" ng-if="$ctrl.lists[$ctrl.activeList].taskList.length > 0 " class="clear_button">Clear done</div>
+        <div ui-sref="list-tile" ng-click="$ctrl.deleteList()" class="clear_button">Delete list</div>
+    </div>
+
 </div>
