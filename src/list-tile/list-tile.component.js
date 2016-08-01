@@ -9,7 +9,7 @@
             }
         })
         .config(function($stateProvider){
-            $stateProvider.state("list-body",{
+            $stateProvider.state("list-tile",{
                 template: "<list-tile></list-tile>",
                 url: "/lists"
             })
