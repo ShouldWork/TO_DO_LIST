@@ -3,7 +3,7 @@
 
     <div id="title_container" ng-init="$ctrl.buttonDisplay">
 
-        <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title"></span>
+        <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-click="$ctrl.editListTitle()"></span>
         <span class="edit_button" ng-click="$ctrl.editListTitle()"></span>
         <span class="done_button" ng-click="$ctrl.updateName($event)"></span>
         <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)" id='newTitle'/>

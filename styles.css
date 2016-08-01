@@ -17,7 +17,7 @@
     margin-top: 10%;
     text-align: right;
     color: ghostWhite;
-    background-color: rgba(255,55,0,0.70);
+    background-color: rgba(16,178,141,0.70);
     padding: 5px;
     text-shadow: 0 0 1px black;
 }
@@ -38,18 +38,16 @@
 
 .task{
     position: relative;
-    top:0;
-    height: 50px;
     max-width: 70%;
     word-wrap: break-word;
-
+    padding: 0;
+    margin: 0;
 
     border:none;
     outline: 0;
     background-color: transparent;
 
     font-size: 3em;
-    overflow: auto;
     text-shadow: none;
 
     transition: all .25s ease-out;
@@ -58,7 +56,9 @@
 
 .task:hover{
     /*border: 2px solid black;*/
-    text-shadow: 0 0 1px white, 2px 15px 1px rgba(0,0,0,0.60);
+    text-shadow: 0 0 1px white;
+    border-bottom: 2px solid rgba(16,178,141,0.80);
+/*, 2px 15px 1px rgba(0,0,0,0.60);*/
 }
 .task:hover .icon{
     display: none;
@@ -114,14 +114,14 @@
 .edit_button {
 
     display: none;
-    width: 20px;
-    height: 20px;
-
+    font-size: 5em;
     cursor: pointer;
 
 
     text-align: center;
-    background: transparent url("resources/edit.svg") center no-repeat;
+    content:  'url("resources/edit.svg")';
+    color: red;
+    /*center no-repeat;*/
     background-size: cover;
     z-index: 100;
 
@@ -145,8 +145,8 @@
 }
 
 .lists_button{
-    width: 20px;
-    height: 20px;
+    width: 2em;
+    height: 2em;
     border: none;
     cursor: pointer;
     background: transparent url("resources/back.svg") center no-repeat;
@@ -161,7 +161,8 @@
     margin-left: 25%;
     padding: 50px;
     border: 2px solid black;
-    background-color: rgba(55,255,100,0.60);
+    background-color: rgba(74,255,214,0.60);;
+/*rgba(55,255,100,0.60);*/
 }
 
 #newTaskContainer{
@@ -305,7 +306,7 @@
     height: 90%;
     border: 3px solid black;
     border-radius: 20px;
-    background-color: rgba(0,0,0,0.50);
+    background-color: rgba(178,70,34,0.70);
     /*background: transparent url("resources/coark.jpg") center repeat;*/
     /*background-size: cover;*/
 

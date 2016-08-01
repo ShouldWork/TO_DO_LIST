@@ -28,7 +28,7 @@
 
         function buttonDisplay(){
             var tc = $("#title_container");
-            tc.on("mouseenter",function(){
+            tc.on("click",function(){
                 if ($("#newTitle").css("display") === "none"){
                     $(".edit_button").show();
                 }
