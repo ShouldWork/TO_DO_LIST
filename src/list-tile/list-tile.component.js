@@ -21,7 +21,7 @@
         self.activeList = taskListService.activeList;
         self.selectList = function(list){
             console.log(list);
-            taskListService.activeList = list;
+            self.activeList = taskListService.activeList = list;
         };
         self.testIndex = 0;
         self.styleize = stylelize;
