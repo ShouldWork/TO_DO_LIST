@@ -69,6 +69,9 @@
             }
 
         }
+        addList("New list");
+        addList("Grocery list");
+
         checkStorage();
     }
     function editListTitle(){
