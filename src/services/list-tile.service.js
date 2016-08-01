@@ -34,9 +34,7 @@
                 console.log("Didn't find any in storage");
                 self.lists = [];
             }
-            console.log(self.lists);
         }
-
 
         function finishTask(target){
             var target = target.path[2],
@@ -66,6 +64,7 @@
             }
         }
         function addList() {
+            console.log("THis is adding a list");
             var newList = {
                 index: self.listIndex,
                 title: "New List",
@@ -73,6 +72,7 @@
                 totalTasks: 0
             };
             self.lists.push(newList);
+            console.log("New list");
             $localStorage.lists = self.lists;
             self.activeList = self.listIndex;
             self.listIndex++;
@@ -100,17 +100,17 @@
         }
         function addTask(keyEvent){
             if (keyEvent.which === 13){
+                console.log("this though");
                 var task = {
                     taskIndex: self.lists[self.activeList].totalTasks,
                     title: $("#newTask").val(),
                     done: false,
                     checked: false,
-                    index: self.lists[self.activeList].totalTasks || 0
                 };
                 $("#newTask").val("");
                 self.lists[self.activeList].taskList.push(task);
-                self.selectedTask = self.lists[self.activeList].totalTasks++;
-
+                console.log(self.selectedTask = self.lists[self.activeList].totalTasks++);
+                console.log("adding");
             }
         }
         getLists();

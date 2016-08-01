@@ -9,7 +9,7 @@
     <div class="flex-col">
 
         <div class="taskContainer" ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList" ng-click="$ctrl.showOptions($event)">
-            <span  class="task" ng-if="tasks.done === false" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.index)"></span>
+            <span  class="task" ng-if="tasks.done === false" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.taskIndex)"></span>
             <div class="iconContainer">
                 <div ng-repeat="icons in $ctrl.taskIconList" class="icon" ng-bind="icons.title" ng-click="icons.doThis($event)" ></div>
                 <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)"/>
