@@ -1,7 +1,4 @@
-<div class="list_nav">
-    <div class="add_button_small" ng-click="$ctrl.addList()" ui-sref="tasklist"></div>
-    <h1 style="float: left" ng-click="$ctrl.addList()" ui-sref="tasklist">Add list</h1>
-</div>
+
 <div id="main" class="list_container">
     <div ng-repeat=" list in $ctrl.lists " class="list_tile" ng-click="$ctrl.selectList(list.index)" ui-sref="tasklist"  list="list" ng-init="$ctrl.stylize()">
         <h1>{{  list.title }}</h1>

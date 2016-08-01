@@ -32,7 +32,7 @@
     background-color: rgba(16,178,141,0.70);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
+    clear: both;
     text-shadow: 0 0 1px black;
 }
 
@@ -57,6 +57,7 @@
     background-size: contain;
     overflow: hidden;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .task{
@@ -177,22 +178,20 @@
 
 .lists_button{
     width: 3em;
-    height: 2em;
+    height: 3em;
     border: none;
     cursor: pointer;
     background: url("resources/lists.svg") center no-repeat;
     background-size: contain;
+    margin-right: 20px;
 }
 
 .list_container{
     position: relative;
     text-align: center;
-    width: 50%%;
-    margin-left: 25%;
-    margin-right: 5%;
-    padding: 50px;
-    border: 2px solid black;
-    background-color: rgba(255,255,255,0.75);
+    margin-right: 10%;
+    float: right;
+
 /*rgba(74,255,214,0.60);;*/
 /*rgba(55,255,100,0.60);*/
 }
@@ -214,7 +213,7 @@
 #listTitle{
 
     margin: auto;
-    max-width: 80%;
+    max-width: 100%;
     position: relative;
 
     text-decoration: double;
@@ -230,24 +229,17 @@
     position: relative;
     top: 0;
     text-align: center;
-    height:auto;
-    width: 200px;
     background-color: rgba(255,138,99,0.80);
     color: ghostWhite;
     text-shadow: 0 0 1px black;
     box-shadow: none;
     cursor: pointer;
     overflow: hidden;
-    padding: 10px;
     transition: all .25s ease-in;
+    border: 2px rgba(16,178,141,0.70) solid;
+    font-size: 1em;
 
-    border: 2px white solid;
-}
-
-
-.list_tile ul{
-    text-decoration: none;
-    list-style: circle;
+    min-width: 30%;
 }
 
 .list_tile:hover{
@@ -317,11 +309,14 @@
 #main{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 10%;
 }
 
-#main div:nth-of-type(1) {flex-grow: 3;}
+#main div:nth-of-type(1) {flex-grow: 6;}
+#main div:nth-of-type(2) {flex-grow: 1;}
+#main div:nth-of-type(3) {flex-grow: 3;}
 #main div:nth-of-type(6) {flex-grow: 1;}
 #main div:nth-of-type(7) {flex-grow: 0;}
 #main div:nth-of-type(9) {flex-grow: 1;}
@@ -373,19 +368,35 @@
 }
 
 .list_nav{
+    position: relative;
+    /*bottom: 40%;*/
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 
 
     width: 20%;
     margin-left: 2%;
-    float: left;
     background-color: rgba(0,0,0,0.30);
     text-shadow: 0 0 1px black;
     color: ghostwhite;
-    padding: 20px;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.list_nav_icon{
+    padding: 5px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.list_nav_icon h1{
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    margin-left: 1%;
+    cursor: pointer;
 }
 
 .list_nav h1{
@@ -399,8 +410,8 @@
 .list{
     border: 3px solid rgba(0,0,0,0.80);
     border-radius: 20px;
-
     box-shadow: 2px 10px 10px rgba(0,0,0,0.50);
+    overflow: hidden;
 }
 
 .about_link{
@@ -419,4 +430,23 @@
     width: 90%;
     margin-top: 5%;
     margin-left: 5%;
+}
+
+
+.tasklist_container{
+    width: 60%;
+    margin-right: 10%;
+    height: 80%;
+    float: right;
+    background-color: rgba(255,255,255,0.60);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.tasklist_container h1{
+    padding: 0;
+    margin: 0;
 }

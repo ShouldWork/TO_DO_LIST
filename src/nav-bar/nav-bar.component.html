@@ -1,0 +1,14 @@
+
+<div class="list_nav">
+    <div class="flex-start list_nav_icon" ng-repeat="item in $ctrl.list"  ng-click="item.doThis()" ui-sref="{{ item.route }}" >
+        <div ng-class="item.class"></div>
+        <h1 ng-bind="item.title"></h1>
+    </div>
+</div>
+
+
+
+<!--<div class="lists_button" ui-sref="list-tile"></div>-->
+<!--<h1 style="float: left">Lists</h1>-->
+<!--<div class="add_button_small" ng-click="$ctrl.addList()" ui-sref="tasklist"></div>-->
+<!--<h1 style="float: left" ng-click="$ctrl.addList()" ui-sref="tasklist">Add list</h1>-->

@@ -22,8 +22,11 @@
         self.editListTitle = taskListService.editListTitle;
         self.updateName = taskListService.updateName;
         self.buttonDisplay = buttonDisplay();
-        self.addTask = taskListService.addTask; 
-        self.taskIconList = ["Fin.","Edit","Flag"];
+        self.addTask = taskListService.addTask;
+        self.flagTask = taskListService.flagTask;
+        self.editTask = taskListService.editTask;
+        self.finishTask = taskListService.finishTask;
+        self.taskIconList = [{title: "Fin.", doThis: self.finishTask},{title: "Edit", dothis: self.editTask},{title: "Flag", doThis: self.flagTask];
         self.showOptions = showOptions;
 
         function buttonDisplay(){

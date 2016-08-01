@@ -17,7 +17,14 @@
         self.activeList = 0;
         self.checkStorage = checkStorage;
         self.updateName = updateName;
-        self.addTask = addTask; 
+        self.addTask = addTask;
+        self.editTask = editTask;
+        self.finishTask = finishTask;
+        self.flagTask = flagTask;
+
+        function finishTask(task){
+            
+        }
 
         function addList() {
             var newList = {
