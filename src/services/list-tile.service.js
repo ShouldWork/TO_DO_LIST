@@ -67,7 +67,9 @@
         }
 
         function deleteList(){
-            console.log(self.lists.splice(self.activeList,1));
+            console.log(self.lists);
+            self.lists.splice(self.activeList,1);
+            console.log(self.lists);
             $sessionStorage.list = self.lists;
         }
 
