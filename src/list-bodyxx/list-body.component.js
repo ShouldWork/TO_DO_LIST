@@ -1,7 +1,7 @@
 (function(){
     angular.module("toDoApp")
         .component("listBody" , {
-            templateUrl: "list-body/list-body.component.html",
+            templateUrl: "list-bodyxx/list-bodyxx.component.html",
             controller: listBodyController
         })
     function listBodyController(taskListService){

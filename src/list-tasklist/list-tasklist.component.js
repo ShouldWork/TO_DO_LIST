@@ -3,7 +3,10 @@
         .component('tasklist', {
             
             templateUrl: "list-tasklist/list-tasklist.component.html",
-            controller: tasklistController
+            controller: tasklistController,
+            bindings:{
+                task: "<"
+            }
         })
         .config(function($stateProvider){
             $stateProvider.state("tasklist",{
@@ -22,13 +25,17 @@
         self.editListTitle = taskListService.editListTitle;
         self.updateName = taskListService.updateName;
         self.buttonDisplay = buttonDisplay();
-        self.addTask = taskListService.addTask; 
-        self.taskIconList = ["Fin.","Edit","Flag"];
+        self.addTask = taskListService.addTask;
+        self.flagTask = taskListService.flagTask;
+        self.editTask = taskListService.editTask;
+        self.finishTask = taskListService.finishTask;
+        self.taskIconList = [{title: "Fin.", doThis: self.finishTask },{title: "Edit", doThis: self.editTask },{title: "Flag", doThis: self.flagTask }];
         self.showOptions = showOptions;
-
+        self.selectTask = taskListService.selectTask;
+        self.clearAll = taskListService.clearAll;
         function buttonDisplay(){
             var tc = $("#title_container");
-            tc.on("mouseenter",function(){
+            tc.on("click",function(){
                 if ($("#newTitle").css("display") === "none"){
                     $(".edit_button").show();
                 }
@@ -38,8 +45,9 @@
             });
         }
         function showOptions(task){
-            var icons = task.target.nextSibling.nextSibling;
+            var icons = task.target.nextSibling.nextSibling.nextSibling;
             $(icons).toggleClass("flex-center");
         }
+
     }
 })();

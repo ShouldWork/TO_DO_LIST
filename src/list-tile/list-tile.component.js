@@ -9,9 +9,9 @@
             }
         })
         .config(function($stateProvider){
-            $stateProvider.state("list-body",{
+            $stateProvider.state("list-tile",{
                 template: "<list-tile></list-tile>",
-                url: "/lists"
+                url: "/"
             })
         });
     function activeListController (taskListService){
@@ -25,6 +25,7 @@
         };
         self.testIndex = 0;
         self.styleize = stylelize;
+        self.addList = taskListService.addList;
 
         function stylelize(){
             $(".list_tile").css("background-color","purple");
