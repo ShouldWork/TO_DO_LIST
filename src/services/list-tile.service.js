@@ -7,15 +7,14 @@
     angular.module('toDoApp')
         .service('taskListService',taskListService);
     
-    function taskListService($q, $log, $sessionStorage) {
+    function taskListService($q, $log, $sessionStorage, $localStorage) {
         var self = this;
         self.listIndex = 0;
         self.addList = addList;
         self.editListTitle = editListTitle;
-        self.lists = [];
+        self.getLists = getLists;
         self.listCount = 0;
         self.activeList = 0;
-        self.checkStorage = checkStorage;
         self.updateName = updateName;
         self.addTask = addTask;
         self.editTask = editTask;
@@ -26,6 +25,19 @@
             console.log(task);
             self.selectedTask = task;
         };
+
+        function getLists() {
+            if ($localStorage.lists !== undefined) {
+                console.log("Found in storage " + $localStorage.lists);
+                self.lists = $localStorage.lists;
+            } else {
+                console.log("Didn't find any in storage");
+                self.lists = [];
+            }
+            console.log(self.lists);
+        }
+
+
         function finishTask(target){
             var target = target.path[2],
                 checked = self.lists[self.activeList].taskList[self.selectedTask].checked;
@@ -61,10 +73,9 @@
                 totalTasks: 0
             };
             self.lists.push(newList);
-            console.log(self.lists);
+            $localStorage.lists = self.lists;
             self.activeList = self.listIndex;
             self.listIndex++;
-            console.log("adding " + newList + " to " + self.lists[self.activeList].totalTasks);
         }
         function updateName(keyEvent){
             if (keyEvent.which === 13) {
@@ -102,7 +113,7 @@
 
             }
         }
-        checkStorage();
+        getLists();
     }
     function editListTitle(){
         var title = $("#listTitle"),
@@ -114,12 +125,6 @@
         newTitle.show();
         done_button.show();
         newTitle.focus();
-    }
-
-    function checkStorage(){
-        {
-            return localStorage.getItem('storedLists') !== null;
-        }
     }
 }());
 
