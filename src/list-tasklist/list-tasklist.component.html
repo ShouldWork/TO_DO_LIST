@@ -20,5 +20,5 @@
         </label>
     </div>
 
-    <div style="float: right; cursor: pointer; padding: 10px;" ng-click="$ctrl.clearAll()" class="about_link">Clear done</div>
+    <div ng-click="$ctrl.clearAll()" ng-if="$ctrl.lists[$ctrl.activeList].taskList.length > 0 " class="clear_button">Clear done</div>
 </div>

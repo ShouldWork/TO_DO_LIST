@@ -456,3 +456,21 @@
     font-style: italic;
     color: rgba(0,0,0,0.60);
 }
+
+
+.clear_button{
+    color: black;
+    text-shadow: 0 0 1px white;
+    background-color: transparent;
+    border: 2px solid rgba(255,155,0,0.70);
+    cursor: pointer;
+
+    padding: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    transition: all .25s ease-in;
+}
+
+.clear_button:hover{
+    background-color: rgba(255,155,0,0.70);
+}

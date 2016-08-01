@@ -31,7 +31,7 @@
             var target = target.path[2];
             $(target).find("span").toggleClass("task_done");
             $(target).find(".flex-center").removeClass("flex-center");
-            self.lists[self.activeList].taskList[self.selectedTask].checked = true;
+            console.log(self.lists[self.activeList].taskList[self.selectedTask].checked = true);
         }
         function editTask(target){
             self.lists[self.activeList].taskList[self.selectedTask].title = "New title";
