@@ -14,7 +14,7 @@
                 url: "/"
             })
         });
-    function activeListController (taskListService){
+    function activeListController (taskListService,$location){
         var self = this; 
         self.lists = taskListService.lists; 
         self.isActive = false;
@@ -22,6 +22,7 @@
         self.selectList = function(list){
             console.log(list);
             self.activeList = taskListService.activeList = list;
+            $location.path("tasklist");
         };
         self.testIndex = 0;
         self.styleize = stylelize;
