@@ -5,16 +5,25 @@
 
         <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title"></span>
         <span class="edit_button" ng-click="$ctrl.editListTitle()"></span>
-        <span class="done_button" ng-click="$ctrl.updateName()"></span>
-        <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} " id='newTitle'/>
+        <span class="done_button" ng-click="$ctrl.updateName($event)"></span>
+        <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)" id='newTitle'/>
 
     </div>
+    <div id="newTaskContainer flex-center">
+        <div class="taskContainer"
+             ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList"
+             ng-click="$ctrl.showOptions($event)">
 
-    <div id="taskList" ng-repeat="task in $ctrl.lists[$ctrl.activeList].taskList">
-        <span class="task" ng-bind="task.name"></span>
+
+            <span  class="task" ng-bind="tasks.title"></span>
+
+            <div class="iconContainer">
+                <div ng-repeat="icons in $ctrl.taskIconList" class="icon" ng-bind="icons" ></div>
+            </div>
+
+        </div>
+        <label for="newTask">
+            <input id="newTask" ng-keypress="$ctrl.addTask($event)" placeholder="Add task...">
+        </label>
     </div>
-    <div id="newTaskContainer">
-    <div for="newTask">
-        <span id="newTask" ng-click="$ctrl.selectList(list.index)">New Task</span>
-    </div> {{ count || " 0 " }}
 </div>   

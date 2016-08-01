@@ -19,12 +19,10 @@
 //
 
 (function(){
-    angular.module("toDoApp",["ui.router"])
+    angular.module("toDoApp",["ui.router","ngStorage"])
         .config(function($urlRouterProvider){
             $urlRouterProvider.otherwise(function($injector){
                 var $state = $injector.get('$state');
-                var storedLists = localStorage.storedLists;
-
             })
         })
 }());

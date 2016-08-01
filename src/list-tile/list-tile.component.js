@@ -24,6 +24,10 @@
             taskListService.activeList = list;
         };
         self.testIndex = 0;
+        self.styleize = stylelize;
 
+        function stylelize(){
+            $(".list_tile").css("background-color","purple");
+        }
     }
 })(); 

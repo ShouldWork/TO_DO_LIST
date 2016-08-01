@@ -7,7 +7,7 @@
     angular.module('toDoApp')
         .service('taskListService',taskListService);
     
-    function taskListService() {
+    function taskListService($q, $log, $sessionStorage) {
         var self = this;
         self.listIndex = 0;
         self.addList = addList;
@@ -23,42 +23,52 @@
             self.lists.push({
                 index: self.listIndex,
                 title: Title || "New List",
-                taskList: []
+                taskList:[{
+                    title: "Test task",
+                    done: false
+                }]
             });
             self.activeList = self.listIndex;
             self.listIndex++;
         }
-        function updateName(){
-            var newTitle = $("#newTitle"),
-                title = $("#listTitle"),
-                done_button = $(".done_button"),
-                edit_button = $(".edit_button");
-            if (newTitle.val() !==""){
+        function updateName(keyEvent){
+            if (keyEvent.which === 13) {
+                var newTitle = $("#newTitle"),
+                    title = $("#listTitle"),
+                    done_button = $(".done_button"),
+                    edit_button = $(".edit_button");
+                if (newTitle.val() !== "") {
 
-                console.log(self.lists[self.activeList] = {
-                    title: newTitle.val(),
-                    index: self.lists[self.activeList].index,
-                    task: self.lists[self.activeList].taskList
-                });
+                    console.log(self.lists[self.activeList] = {
+                        title: newTitle.val(),
+                        index: self.lists[self.activeList].index,
+                        taskList: self.lists[self.activeList].taskList
+                    });
 
-                self.listIndex++;
+                    self.listIndex++;
+                }
+                newTitle.val("");
+                newTitle.hide();
+                title.show();
+                done_button.hide();
+                edit_button.show();
             }
-            newTitle.val("");
-            newTitle.hide();
-            title.show();
-            done_button.hide();
-            edit_button.show();
         }
-        function addTask(){
-            console.log("this is happening now")
-        }
+        function addTask(keyEvent){
+            if (keyEvent.which === 13){
+                var task = {
+                    title: $("#newTask").val(),
+                    done: false
+                };
+                $("#newTask").val("");
+                console.log(task);
+                console.log(self.activeList);
+                console.log(self.lists[self.activeList]);
+                console.log(self.lists[self.activeList].taskList);
+                self.lists[self.activeList].taskList.push(task);
+            }
 
-        addList("First list");
-        addList("Second list");
-        addList("Third list");
-        addList("Fourth list");
-        addList("Fifth list");
-        addList("Sixth list");
+        }
         checkStorage();
     }
     function editListTitle(){
@@ -75,8 +85,6 @@
 
     function checkStorage(){
         {
-            console.log("Not this though")
-            console.log(localStorage.getItem('storedLists'));
             return localStorage.getItem('storedLists') !== null;
         }
     }

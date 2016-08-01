@@ -21,17 +21,25 @@
         self.activeList = taskListService.activeList;
         self.editListTitle = taskListService.editListTitle;
         self.updateName = taskListService.updateName;
-        self.buttonDisplay = buttonDisplay(); 
+        self.buttonDisplay = buttonDisplay();
+        self.addTask = taskListService.addTask; 
+        self.taskIconList = ["Fin.","Edit","Flag"];
+        self.showOptions = showOptions;
 
         function buttonDisplay(){
-            $("#title_container").on("mouseenter",function(){
+            var tc = $("#title_container");
+            tc.on("mouseenter",function(){
                 if ($("#newTitle").css("display") === "none"){
                     $(".edit_button").show();
                 }
-            })
-            $("#title_container").on("mouseleave",function(){
+            });
+            tc.on("mouseleave",function(){
                 $(".edit_button").hide();
-            })
+            });
+        }
+        function showOptions(task){
+            var icons = task.target.nextSibling.nextSibling;
+            $(icons).toggleClass("flex-center");
         }
     }
 })();
