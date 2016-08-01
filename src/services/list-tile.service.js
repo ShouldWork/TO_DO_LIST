@@ -73,7 +73,8 @@
 
         function deleteTask(){
             console.log(self.lists[self.activeList].taskList.splice([self.selectedTask],1));
-            console.log(self.lists[self.activeList].totalTasks--);
+            self.lists[self.activeList].totalTasks--;
+            self.lists[self.activeList].totalTasks--;
             $sessionStorage.list = self.lists;
         }
 

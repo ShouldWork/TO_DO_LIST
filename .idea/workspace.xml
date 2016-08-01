@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a1102c-be2c-4ec2-a022-062fe012e444" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html" afterPath="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js" afterPath="$PROJECT_DIR$/src/list-tasklist/list-tasklist.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/list-tile.service.js" afterPath="$PROJECT_DIR$/src/services/list-tile.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.css" afterPath="$PROJECT_DIR$/styles.css" />
     </list>
     <ignored path="TO_DO_LIST.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +26,8 @@
       <file leaf-file-name="list-tile.service.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/services/list-tile.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+            <state relative-caret-position="285">
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -464,7 +461,7 @@
       <workItem from="1469800426872" duration="5951000" />
       <workItem from="1469919199096" duration="27103000" />
       <workItem from="1470038051537" duration="7872000" />
-      <workItem from="1470059129375" duration="6303000" />
+      <workItem from="1470059129375" duration="6588000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit for testing">
       <created>1468852205193</created>
@@ -526,7 +523,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105530000" />
+    <option name="totallyTimeSpent" value="105815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1856" height="1057" extended-state="0" />
@@ -942,8 +939,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/list-tile.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
+        <state relative-caret-position="285">
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
           <folding />
         </state>
       </provider>
