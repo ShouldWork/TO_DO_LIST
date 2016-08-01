@@ -25,6 +25,7 @@
         };
         self.testIndex = 0;
         self.styleize = stylelize;
+        self.addList = taskListService.addList;
 
         function stylelize(){
             $(".list_tile").css("background-color","purple");

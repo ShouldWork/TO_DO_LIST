@@ -50,6 +50,15 @@
 }
 
 
+.add_button_small{
+    height: 3em;
+    width: 3em;
+    background: transparent url('resources/add-mark.svg') center;
+    background-size: contain;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 .task{
     position: relative;
     max-width: 70%;
@@ -167,22 +176,23 @@
 }
 
 .lists_button{
-    width: 5%;
+    width: 3em;
     height: 2em;
     border: none;
     cursor: pointer;
-    background: transparent url("resources/lists.svg") center no-repeat;
+    background: url("resources/lists.svg") center no-repeat;
     background-size: contain;
 }
 
 .list_container{
     position: relative;
     text-align: center;
-    width: 80%;
-    margin-left: 10%;
+    width: 50%%;
+    margin-left: 25%;
+    margin-right: 5%;
     padding: 50px;
     border: 2px solid black;
-    background-color: rgba(255,255,255,0.50);
+    background-color: rgba(255,255,255,0.75);
 /*rgba(74,255,214,0.60);;*/
 /*rgba(55,255,100,0.60);*/
 }
@@ -357,7 +367,12 @@
 
 
 .list_nav{
-    width: 80%;
+    width: 20%;
+    margin-left: 2%;
+    float: left;
+    background-color: rgba(0,0,0,0.30);
+    text-shadow: 0 0 1px black;
+    color: ghostwhite;
 }
 
 .list_nav h1{
@@ -365,6 +380,8 @@
     margin: 0;
     font-size: 2em;
     margin-left: 1%;
+    cursor: pointer;
+
 }
 
 .list{

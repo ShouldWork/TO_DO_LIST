@@ -19,17 +19,17 @@
         self.updateName = updateName;
         self.addTask = addTask; 
 
-        function addList(Title) {
-            self.lists.push({
+        function addList() {
+            var newList = {
                 index: self.listIndex,
-                title: Title || "New List",
-                taskList:[{
-                    title: "Test task",
-                    done: false
-                }]
-            });
+                title: "New List",
+                taskList:[]
+            };
+            self.lists.push(newList);
+            console.log(self.lists);
             self.activeList = self.listIndex;
             self.listIndex++;
+            console.log("adding " + newList + " to " + self.lists[self.activeList].title);
         }
         function updateName(keyEvent){
             if (keyEvent.which === 13) {
@@ -39,13 +39,11 @@
                     edit_button = $(".edit_button");
                 if (newTitle.val() !== "") {
 
-                    console.log(self.lists[self.activeList] = {
+                    self.lists[self.activeList] = {
                         title: newTitle.val(),
                         index: self.lists[self.activeList].index,
                         taskList: self.lists[self.activeList].taskList
-                    });
-
-                    self.listIndex++;
+                    };;
                 }
                 newTitle.val("");
                 newTitle.hide();
@@ -61,17 +59,9 @@
                     done: false
                 };
                 $("#newTask").val("");
-                console.log(task);
-                console.log(self.activeList);
-                console.log(self.lists[self.activeList]);
-                console.log(self.lists[self.activeList].taskList);
                 self.lists[self.activeList].taskList.push(task);
             }
-
         }
-        addList("New list");
-        addList("Grocery list");
-
         checkStorage();
     }
     function editListTitle(){
