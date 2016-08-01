@@ -75,7 +75,7 @@
         }
 
         function deleteTask(target){
-            console.log($(target).find(".flex-center"));
+            console.log($(target));
             self.lists[self.activeList].taskList[self.selectedTask].done = true;
             $(target).find(".flex-center").removeClass("flex-center");
             $sessionStorage.list = self.lists;
