@@ -74,10 +74,10 @@
             $sessionStorage.list = self.lists;
         }
 
-        function deleteTask(){
-            console.log(self.lists[self.activeList].taskList[self.selectedTask].done = true);
+        function deleteTask(target){
+            self.lists[self.activeList].taskList[self.selectedTask].done = true;
+            $(target).find(".flex-center").removeClass("flex-center");
             $sessionStorage.list = self.lists;
-
         }
 
         function addList() {
