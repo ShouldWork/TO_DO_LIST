@@ -10,7 +10,6 @@
     function taskListService($q, $log, $sessionStorage) {
         var self = this;
         self.listIndex = 0;
-        self.selectedTask = 0;
         self.addList = addList;
         self.editListTitle = editListTitle;
         self.lists = [];
@@ -28,10 +27,15 @@
             self.selectedTask = task;
         };
         function finishTask(target){
-            var target = target.path[2];
+            var target = target.path[2],
+                checked = self.lists[self.activeList].taskList[self.selectedTask].checked;
             $(target).find("span").toggleClass("task_done");
             $(target).find(".flex-center").removeClass("flex-center");
-            console.log(self.lists[self.activeList].taskList[self.selectedTask].checked = true);
+            if (!checked){
+                self.lists[self.activeList].taskList[self.selectedTask].checked = true;
+            } else {
+                self.lists[self.activeList].taskList[self.selectedTask].checked = false;
+            }
         }
         function editTask(target){
             self.lists[self.activeList].taskList[self.selectedTask].title = "New title";
