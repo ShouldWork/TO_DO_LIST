@@ -438,12 +438,15 @@
     margin-right: 10%;
     height: 80%;
     float: right;
-    background-color: rgba(255,255,255,0.80);
+    
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 10%;
+
+    background: transparent url(resources/paper.jpg) center no-repeat;
+    background-size: contain;
 }
 
 .tasklist_container h1{
