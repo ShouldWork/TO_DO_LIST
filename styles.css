@@ -60,6 +60,27 @@
     margin-right: 20px;
 }
 
+.delete_button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 2em;
+    width: 2em;
+    background: transparent url("resources/delete.svg") center;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0;
+
+    transition: all .50s ease-in;
+}
+
+.delete_button:hover{
+    height: 3em;
+    width: 3em;
+
+    text-shadow: 0 0 2px yellow;
+}
+
 .task{
     position: relative;
     max-width: 70%;
@@ -92,17 +113,6 @@
 .task:hover #title_container{
     background-color: red;
 }
-
-/*.task:hover #iconContainer{*/
-    /*background-color: red;*/
-
-
-    /*display: flex;*/
-    /*flex-flow: row nowrap;*/
-    /*justify-content: flex-start;*/
-    /*align-items: center;*/
-/*}*/
-
 
 
 .category_button{
@@ -228,6 +238,8 @@
 .list_tile{
     position: relative;
     top: 0;
+    min-height: 90px;
+    height: auto;
     text-align: center;
     background-color: rgba(255,138,99,0.80);
     color: ghostWhite;
@@ -235,20 +247,33 @@
     box-shadow: none;
     cursor: pointer;
     overflow: hidden;
-    transition: all .25s ease-in;
+    transition: all .50s ease-in;
     border: 2px rgba(16,178,141,0.70) solid;
     font-size: 1em;
-    height: 90px;
     min-width: 30%;
 }
 
 .list_tile:hover{
     top: -15px;
-    height: 120px;
     border: 2px black solid;
     box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
 }
 
+
+.list_tile:hover .delete_button{
+    opacity: 1;
+}
+
+
+.list_tile h1{
+    padding: 20px;
+    text-align: end;
+    transition: all 1s ease-in-out;
+}
+
+.list_tile:hover h1{
+    text-align: start;
+}
 
 #newTask , #newTask:active , #newTask:focus{
     border: none;
