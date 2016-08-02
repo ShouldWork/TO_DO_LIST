@@ -1,6 +1,6 @@
 
 <div class="tasklist_container">
-
+    <div class="delete_button"></div>
     <div class="flex-center" ng-init="$ctrl.buttonDisplay">
         <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-click="$ctrl.editListTitle($ctrl.activeList)"></span>
         <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)" id='newTitle'/>
