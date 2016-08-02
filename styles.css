@@ -545,16 +545,16 @@
 
 .tasklist_container{
     position: relative;
-    width: 60%;
+    width: 70%;
     margin-right: 10%;
-    height: 80%;
+    height: 95%;
     float: right;
     
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10%;
+    margin-bottom: 2.5%;
 
     background: transparent url(resources/paper.jpg) center no-repeat;
     background-size: cover;
