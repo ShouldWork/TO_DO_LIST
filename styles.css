@@ -137,6 +137,13 @@
     background-color: transparent;
 }
 
+.icon_flag{
+    background: transparent url("resources/important.svg") center no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
 
 .task{
     position: relative;
