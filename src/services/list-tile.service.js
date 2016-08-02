@@ -26,7 +26,7 @@
         self.checkList = checkList;
         self.star = star;
         self.deleteButton = deleteButton;
-        self.iconList = [{title: "Fin.", doThis: self.finishTask, class: "icon_finish"},{title: "Edit", doThis: self.editTask, class: "icon_edit"},{title: "Flag", doThis: self.flagTask, class: "icon_flag"},{title: "Delete", doThis: self.deleteTask, class: "icon_delete"}];
+        self.taskiconList = [{title: "Fin.", doThis: self.finishTask, class: "icon_finish"},{title: "Edit", doThis: self.editTask, class: "icon_edit"},{title: "Flag", doThis: self.flagTask, class: "icon_flag"},{title: "Delete", doThis: self.deleteTask, class: "icon_delete"}];
         self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
         self.selectTask = function(task){
             console.log(task);
