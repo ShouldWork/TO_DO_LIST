@@ -328,7 +328,7 @@
 }
 
 .list_tile h3{
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0;
     margin: 0;
     text-shadow: 0 0 2px white;
@@ -338,12 +338,11 @@
     transition: font-size .25s ease-in;
 }
 .list_tile h3:before{
-
     content: "Total tasks:  ";
 }
 
 .list_tile:hover h3{
-    font-size: 2em;
+    font-size: 1em;
 }
 
 #newTask , #newTask:active , #newTask:focus{
