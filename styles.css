@@ -328,16 +328,16 @@
 }
 
 .list_tile h3{
-    font-size: .5em;
+    font-size: .75em;
     padding: 0;
     margin: 0;
     text-shadow: 0 0 2px white;
     position: absolute;
-    top: .5em;
-    left: .5em;
+    top: .75em;
+    left: .75em;
 }
 .list_tile h3:before{
-    content: "Total tasks:";
+    content: "Total tasks:  ";
 }
 
 #newTask , #newTask:active , #newTask:focus{
