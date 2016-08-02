@@ -133,6 +133,8 @@
 .icon_delete{
     background: transparent url("resources/delete_can.svg") center no-repeat;
     background-size: cover;
+    border: none;
+    background-color: transparent;
 }
 
 
