@@ -24,17 +24,25 @@
         self.deleteList = deleteList;
         self.deleteTask = deleteTask;
         self.checkList = checkList;
+        self.star = star;
+        self.deleteButton = deleteButton;
         self.selectTask = function(task){
             console.log(task);
             self.selectedTask = task;
         };
-
+        function star(list,target){
+            var el = target.path[0],
+                favorite = self.lists[list].properties.favorite;
+            event.stopPropagation();
+            $(el).toggleClass("unstar").toggleClass("star");
+            self.lists[list].properties.favorite = (favorite) ? false : true;
+        }
         function checkList(list,target){
-            var el = target.path[0];
+            var el = target.path[0],
+                stage = self.lists[list].properties.staged;
             event.stopPropagation();
             $(el).toggleClass("uncheck_mark").toggleClass("check_mark");
-            console.log(list);
-            console.log(target);
+            self.lists[list].properties.staged = (stage) ? false : true;
         }
 
         function getLists() {
@@ -45,6 +53,14 @@
                 console.log("Didn't find any in storage");
                 self.lists = [];
             }
+        }
+
+        function deleteButton(list,target){
+            var el = target.path[0];
+            event.stopPropagation();
+            self.activeList = list;
+            console.log("DeleteButotn active: " + list);
+            deleteList()
         }
 
         function finishTask(target){
@@ -76,32 +92,35 @@
         }
 
         function deleteList(){
-            console.log(self.lists);
-            console.log("Active list: " + self.activeList);
-            self.lists.splice(self.activeList,1);
-            console.log(self.lists);
+            console.log(self.activeList);
+            console.log(self.lists[self.activeList].properties.display);
+            self.lists[self.activeList].properties.display = false;
+            console.log(self.lists[self.activeList].properties.display);
             $sessionStorage.list = self.lists;
         }
 
         function deleteTask(target){
             var target = target.path[1];
-            console.log($(target).removeClass("flex-center"));
+            $(target).removeClass("flex-center");
             self.lists[self.activeList].taskList[self.selectedTask].done = true;
             $sessionStorage.list = self.lists;
         }
 
         function addList() {
-            console.log("THis is adding a list");
+            console.log("This is adding a list");
             var newList = {
-                index: self.listIndex,
+                properties: {
+                    index: self.listIndex,
+                    display: true,
+                    staged: false,
+                    totalTasks: 0,
+                    favorite: false
+                },
                 title: "New List",
-                taskList:[],
-                totalTasks: 0
+                taskList:[]
             };
             self.lists.push(newList);
-            console.log("New list");
             $localStorage.lists = self.lists;
-            self.activeList = self.listIndex;
             self.listIndex++;
         }
         function updateName(keyEvent){
@@ -113,10 +132,9 @@
                 if (newTitle.val() !== "") {
 
                     self.lists[self.activeList] = {
+                        properties: self.lists[activeList].properties,
                         title: newTitle.val(),
-                        index: self.lists[self.activeList].index,
-                        taskList: self.lists[self.activeList].taskList,
-                        totalTasks: self.lists[self.activeList].totalTasks
+                        taskList: self.lists[self.activeList].taskList
                     };
                 }
                 newTitle.val("");
@@ -131,21 +149,22 @@
                 if ($("#newTask").val() !==""){
                     console.log("this though");
                     var task = {
-                        taskIndex: self.lists[self.activeList].totalTasks,
+                        taskIndex: self.lists[self.activeList].properties.totalTasks,
                         title: $("#newTask").val(),
                         done: false,
-                        checked: false,
+                        checked: false
                     };
                     $("#newTask").val("");
                     self.lists[self.activeList].taskList.push(task);
-                    console.log(self.selectedTask = self.lists[self.activeList].totalTasks++);
-                    console.log("adding");
+                    self.selectedTask = self.lists[self.activeList].properties.totalTasks++;
+                    console.log(task);
                 }
             }
         }
         getLists();
     }
-    function editListTitle(){
+    function editListTitle(list){
+        self.activeList = list;
         var title = $("#listTitle"),
             edit_button = $(".edit_button"),
             done_button = $(".done_button"),

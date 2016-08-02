@@ -83,31 +83,49 @@
 
 
 
-.uncheck_mark , .check_mark{
+.uncheck_mark , .check_mark , .unstar, .star{
     position: absolute;
-    left: 10px;
-    top: 10px;
     height: 1.5em;
     width: 1.5em;
     transition: all .25s ease-in;
     opacity: 0;
+    border: none;
+}
 
+.star{
+    bottom: 10px;
+    right: 2.5em;
+    background: transparent url("resources/star.svg");
+    background-size: cover;
+    opacity: 0.50;
+}
+.unstar{
+    bottom: 10px;
+    right: 2.5em;
+    background: transparent url("resources/unstar.svg");
+    background-size: cover;
+    opacity: 0;
 }
 
 .check_mark{
+    right: 10px;
+    bottom: 10px;
     background: transparent url("resources/check.svg");
     background-size: cover;
     opacity: 0.50;
 }
 
 .uncheck_mark{
+    right: 10px;
+    bottom: 10px;
     background: transparent url("resources/uncheck.svg");
     background-size: cover;
 }
 
-.uncheck_mark:hover, .check_mark:hover{
+.uncheck_mark:hover, .check_mark:hover, .unstar:hover , .star:hover{
     height: 2em;
     width: 2em;
+    border: 1px solid black;
 }
 
 .task{
@@ -286,7 +304,7 @@
 }
 
 
-.list_tile:hover .delete_button,.list_tile:hover .uncheck_mark, .list_tile:hover .check_mark{
+.list_tile:hover .delete_button,.list_tile:hover .uncheck_mark, .list_tile:hover .check_mark, .list_tile:hover .star, .list_tile:hover .unstar{
     opacity: 1;
 }
 

@@ -16,21 +16,16 @@
         });
     function activeListController (taskListService,$location){
         var self = this; 
-        self.lists = taskListService.lists; 
-        self.isActive = false;
+        self.lists = taskListService.lists;
         self.activeList = taskListService.activeList;
         self.selectList = function(list){
             console.log(list);
             self.activeList = taskListService.activeList = list;
             $location.path("tasklist");
         };
-        self.testIndex = 0;
-        self.styleize = stylelize;
         self.addList = taskListService.addList;
         self.checkList = taskListService.checkList;
-
-        function stylelize(){
-            $(".list_tile").css("background-color","purple");
-        }
+        self.star = taskListService.star;
+        self.deleteButton = taskListService.deleteButton;
     }
 })(); 
