@@ -243,8 +243,8 @@
 }
 
 .list_tile:hover{
-    top: +15px;
-    height: 105px;
+    top: -15px;
+    height: 120px;
     border: 2px black solid;
     box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
 }
