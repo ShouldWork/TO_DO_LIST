@@ -328,13 +328,13 @@
 }
 
 .list_tile h3{
-    font-size: 1em;
+    font-size: .5em;
     padding: 0;
     margin: 0;
     text-shadow: 0 0 2px white;
     position: absolute;
-    top: 1em;
-    left: 1em;
+    top: .5em;
+    left: .5em;
 }
 .list_tile h3:before{
     content: "Total tasks:";
