@@ -44,8 +44,8 @@
             });
         }
         function showOptions(task){
-            var icons = task.target.nextSibling.nextSibling.nextSibling;
-            $(icons).slideToggle();
+            // var icons = task.target.nextSibling.nextSibling.nextSibling;
+            // $(icons).slideToggle();
         }
 
     }
