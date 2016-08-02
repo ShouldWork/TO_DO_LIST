@@ -103,7 +103,7 @@
         function deleteTask(target){
             var target = target.path[1];
             console.log(target);
-            console.log($(target).slideToggle);
+            console.log($(target).slideToggle());
             self.lists[self.activeList].taskList[self.selectedTask].done = true;
             $sessionStorage.list = self.lists;
         }
