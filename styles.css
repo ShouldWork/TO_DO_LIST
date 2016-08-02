@@ -558,6 +558,8 @@
 
     background: transparent url(resources/paper.jpg) center no-repeat;
     background-size: cover;
+
+    transition: all .25s ease-in;
 }
 
 .tasklist_container h1{
