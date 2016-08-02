@@ -335,10 +335,15 @@
     position: absolute;
     top: .75em;
     left: .75em;
+    transition: font-size .25s ease-in;
 }
 .list_tile h3:before{
 
     content: "Total tasks:  ";
+}
+
+.list_tile:hover h3{
+    font-size: 2em;
 }
 
 #newTask , #newTask:active , #newTask:focus{
