@@ -39,7 +39,7 @@
             var tc = $("#title_container");
             tc.on("click",function(){
                 if ($("#newTitle").css("display") === "none"){
-                    $(".edit_button").show();
+                    $(".edit_button").slideToggle();
                 }
             });
             tc.on("mouseleave",function(){
