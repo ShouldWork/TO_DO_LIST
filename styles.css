@@ -300,7 +300,7 @@
     top: -15px;
     border: 2px black solid;
     box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
-    background-color: rgba(255,138,99,1);
+    background-color: rgba(255,138,99,0.80);
 }
 
 
@@ -316,10 +316,6 @@
     color: ghostWhite;
     text-shadow: 0 0 2px black;
     transition: all 1s ease-in-out;
-}
-
-.list_tile:hover h1{
-    text-shadow: 0 0 5px black;
 }
 
 #newTask , #newTask:active , #newTask:focus{
