@@ -144,6 +144,20 @@
     background-color: transparent;
 }
 
+.icon_edit{
+    background: transparent url("resources/edit.svg") center no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
+.icon_finish{
+    background: transparent url("resources/check.svg") center no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
 
 .task{
     position: relative;
