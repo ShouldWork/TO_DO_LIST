@@ -34,7 +34,7 @@
         self.clearAll = taskListService.clearAll;
         self.deleteList = taskListService.deleteList;
         self.deleteTask = taskListService.deleteTask;
-        self.taskIconList = [{title: "Fin.", doThis: self.finishTask },{title: "Edit", doThis: self.editTask },{title: "Flag", doThis: self.flagTask },{title: "Delete", doThis: self.deleteTask}];
+        self.taskIconList = taskListService.selectList;
         function buttonDisplay(){
             var tc = $("#title_container");
             tc.on("click",function(){

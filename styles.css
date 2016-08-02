@@ -66,7 +66,7 @@
     top: 10px;
     height: 1.5em;
     width: 1.5em;
-    background: transparent url("resources/delete.svg") center;
+    background: transparent url("resources/delete_round.svg") center;
     background-size: cover;
     cursor: pointer;
     opacity: 0;
@@ -77,7 +77,6 @@
 .delete_button:hover{
     height: 2em;
     width: 2em;
-
     text-shadow: 0 0 2px yellow;
 }
 
@@ -127,6 +126,12 @@
     width: 2em;
     border: 1px solid black;
 }
+
+.icon_delete{
+    background: transparent url("resources/delete_can.svg") center no-repeat;
+    background-size: cover;
+}
+
 
 .task{
     position: relative;
