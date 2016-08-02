@@ -64,8 +64,8 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     background: transparent url("resources/delete.svg") center;
     background-size: cover;
     cursor: pointer;
@@ -75,10 +75,39 @@
 }
 
 .delete_button:hover{
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
 
     text-shadow: 0 0 2px yellow;
+}
+
+
+
+.uncheck_mark , .check_mark{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 1.5em;
+    width: 1.5em;
+    transition: all .25s ease-in;
+    opacity: 0;
+
+}
+
+.check_mark{
+    background: transparent url("resources/check.svg");
+    background-size: cover;
+    opacity: 0.50;
+}
+
+.uncheck_mark{
+    background: transparent url("resources/uncheck.svg");
+    background-size: cover;
+}
+
+.uncheck_mark:hover, .check_mark:hover{
+    height: 2em;
+    width: 2em;
 }
 
 .task{
@@ -240,16 +269,12 @@
     top: 0;
     min-height: 90px;
     height: auto;
-    text-align: center;
     background-color: rgba(255,138,99,0.80);
-    color: ghostWhite;
-    text-shadow: 0 0 1px black;
     box-shadow: none;
     cursor: pointer;
     overflow: hidden;
     transition: all .50s ease-in;
     border: 2px rgba(16,178,141,0.70) solid;
-    font-size: 1em;
     min-width: 30%;
 }
 
@@ -257,22 +282,26 @@
     top: -15px;
     border: 2px black solid;
     box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
+    background-color: rgba(255,138,99,1);
 }
 
 
-.list_tile:hover .delete_button{
+.list_tile:hover .delete_button,.list_tile:hover .uncheck_mark, .list_tile:hover .check_mark{
     opacity: 1;
 }
 
 
 .list_tile h1{
-    padding: 20px;
-    text-align: end;
+
+    font-size: 2em;
+    padding: .5em;
+    color: ghostWhite;
+    text-shadow: 0 0 2px black;
     transition: all 1s ease-in-out;
 }
 
 .list_tile:hover h1{
-    text-align: start;
+    text-shadow: 0 0 5px black;
 }
 
 #newTask , #newTask:active , #newTask:focus{

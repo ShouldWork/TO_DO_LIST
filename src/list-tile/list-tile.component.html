@@ -2,6 +2,7 @@
 <div id="main" class="list_container">
     <div ng-repeat=" list in $ctrl.lists " class="list_tile" ng-click="$ctrl.selectList(list.index)">
         <div class="delete_button"></div>
+        <div class="uncheck_mark" ng-click="$ctrl.checkList(list.index,$event)"></div>
         <h1 ng-bind="list.title"></h1>
     </div>
 </div>

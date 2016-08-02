@@ -23,10 +23,19 @@
         self.clearAll = clearAll;
         self.deleteList = deleteList;
         self.deleteTask = deleteTask;
+        self.checkList = checkList;
         self.selectTask = function(task){
             console.log(task);
             self.selectedTask = task;
         };
+
+        function checkList(list,target){
+            var el = target.path[0];
+            event.stopPropagation();
+            $(el).toggleClass("uncheck_mark").toggleClass("check_mark");
+            console.log(list);
+            console.log(target);
+        }
 
         function getLists() {
             if ($localStorage.lists !== undefined) {
