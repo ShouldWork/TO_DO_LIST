@@ -42,9 +42,6 @@
                     $(".edit_button").slideToggle();
                 }
             });
-            tc.on("mouseleave",function(){
-                $(".edit_button").hide();
-            });
         }
         function showOptions(task){
             var icons = task.target.nextSibling.nextSibling.nextSibling;
