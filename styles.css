@@ -60,7 +60,7 @@
     margin-right: 20px;
 }
 
-.delete_button{
+.delete_button , .close_button{
     position: absolute;
     right: 10px;
     top: 10px;
@@ -74,12 +74,15 @@
     transition: all .50s ease-in;
 }
 
-.delete_button:hover{
+.delete_button:hover , .close_button:hover{
     height: 2em;
     width: 2em;
     text-shadow: 0 0 2px yellow;
 }
 
+.close_button{
+    opacity: 1;
+}
 
 
 .uncheck_mark , .check_mark , .unstar, .star{
