@@ -411,6 +411,8 @@
     z-index: 100;
 
     cursor: pointer;
+
+    float: left;
 }
 
 .icon:hover{
