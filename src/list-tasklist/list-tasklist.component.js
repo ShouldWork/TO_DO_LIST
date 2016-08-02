@@ -45,7 +45,7 @@
         }
         function showOptions(task){
             var icons = task.target.nextSibling.nextSibling.nextSibling;
-            $(icons).toggleClass("flex-center");
+            $(icons).slideToggle();
         }
 
     }
