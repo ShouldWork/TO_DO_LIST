@@ -327,6 +327,13 @@
     transition: all 1s ease-in-out;
 }
 
+.list_tile h3{
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 0 2px black;
+}
+
 #newTask , #newTask:active , #newTask:focus{
     border: none;
     outline: 0;
