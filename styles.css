@@ -238,7 +238,7 @@
     transition: all .25s ease-in;
     border: 2px rgba(16,178,141,0.70) solid;
     font-size: 1em;
-
+    height: 90px;
     min-width: 30%;
 }
 
