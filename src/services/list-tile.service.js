@@ -61,7 +61,6 @@
             var el = target.path[0];
             event.stopPropagation();
             self.activeList = list;
-            console.log("DeleteButotn active: " + list);
             deleteList()
         }
 
@@ -103,7 +102,7 @@
 
         function deleteTask(target){
             var target = target.path[1];
-            $(target).removeClass("flex-center");
+            $(target).slideToggle;
             self.lists[self.activeList].taskList[self.selectedTask].done = true;
             $sessionStorage.list = self.lists;
         }
