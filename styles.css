@@ -302,8 +302,6 @@
     border: 2px black solid;
     box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
     background-color: rgba(255,138,99,0.80);
-    border-left: 2px rgba(0,0,0,1) solid;
-    border-right: 2px rgba(0,0,0,1) solid;
 }
 
 
