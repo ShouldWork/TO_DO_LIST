@@ -36,16 +36,16 @@
         self.deleteTask = taskListService.deleteTask;
         self.taskIconList = taskListService.taskIconList;
         function buttonDisplay(){
-            var tc = $("#title_container");
-            tc.on("click",function(){
-                if ($("#newTitle").css("display") === "none"){
-                    $(".edit_button").slideToggle();
-                }
-            });
+            // var tc = $("#title_container");
+            // tc.on("click",function(){
+            //     if ($("#newTitle").css("display") === "none"){
+            //         $(".edit_button").slideDown();
+            //     }
+            // });
         }
         function showOptions(task){
-            // var icons = task.target.nextSibling.nextSibling.nextSibling;
-            // $(icons).slideToggle();
+            var icons = task.target.nextSibling.nextSibling.nextSibling;
+            $(icons).slideToggle();
         }
 
     }
