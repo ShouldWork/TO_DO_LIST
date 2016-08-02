@@ -243,6 +243,7 @@
 }
 
 .list_tile:hover{
+    position: fixed;
     top: -15px;
     height: 120px;
     border: 2px black solid;
