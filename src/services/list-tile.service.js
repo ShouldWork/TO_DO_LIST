@@ -26,6 +26,7 @@
         self.checkList = checkList;
         self.star = star;
         self.deleteButton = deleteButton;
+        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
         self.selectTask = function(task){
             console.log(task);
             self.selectedTask = task;

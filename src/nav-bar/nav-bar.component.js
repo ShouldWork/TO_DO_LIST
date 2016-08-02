@@ -10,7 +10,7 @@
         self.addList = taskListService.addList;
         self.doNothing = doNothing;
         self.activeList = taskListService.activeList;
-        self.list =[{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
+        self.buttonlist = taskListService.buttonlist;
         self.addItem = addItem;
     }
     function addItem(){
