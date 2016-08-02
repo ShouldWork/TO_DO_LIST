@@ -67,14 +67,17 @@
         }
 
         function deleteList(){
-            console.log(self.lists.splice(self.activeList,1));
+            console.log(self.lists);
+            console.log("Active list: " + self.activeList);
+            self.lists.splice(self.activeList,1);
+            console.log(self.lists);
             $sessionStorage.list = self.lists;
         }
 
-        function deleteTask(){
-            console.log(self.lists[self.activeList].taskList.splice([self.selectedTask],1));
-            self.lists[self.activeList].totalTasks--;
-            self.lists[self.activeList].totalTasks--;
+        function deleteTask(target){
+            var target = target.path[1];
+            console.log($(target).removeClass("flex-center"));
+            self.lists[self.activeList].taskList[self.selectedTask].done = true;
             $sessionStorage.list = self.lists;
         }
 
@@ -116,17 +119,19 @@
         }
         function addTask(keyEvent){
             if (keyEvent.which === 13){
-                console.log("this though");
-                var task = {
-                    taskIndex: self.lists[self.activeList].totalTasks,
-                    title: $("#newTask").val(),
-                    done: false,
-                    checked: false,
-                };
-                $("#newTask").val("");
-                self.lists[self.activeList].taskList.push(task);
-                console.log(self.selectedTask = self.lists[self.activeList].totalTasks++);
-                console.log("adding");
+                if ($("#newTask").val() !==""){
+                    console.log("this though");
+                    var task = {
+                        taskIndex: self.lists[self.activeList].totalTasks,
+                        title: $("#newTask").val(),
+                        done: false,
+                        checked: false,
+                    };
+                    $("#newTask").val("");
+                    self.lists[self.activeList].taskList.push(task);
+                    console.log(self.selectedTask = self.lists[self.activeList].totalTasks++);
+                    console.log("adding");
+                }
             }
         }
         getLists();
