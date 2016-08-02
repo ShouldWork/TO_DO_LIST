@@ -291,7 +291,7 @@
     box-shadow: none;
     cursor: pointer;
     overflow: hidden;
-    transition: all .50s ease-in;
+    transition: all .25s ease-in;
     border: 2px rgba(16,178,141,0.70) solid;
     min-width: 30%;
 }
