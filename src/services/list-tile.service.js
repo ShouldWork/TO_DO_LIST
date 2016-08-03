@@ -74,10 +74,11 @@
             $(target).parent().slideToggle();
         }
         function flagTask(target,task){
-            var target = target.path[2];
+            // var target = target.path[2];
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
             $(target).parent().slideToggle();
+            console.log(task);
         }
 
 
