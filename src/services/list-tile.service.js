@@ -70,13 +70,8 @@
         function finishTask(target,task){
             var target = target.path[2],
                 checked = self.lists[self.activeList].taskList[task].checked;
-            $(target).find("span").toggleClass("task_done");
             $(target).find(".flex-center").removeClass("flex-center");
-            if (!checked){
-                self.lists[self.activeList].taskList[task].checked = true;
-            } else {
-                self.lists[self.activeList].taskList[task].checked = false;
-            }
+            self.lists[self.activeList].taskList[task].checked = (!checked) ? true : false;
         }
         function editTask(target,task){
             self.lists[self.activeList].taskList[task].title = "New title";
@@ -85,7 +80,6 @@
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important
             self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
-            $(target).parent().toggleClass(task_important);
             console.log(self.lists[self.activeList].taskList);
         }
 
