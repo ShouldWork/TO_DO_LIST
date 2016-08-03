@@ -15,7 +15,8 @@
             })
         });
     function activeListController (taskListService,$location){
-        var self = this; 
+        var self = this;
+        self.pageClass = 'list-tile';
         self.lists = taskListService.lists;
         self.activeList = taskListService.activeList;
         self.selectList = function(list){

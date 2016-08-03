@@ -17,7 +17,7 @@
     
     function tasklistController(taskListService){
         var self = this;
-        var other = "this";
+        self.pageClass = 'tasklist';
         self.lists = taskListService.lists; 
         self.addList = taskListService.addList;
         self.listTitle = taskListService.title;

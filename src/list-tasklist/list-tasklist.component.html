@@ -1,24 +1,24 @@
 
 <div class="tasklist_container">
     <div class="close_button" ui-sref="list-tile"></div>
-    <div class="flex-center" ng-init="$ctrl.buttonDisplay">
-        <span id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-click="$ctrl.editListTitle($ctrl.activeList)"></span>
-        <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)" id='newTitle'/>
+    <div class="flex-center" ng-init="$ctrl.buttonDisplay" ng-switch="$ctrl.lists[$ctrl.activeList].edit">
+        <span  id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title"  ng-switch-default ng-click="$ctrl.lists[$ctrl.activeList].edit = true"></span>
+        <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event,$ctrl.activeList)" ng-switch-when="true" id='newTitle'/>
     </div>
 
     <div class="flex-col">
 
-        <div class="taskContainer" ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList" ng-click="$ctrl.showOptions($event)">
-            <span  class="task" ng-if="tasks.done === false" ng-class="{task_done: tasks.checked,task_important: tasks.important}" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.taskIndex)"></span>
+        <div class="taskContainer" ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList" ng-click="$ctrl.showOptions($event)" ng-switch="tasks.edit">
+            <span ng-switch-default class="task" ng-if="tasks.done === false" ng-class="{task_done: tasks.checked,task_important: tasks.important}" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.taskIndex)"></span>
+            <input style="width: 100px; height: 50px" placeholder="Thist hing" ng-switch-when="true" id="editTask">
             <div class="iconContainer">
                 <div ng-repeat="icons in $ctrl.taskIconList" class="icon {{ icons.class }}" ng-bind="icons.title" ng-click="icons.doThis($event,tasks.taskIndex)" ></div>
-                <input class="new_title" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} "  ng-keypress="$ctrl.updateName($event)"/>
             </div>
         </div>
-        <label for="newTask">
-            <input id="newTask" ng-keypress="$ctrl.addTask($event)" placeholder="Add task...">
-        </label>
     </div>
+    <label for="newTask">
+        <input id="newTask" ng-keypress="$ctrl.addTask($event)" placeholder="Add task...">
+    </label>
 
     <div class="list_button_container">
         <div ng-click="$ctrl.clearAll()" ng-if="$ctrl.lists[$ctrl.activeList].taskList.length > 0 " class="clear_button">Clear done</div>

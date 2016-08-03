@@ -64,19 +64,15 @@
         }
 
         function finishTask(target,task){
-            var target = target.path[1],
-                checked = self.lists[self.activeList].taskList[task].checked;
-            // $(target).slideUp(200);
+            var checked = self.lists[self.activeList].taskList[task].checked;
             self.lists[self.activeList].taskList[task].checked = (!checked);
         }
         function editTask(target,task){
-            var target = target.path[1];
-            // $(target).slideUp(200);
-            self.lists[self.activeList].taskList[task].title = "New title";
+            var el = target.path[2],
+                editing = self.lists[self.activeList].taskList[task].edit;
+            self.lists[self.activeList].taskList[task].edit = (!editing);
         }
         function flagTask(target,task){
-            var target = target.path[1];
-            // $(target).slideUp(200);
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important);
         }
@@ -118,31 +114,27 @@
                     favorite: false
                 },
                 title: "New List",
+                edit: false,
                 taskList:[]
             };
             self.lists.push(newList);
             $localStorage.lists = self.lists;
             self.listIndex++;
         }
-        function updateName(keyEvent){
+        function updateName(keyEvent,list){
+            self.activeList = list;
             if (keyEvent.which === 13) {
-                var newTitle = $("#newTitle"),
-                    title = $("#listTitle"),
-                    done_button = $(".done_button"),
-                    edit_button = $(".edit_button");
+                var newTitle = $("#newTitle");
                 if (newTitle.val() !== "") {
 
                     self.lists[self.activeList] = {
-                        properties: self.lists[activeList].properties,
+                        properties: self.lists[self.activeList].properties,
                         title: newTitle.val(),
+                        edit: false,
                         taskList: self.lists[self.activeList].taskList
                     };
                 }
                 newTitle.val("");
-                newTitle.hide();
-                title.show();
-                done_button.hide();
-                edit_button.show();
             }
         }
         function addTask(keyEvent){
@@ -152,6 +144,7 @@
                         taskIndex: self.lists[self.activeList].properties.totalTasks,
                         title: $("#newTask").val(),
                         done: false,
+                        edit: false,
                         checked: false,
                         important: false
                     };
@@ -164,16 +157,16 @@
         getLists();
     }
     function editListTitle(list){
-        self.activeList = list;
-        var title = $("#listTitle"),
-            edit_button = $(".edit_button"),
-            done_button = $(".done_button"),
-            newTitle = $("#newTitle");
-        title.hide();
-        edit_button.hide();
-        newTitle.show();
-        done_button.show();
-        newTitle.focus();
+        // self.activeList = list;
+        // var title = $("#listTitle"),
+        //     edit_button = $(".edit_button"),
+        //     done_button = $(".done_button"),
+        //     newTitle = $("#newTitle");
+        // title.hide();
+        // edit_button.hide();
+        // newTitle.show();
+        // done_button.show();
+        // newTitle.focus();
     }
 }());
 

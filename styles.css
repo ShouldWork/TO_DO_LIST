@@ -241,7 +241,6 @@ text-decoration: double;
 }
 
 .new_title , .new_title:active{
-display: none;
 border: none;
 outline: 0;
 width: 80%;
@@ -419,7 +418,7 @@ text-shadow: 0 0 1px white;
     border: none;
     outline: 0;
     background-color: transparent;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -557,7 +556,7 @@ margin-left: 5%;
 
 .tasklist_container{
     position: relative;
-    width: 70%;
+    width: 73%;
     margin-right: 2.5%;
     height: 95%;
     float: right;
@@ -610,3 +609,56 @@ border: 2px solid rgba(255,155,0,0.70);
     align-items: center;
     justify-items: center;
 }
+
+
+
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}
+
+
+@keyframes fadeOut{
+    from { opacity: 1}
+    to {opacity: 0};
+}
+
+
+/*.ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 8888; position: absolute; float: none;  }*/
+/*.ng-enter           { animation: slideInUp 0.5s both ease-in; z-index: 9999; }*/
