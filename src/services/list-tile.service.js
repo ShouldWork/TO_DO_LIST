@@ -71,12 +71,12 @@
             var target = target.path[2],
                 checked = self.lists[self.activeList].taskList[task].checked;
             self.lists[self.activeList].taskList[task].checked = (!checked) ? true : false;
-            $(target).slideToggle();
+            $(target).parent().slideToggle();
         }
         function editTask(target,task){
             self.lists[self.activeList].taskList[task].title = "New title";
             console.log("This though Edit");
-            $(target).slideToggle();
+            $(target).parent().slideToggle();
         }
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important
