@@ -652,6 +652,11 @@ border: 2px solid rgba(255,155,0,0.70);
     from    { transform:translateY(100%); }
     to      { transform: translateY(0); }
 }
+/* slide out from the bottom */
+@keyframes slideInDown {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(200%); }
+}
 
 
 @keyframes fadeOut{
@@ -660,5 +665,5 @@ border: 2px solid rgba(255,155,0,0.70);
 }
 
 
-.ng-leave           { animation: rotateFall 0.5s both ease-in; z-index: 8888; position: absolute; float: none;  }
-.ng-enter           { animation: slideInUp 0.5s both ease-in; z-index: 9999; }
+.ng-leave           { animation: slideOutDown 0.5s both ease-in; z-index: 8888; }
+.ng-enter           { animation: slideInUp 0.01s both ease-in; z-index: 9999; display: none;}
