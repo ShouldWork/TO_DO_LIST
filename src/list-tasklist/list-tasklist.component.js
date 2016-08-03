@@ -24,7 +24,6 @@
         self.activeList = taskListService.activeList;
         self.editListTitle = taskListService.editListTitle;
         self.updateName = taskListService.updateName;
-        self.buttonDisplay = buttonDisplay();
         self.addTask = taskListService.addTask;
         self.flagTask = taskListService.flagTask;
         self.editTask = taskListService.editTask;
@@ -35,18 +34,18 @@
         self.deleteList = taskListService.deleteList;
         self.deleteTask = taskListService.deleteTask;
         self.taskIconList = taskListService.taskIconList;
-        function buttonDisplay(){
-            // var tc = $("#title_container");
-            // tc.on("click",function(){
-            //     if ($("#newTitle").css("display") === "none"){
-            //         $(".edit_button").slideDown();
-            //     }
-            // });
-        }
+        self.closeTaskOptions = taskListService.closeTaskOptions;
         function showOptions(task){
-            var icons = task.target.nextSibling.nextSibling.nextSibling;
-            $(icons).slideToggle();
+            var icons = task.path[1].children[1],
+                isIcon = $(icons).hasClass("icon");
+            if (!isIcon){
+                if ($(icons).css("display") === "none") {
+                    $(".iconContainer").slideUp(200);
+                    $(icons).slideDown(200);
+                } else {
+                    $(icons).slideUp(200);
+                }
+            }
         }
-
     }
 })();

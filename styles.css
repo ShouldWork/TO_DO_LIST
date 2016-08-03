@@ -130,47 +130,81 @@
     border: 1px solid black;
 }
 
+.iconContainer{
+    position: absolute;
+    top: -1.5em;
+    left: -4.5em;
+    width: 4.5em;
+    height: 5em;
+    display: none;
+    border: 3px solid rgba(16,178,141,0.70);
+    border-radius: 1em;
+}
+
+.icon{
+    position: relative;
+    height: 2em;
+    width: 2em;
+    box-shadow: none;
+    transition: all .25s ease-in-out;
+    z-index: 100;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+    border-radius: 42%;
+    float: left;
+}
+
+.icon:hover{
+    background-color: rgba(16,178,141,0.30);
+    /*box-shadow: 2px 5px 10px rgba(0,0,0,0.80), 1px 2px 5px rgba(255,55,0,0.60);*/
+}
+
 .icon_delete{
     background: transparent url("resources/delete_can.svg") center no-repeat;
     background-size: cover;
     border: none;
-    background-color: transparent;
 }
 
 .icon_flag{
     background: transparent url("resources/important.svg") center no-repeat;
     background-size: cover;
     border: none;
-    background-color: transparent;
 }
 
 .icon_edit{
     background: transparent url("resources/edit.svg") center no-repeat;
     background-size: cover;
     border: none;
-    background-color: transparent;
 }
 
 .icon_finish{
     background: transparent url("resources/check.svg") center no-repeat;
     background-size: cover;
     border: none;
-    background-color: transparent;
 }
+
+.icon_close{
+    left: -.75em;
+    bottom: 6em;
+    height: 1em;
+    width: 1em;
+    background: transparent url("resources/delete_round.svg") center no-repeat;
+    background-size: cover;
+}
+
+
 
 
 .task{
     position: relative;
-    max-width: 70%;
     word-wrap: break-word;
     padding: 0;
     margin: 0;
 
     border:none;
-    outline: 0;
     background-color: transparent;
 
-    font-size: 3em;
+    font-size: 2em;
     text-shadow: none;
     text-decoration:  none;
 
@@ -325,110 +359,73 @@ text-shadow: 0 0 1px white;
 
 /*border: 1px rgba(0,0,0,1) solid;*/
 .list_tile{
-position: relative;
-top: 0;
-min-height: 90px;
-height: auto;
-background-color: rgba(16,178,141,0.70);
-box-shadow: none;
-cursor: pointer;
-overflow: hidden;
-transition: all .25s ease-in;
+    position: relative;
+    top: 0;
+    min-height: 90px;
+    height: auto;
+    background-color: rgba(16,178,141,0.70);
+    box-shadow: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .25s ease-in;
     border-right: 1px rgba(0,0,0,1) solid;
     margin: 1px;
-min-width: 30%;
+    min-width: 30%;
 }
 
 
 .list_tile:hover{
-top: -15px;
-border-left: 2px rgba(0,0,0,1) solid;
-border-right: 2px rgba(0,0,0,1) solid;
-box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
-background-color: rgba(255,138,99,0.80);
+    top: -15px;
+    border-left: 2px rgba(0,0,0,1) solid;
+    border-right: 2px rgba(0,0,0,1) solid;
+    box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
+    background-color: rgba(255,138,99,0.80);
 }
 
 
 .list_tile:hover .delete_button,.list_tile:hover .uncheck_mark, .list_tile:hover .check_mark, .list_tile:hover .star, .list_tile:hover .unstar{
-opacity: 1;
+    opacity: 1;
 }
 
 
 .list_tile h1{
 
-font-size: 2em;
-padding: .5em;
-color: ghostWhite;
-text-shadow: 0 0 2px black;
-transition: all 1s ease-in-out;
+    font-size: 2em;
+    padding: .5em;
+    color: ghostWhite;
+    text-shadow: 0 0 2px black;
+    transition: all 1s ease-in-out;
 }
 
 .list_tile h3{
-font-size: 1em;
-padding: 0;
-margin: 0;
-text-shadow: 0 0 2px white;
-position: absolute;
-bottom: .75em;
-left: .75em;
-transition: font-size .25s ease-in;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 0 2px white;
+    position: absolute;
+    bottom: .75em;
+    left: .75em;
+    transition: font-size .25s ease-in;
 }
 .list_tile h3:before{
-content: "Total tasks:  ";
+    content: "Total tasks:  ";
 }
 
 .list_tile:hover h3{
-font-size: 1em;
+    font-size: 1em;
 }
 
 #newTask , #newTask:active , #newTask:focus{
-border: none;
-outline: 0;
-background-color: transparent;
-font-size: 3em;
-text-align: center;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    font-size: 3em;
+    text-align: center;
 }
 
 #newTask:hover, #newTask:active, #newTask:focus{
-text-decoration: underline;
+    text-decoration: underline;
 }
-
-.iconContainer{
-    position: absolute;
-    top:0;
-    right: 110%;
-    width: 4em;
-    display: none;
-}
-
-.icon{
-position: relative;
-height: 2em;
-width: 2em;
-top:0;
-
-border: 1px solid black;
-border-radius: 5%;
-/*background-color: rgba(255,255,255,0.50);*/
-/*text-shadow: none;*/
-box-shadow: none;
-
-transition: all .25s ease-in-out;
-z-index: 100;
-
-cursor: pointer;
-
-float: left;
-}
-
-.icon:hover{
-box-shadow: 2px 5px 10px rgba(0,0,0,0.80), 1px 2px 5px rgba(0,0,255,0.70);
-top: -5px;
-background-color: rgba(255,55,0,0.60);
-text-shadow: 0 0 1px white;
-}
-
-
 
 #main{
 display: flex;

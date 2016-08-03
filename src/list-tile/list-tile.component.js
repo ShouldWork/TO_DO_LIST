@@ -19,7 +19,6 @@
         self.lists = taskListService.lists;
         self.activeList = taskListService.activeList;
         self.selectList = function(list){
-            console.log(list);
             self.activeList = taskListService.activeList = list;
             $location.path("tasklist");
         };

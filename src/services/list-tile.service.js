@@ -25,7 +25,8 @@
         self.checkList = checkList;
         self.star = star;
         self.deleteButton = deleteButton;
-        self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"}];
+        self.closeTaskOptions = closeTaskOptions;
+        self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
         self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
         self.selectTask = function(task){
             self.selectedTask = task;
@@ -65,17 +66,17 @@
         function finishTask(target,task){
             var target = target.path[1],
                 checked = self.lists[self.activeList].taskList[task].checked;
-            $(target).slideToggle(200);
+            // $(target).slideUp(200);
             self.lists[self.activeList].taskList[task].checked = (!checked);
         }
         function editTask(target,task){
             var target = target.path[1];
-            $(target).slideToggle(200);
+            // $(target).slideUp(200);
             self.lists[self.activeList].taskList[task].title = "New title";
         }
         function flagTask(target,task){
             var target = target.path[1];
-            $(target).slideToggle(200);
+            // $(target).slideUp(200);
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important);
         }
@@ -102,9 +103,12 @@
             self.lists[self.activeList].taskList[task].done = true;
             $sessionStorage.list = self.lists;
         }
+        function closeTaskOptions(){
+            console.log($(".iconContainer").slideUp(100));
+        }
+
 
         function addList() {
-            console.log("This is adding a list");
             var newList = {
                 properties: {
                     index: self.listIndex,
