@@ -284,7 +284,7 @@
 }
 
 #newTaskContainer{
-
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -298,7 +298,6 @@
 }
 
 #listTitle{
-
     margin: auto;
     max-width: 100%;
     position: relative;
@@ -382,7 +381,10 @@
 }
 
 .iconContainer{
-    width: 100%;
+    position: absolute;
+    bottom: 15%
+    right: 150%;
+    width: 8em;
     display: none;
     margin-left: 15%;
 }
@@ -395,8 +397,8 @@
 
     border: 1px solid black;
     border-radius: 5%;
-    background-color: rgba(255,255,255,0.50);
-    text-shadow: none;
+    /*background-color: rgba(255,255,255,0.50);*/
+    /*text-shadow: none;*/
     box-shadow: none;
 
     transition: all .25s ease-in-out;
