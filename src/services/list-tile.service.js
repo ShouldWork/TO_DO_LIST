@@ -50,7 +50,7 @@
             if ($localStorage.lists !== undefined) {
                 console.log("Found in storage " + $localStorage.lists);
                 self.lists = $localStorage.lists;
-                self.listIndex = self.lists.length;
+                self.listIndex = self.lists.length  - 1;
             } else {
                 console.log("Didn't find any in storage");
                 self.lists = [];
