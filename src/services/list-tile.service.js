@@ -78,7 +78,7 @@
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
             $(target).parent().slideToggle();
-            console.log("task: " + task + " target " + target.target);
+            console.log("task: " + task + " target " + target.target.path);
         }
 
 
