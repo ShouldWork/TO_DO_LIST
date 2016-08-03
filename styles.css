@@ -663,7 +663,11 @@ border: 2px solid rgba(255,155,0,0.70);
     from { opacity: 1}
     to {opacity: 0};
 }
+@keyframes fadeIn{
+    from { opacity: 1}
+    to {opacity: 0};
+}
 
 
-.ng-leave           { animation: slideOutDown 0.5s both ease-in; z-index: 8888; }
-.ng-enter           { animation: slideInUp 0.01s both ease-in; z-index: 9999; display: none;}
+.ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 8888; }
+.ng-enter           { animation: fadeIn 0.5s both ease-in; z-index: 9999; display: none;}
