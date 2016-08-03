@@ -56,6 +56,8 @@
                 self.lists = [];
                 self.listIndex = 0;
             }
+
+            console.log(self.listIndex);
         }
 
         function deleteButton(list,target){
