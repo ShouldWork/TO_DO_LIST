@@ -132,8 +132,8 @@
 
 .iconContainer{
     position: absolute;
-    top: -1.5em;
-    left: -4.5em;
+    top: -1em;
+    left: -4.75em;
     width: 4.5em;
     height: 5em;
     display: none;
@@ -184,8 +184,8 @@
 }
 
 .icon_close{
-    left: -.75em;
-    bottom: 6em;
+    left: -1.25em;
+    bottom: 5em;
     height: 1em;
     width: 1em;
     background: transparent url("resources/delete_round.svg") center no-repeat;
