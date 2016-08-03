@@ -41,8 +41,8 @@
 .add_button{
     height: 200px;
     width: 200px;
-    background: transparent url('resources/add-mark.svg') center;
-    background-size: contain;
+    background: transparent url('resources/add-mark.svg') center no-repeat;
+    background-size: cover;
     margin: auto;
     overflow: hidden;
     cursor: pointer;
@@ -53,8 +53,8 @@
 .add_button_small{
     height: 3em;
     width: 3em;
-    background: transparent url('resources/add-mark.svg') center;
-    background-size: contain;
+    background: transparent url('resources/add-mark.svg') center no-repeat;
+    background-size: cover;
     overflow: hidden;
     cursor: pointer;
     margin-right: 20px;
@@ -66,7 +66,7 @@
     top: 10px;
     height: 1.5em;
     width: 1.5em;
-    background: transparent url("resources/delete_round.svg") center;
+    background: transparent url("resources/delete_round.svg") center no-repeat;
     background-size: cover;
     cursor: pointer;
     opacity: 0;
@@ -172,26 +172,76 @@
 
     font-size: 3em;
     text-shadow: none;
+    text-decoration:  none;
 
     transition: all .25s ease-out;
     cursor: pointer;
 }
 
 .task:hover{
-    /*border: 2px solid black;*/
-    text-shadow: 0 0 1px white;
-    border-bottom: 2px solid rgba(16,178,141,0.80);
+/*border: 2px solid black;*/
+text-shadow: 0 0 1px white;
+border-bottom: 2px solid rgba(16,178,141,0.80);
 /*, 2px 15px 1px rgba(0,0,0,0.60);*/
 }
 .task:hover .icon{
-    display: none;
-    background-color: blue;
+display: none;
+background-color: blue;
 }
 
 .task:hover #title_container{
-    background-color: red;
+background-color: red;
 }
 
+
+
+.task_done{
+text-decoration: line-through;
+font-style: italic;
+color: rgba(0,0,0,0.60);
+}
+
+.task_important{
+color: rgba(255,55,0,0.80);
+text-decoration: double;
+}
+
+.new_title , .new_title:active{
+display: none;
+border: none;
+outline: 0;
+width: 80%;
+/*background: transparent;*/
+color: black;
+font-size: 5em;
+text-align: center;
+text-decoration: none;
+}
+
+.new_title:focus {
+background-color: transparent;
+border: none;
+text-decoration: underline;
+}
+
+.edit_button {
+
+display: none;
+font-size: 5em;
+cursor: pointer;
+
+
+text-align: center;
+content:  'url("resources/edit.svg")';
+color: red;
+/*center no-repeat;*/
+background-size: cover;
+z-index: 100;
+
+float: right;
+
+margin: 0;
+}
 
 .category_button{
     height: 20px;
@@ -212,73 +262,35 @@
 
     border-radius: 20px;
 }
-
-.new_title , .new_title:active{
-    display: none;
-    border: none;
-    outline: 0;
-    width: 80%;
-    /*background: transparent;*/
-    color: black;
-    font-size: 5em;
-    text-align: center;
-    text-decoration: none;
-}
-
-.new_title:focus {
-    background-color: transparent;
-    border: none;
-    text-decoration: underline;
-}
-
-.edit_button {
-
-    display: none;
-    font-size: 5em;
-    cursor: pointer;
-
-
-    text-align: center;
-    content:  'url("resources/edit.svg")';
-    color: red;
-    /*center no-repeat;*/
-    background-size: cover;
-    z-index: 100;
-
-    float: right;
-
-    margin: 0;
-}
-
 .done_button{
-    z-index: 150;
-    width: 20px;
-    height: 20px;
+z-index: 150;
+width: 20px;
+height: 20px;
 
-    cursor: pointer;
+cursor: pointer;
 
 
-    display: none;
-    background-size: contain;
-    background: transparent url("resources/check-sign.svg") center no-repeat;
-    float: right;
+display: none;
+background-size: contain;
+background: transparent url("resources/check-sign.svg") center no-repeat;
+float: right;
 }
 
 .lists_button{
-    width: 3em;
-    height: 3em;
-    border: none;
-    cursor: pointer;
-    background: url("resources/lists.svg") center no-repeat;
-    background-size: contain;
-    margin-right: 20px;
+width: 3em;
+height: 3em;
+border: none;
+cursor: pointer;
+background: url("resources/lists.svg") center no-repeat;
+background-size: contain;
+margin-right: 20px;
 }
 
 .list_container{
-    position: relative;
-    text-align: center;
-    margin-right: 10%;
-    float: right;
+position: relative;
+text-align: center;
+margin-right: 10%;
+float: right;
 /*rgba(74,255,214,0.60);;*/
 /*rgba(55,255,100,0.60);*/
 }
@@ -294,136 +306,136 @@
 
 
 .overlay{
-    background-color: rgba(0,0,0,0.50);
+background-color: rgba(0,0,0,0.50);
 }
 
 #listTitle{
-    margin: auto;
-    max-width: 100%;
-    position: relative;
+margin: auto;
+max-width: 100%;
+position: relative;
 
-    text-decoration: double;
-    text-align: center;
-    font-size: 5em;
+text-decoration: double;
+text-align: center;
+font-size: 5em;
 
-    text-shadow: 0 0 1px white;
+text-shadow: 0 0 1px white;
 
 
 }
 
+/*border: 1px rgba(0,0,0,1) solid;*/
 .list_tile{
-    position: relative;
-    top: 0;
-    min-height: 90px;
-    height: auto;
-    background-color: rgba(16,178,141,0.70);
-    box-shadow: none;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all .25s ease-in;
-/*    border: 1px rgba(0,0,0,1) solid;
-    border-right: 1px rgba(0,0,0,1) solid;*/
+position: relative;
+top: 0;
+min-height: 90px;
+height: auto;
+background-color: rgba(16,178,141,0.70);
+box-shadow: none;
+cursor: pointer;
+overflow: hidden;
+transition: all .25s ease-in;
+    border-right: 1px rgba(0,0,0,1) solid;
     margin: 1px;
-    min-width: 30%;
+min-width: 30%;
 }
+
 
 .list_tile:hover{
-    top: -15px;
-    border-left: 2px rgba(0,0,0,1) solid;
-    border-right: 2px rgba(0,0,0,1) solid;
-    box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
-    background-color: rgba(255,138,99,0.80);
+top: -15px;
+border-left: 2px rgba(0,0,0,1) solid;
+border-right: 2px rgba(0,0,0,1) solid;
+box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
+background-color: rgba(255,138,99,0.80);
 }
 
 
 .list_tile:hover .delete_button,.list_tile:hover .uncheck_mark, .list_tile:hover .check_mark, .list_tile:hover .star, .list_tile:hover .unstar{
-    opacity: 1;
+opacity: 1;
 }
 
 
 .list_tile h1{
 
-    font-size: 2em;
-    padding: .5em;
-    color: ghostWhite;
-    text-shadow: 0 0 2px black;
-    transition: all 1s ease-in-out;
+font-size: 2em;
+padding: .5em;
+color: ghostWhite;
+text-shadow: 0 0 2px black;
+transition: all 1s ease-in-out;
 }
 
 .list_tile h3{
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-    text-shadow: 0 0 2px white;
-    position: absolute;
-    bottom: .75em;
-    left: .75em;
-    transition: font-size .25s ease-in;
+font-size: 1em;
+padding: 0;
+margin: 0;
+text-shadow: 0 0 2px white;
+position: absolute;
+bottom: .75em;
+left: .75em;
+transition: font-size .25s ease-in;
 }
 .list_tile h3:before{
-    content: "Total tasks:  ";
+content: "Total tasks:  ";
 }
 
 .list_tile:hover h3{
-    font-size: 1em;
+font-size: 1em;
 }
 
 #newTask , #newTask:active , #newTask:focus{
-    border: none;
-    outline: 0;
-    background-color: transparent;
-    font-size: 3em;
-    text-align: center;
+border: none;
+outline: 0;
+background-color: transparent;
+font-size: 3em;
+text-align: center;
 }
 
 #newTask:hover, #newTask:active, #newTask:focus{
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 .iconContainer{
     position: absolute;
-    bottom: 15%
-    right: 150%;
-    width: 8em;
+    top:0;
+    right: 110%;
+    width: 4em;
     display: none;
-    margin-left: 15%;
 }
 
 .icon{
-    position: relative;
-    height: 2em;
-    width: 2em;
-    top:0;
+position: relative;
+height: 2em;
+width: 2em;
+top:0;
 
-    border: 1px solid black;
-    border-radius: 5%;
-    /*background-color: rgba(255,255,255,0.50);*/
-    /*text-shadow: none;*/
-    box-shadow: none;
+border: 1px solid black;
+border-radius: 5%;
+/*background-color: rgba(255,255,255,0.50);*/
+/*text-shadow: none;*/
+box-shadow: none;
 
-    transition: all .25s ease-in-out;
-    z-index: 100;
+transition: all .25s ease-in-out;
+z-index: 100;
 
-    cursor: pointer;
+cursor: pointer;
 
-    float: left;
+float: left;
 }
 
 .icon:hover{
-    box-shadow: 2px 5px 10px rgba(0,0,0,0.80), 1px 2px 5px rgba(0,0,255,0.70);
-    top: -5px;
-    background-color: rgba(255,55,0,0.60);
-    text-shadow: 0 0 1px white;
+box-shadow: 2px 5px 10px rgba(0,0,0,0.80), 1px 2px 5px rgba(0,0,255,0.70);
+top: -5px;
+background-color: rgba(255,55,0,0.60);
+text-shadow: 0 0 1px white;
 }
 
 
 
 #main{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 60%;
-    margin-bottom: 10%;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+width: 60%;
+margin-bottom: 10%;
 }
 
 #main div:nth-of-type(1) {flex-grow: 6;}
@@ -436,113 +448,113 @@
 
 
 .page-container{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    /*background-color: rgba(178,70,34,0.70);*/
-    background: transparent url("resources/coark.jpg") center repeat;
-    background-size: cover;
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+/*background-color: rgba(178,70,34,0.70);*/
+background: transparent url("resources/coark.jpg") center repeat;
+background-size: cover;
 
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
+-webkit-filter: blur(3px);
+-moz-filter: blur(3px);
+-o-filter: blur(3px);
+-ms-filter: blur(3px);
+filter: blur(3px);
 
-    z-index: -1;
+z-index: -1;
 
-    transition: all .25s ease-in;
+transition: all .25s ease-in;
 
 }
 
 .flex-start{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+display: flex;
+flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: center;
 }
 
 .flex-center{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+align-items: center;
 }
 
 .flex-col{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
 }
 
 .list_nav{
-    position: relative;
-    /*bottom: 40%;*/
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
+position: relative;
+/*bottom: 40%;*/
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
 
 
-    width: 20%;
-    margin-left: 2%;
-    background-color: rgba(0,0,0,0.30);
-    text-shadow: 0 0 1px black;
-    color: ghostwhite;
-    border-radius: 20px;
-    padding-top: 10px;
-    padding-left: 10px;
+width: 20%;
+margin-left: 2%;
+background-color: rgba(0,0,0,0.30);
+text-shadow: 0 0 1px black;
+color: ghostwhite;
+border-radius: 20px;
+padding-top: 10px;
+padding-left: 10px;
 }
 
 .list_nav_icon{
-    padding: 5px;
-    margin: 0;
-    margin-bottom: 20px;
+padding: 5px;
+margin: 0;
+margin-bottom: 20px;
 }
 
 .list_nav_icon h1{
-    padding: 0;
-    margin: 0;
-    font-size: 1em;
-    margin-left: 1%;
-    cursor: pointer;
+padding: 0;
+margin: 0;
+font-size: 1em;
+margin-left: 1%;
+cursor: pointer;
 }
 
 .list_nav h1{
-    padding: 0;
-    margin: 0;
-    font-size: 1em;
-    margin-left: 1%;
-    cursor: pointer;
+padding: 0;
+margin: 0;
+font-size: 1em;
+margin-left: 1%;
+cursor: pointer;
 }
 
 .list{
-    border: 3px solid rgba(0,0,0,0.80);
-    border-radius: 20px;
-    box-shadow: 2px 10px 10px rgba(0,0,0,0.50);
-    overflow: hidden;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 0;
+border: 3px solid rgba(0,0,0,0.80);
+border-radius: 20px;
+box-shadow: 2px 10px 10px rgba(0,0,0,0.50);
+overflow: hidden;
+width: 80%;
+margin-left: 10%;
+margin-top: 0;
 }
 
 .about_link{
-    border: 1px solid ghostWhite;
-    background-color: transparent;
-    color: ghostWhite;
-    text-shadow: 0 0 1px black;
-    font-size: 2em;
-    padding: 5px;
-    float: left;
-    cursor: pointer;
+border: 1px solid ghostWhite;
+background-color: transparent;
+color: ghostWhite;
+text-shadow: 0 0 1px black;
+font-size: 2em;
+padding: 5px;
+float: left;
+cursor: pointer;
 }
 
 .about_page{
-    height: 100px;
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
+height: 100px;
+width: 90%;
+margin-top: 5%;
+margin-left: 5%;
 }
 
 
@@ -552,7 +564,7 @@
     margin-right: 2.5%;
     height: 95%;
     float: right;
-    
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -562,6 +574,7 @@
     background: transparent url(resources/paper.jpg) center no-repeat;
     background-size: cover;
 
+
     transition: all .25s ease-in;
 }
 
@@ -570,23 +583,15 @@
     margin: 0;
 }
 
-.task_done{
-    text-decoration: line-through;
-    font-style: italic;
-    color: rgba(0,0,0,0.60);
+.taskContainer{
+    position: relative;
 }
-
-.task_important{
-    color: rgba(255,55,0,0.80);
-    font-style: bold;
-}
-
 
 .clear_button{
-    color: black;
-    text-shadow: 0 0 1px white;
-    background-color: transparent;
-    border: 2px solid rgba(255,155,0,0.70);
+color: black;
+text-shadow: 0 0 1px white;
+background-color: transparent;
+border: 2px solid rgba(255,155,0,0.70);
     cursor: pointer;
 
     padding: 10px;

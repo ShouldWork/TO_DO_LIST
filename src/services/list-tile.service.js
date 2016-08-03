@@ -63,22 +63,21 @@
         }
 
         function finishTask(target,task){
-            var target = target.path[2],
+            var target = target.path[1],
                 checked = self.lists[self.activeList].taskList[task].checked;
-            self.lists[self.activeList].taskList[task].checked = (!checked) ? true : false;
-            $(target).parent().slideToggle();
+            $(target).slideToggle(200);
+            self.lists[self.activeList].taskList[task].checked = (!checked);
         }
         function editTask(target,task){
-            var target = target.path[2];
+            var target = target.path[1];
+            $(target).slideToggle(200);
             self.lists[self.activeList].taskList[task].title = "New title";
-            $(target).parent().slideToggle();
         }
         function flagTask(target,task){
-            // var target = target.path[2];
+            var target = target.path[1];
+            $(target).slideToggle(200);
             var important = self.lists[self.activeList].taskList[task].important;
-            self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
-            $(target).parent().slideToggle();
-            console.log("task: " + task + " target " + target.target.path);
+            self.lists[self.activeList].taskList[task].important = (!important);
         }
 
 
