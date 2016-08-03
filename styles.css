@@ -660,5 +660,5 @@ border: 2px solid rgba(255,155,0,0.70);
 }
 
 
-/*.ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 8888; position: absolute; float: none;  }*/
-/*.ng-enter           { animation: slideInUp 0.5s both ease-in; z-index: 9999; }*/
+.ng-leave           { animation: rotateFall 0.5s both ease-in; z-index: 8888; position: absolute; float: none;  }
+.ng-enter           { animation: slideInUp 0.5s both ease-in; z-index: 9999; }
