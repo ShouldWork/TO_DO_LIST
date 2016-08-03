@@ -67,24 +67,29 @@
             deleteList()
         }
 
-        function finishTask(target){
+        function finishTask(target,task){
             var target = target.path[2],
-                checked = self.lists[self.activeList].taskList[self.selectedTask].checked;
+                checked = self.lists[self.activeList].taskList[task].checked;
             $(target).find("span").toggleClass("task_done");
             $(target).find(".flex-center").removeClass("flex-center");
             if (!checked){
-                self.lists[self.activeList].taskList[self.selectedTask].checked = true;
+                self.lists[self.activeList].taskList[task].checked = true;
             } else {
-                self.lists[self.activeList].taskList[self.selectedTask].checked = false;
+                self.lists[self.activeList].taskList[task].checked = false;
             }
         }
-        function editTask(target){
-            self.lists[self.activeList].taskList[self.selectedTask].title = "New title";
+        function editTask(target,task){
+            self.lists[self.activeList].taskList[task].title = "New title";
             console.log("This though Edit");
         }
-        function flagTask(target){
-
+        function flagTask(target,task){
+            var important = self.lists[self.activeList].taskList[task].important
+            self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
+            $(target).parent().toggleClass(task_important);
+            console.log(self.lists[self.activeList].taskList);
         }
+
+
         function clearAll(){
             for (var p = 0; p < self.lists.length; p++){
                 for (var t = 0; t < self.lists[p].taskList.length; t++){
@@ -96,10 +101,7 @@
         }
 
         function deleteList(){
-            console.log(self.activeList);
-            console.log(self.lists[self.activeList].properties.display);
             self.lists[self.activeList].properties.display = false;
-            console.log(self.lists[self.activeList].properties.display);
             $sessionStorage.list = self.lists;
         }
 
@@ -151,17 +153,16 @@
         function addTask(keyEvent){
             if (keyEvent.which === 13){
                 if ($("#newTask").val() !==""){
-                    console.log("this though");
                     var task = {
                         taskIndex: self.lists[self.activeList].properties.totalTasks,
                         title: $("#newTask").val(),
                         done: false,
-                        checked: false
+                        checked: false,
+                        important: false
                     };
                     $("#newTask").val("");
                     self.lists[self.activeList].taskList.push(task);
                     self.selectedTask = self.lists[self.activeList].properties.totalTasks++;
-                    console.log(task);
                 }
             }
         }

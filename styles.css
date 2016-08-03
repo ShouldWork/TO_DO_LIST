@@ -574,6 +574,11 @@
     color: rgba(0,0,0,0.60);
 }
 
+.task_important{
+    color: rgba(255,55,0,0.80);
+    font-style: bold;
+}
+
 
 .clear_button{
     color: black;
