@@ -51,7 +51,7 @@
 
 
 .add_button_small{
-    position: relative;
+    position: absolute;
     width: 3em;
     height: 3em;
     border: none;
@@ -311,7 +311,7 @@ float: right;
 }
 
 .lists_button{
-    position: relative;
+    position: absolute;
     width: 3em;
     height: 3em;
     border: none;
