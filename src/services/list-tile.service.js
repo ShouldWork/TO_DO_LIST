@@ -9,11 +9,10 @@
     
     function taskListService($q, $log, $sessionStorage, $localStorage) {
         var self = this;
-        self.listIndex = 0;
+
         self.addList = addList;
         self.editListTitle = editListTitle;
         self.getLists = getLists;
-        self.listCount = 0;
         self.activeList = 0;
         self.updateName = updateName;
         self.addTask = addTask;
@@ -51,9 +50,11 @@
             if ($localStorage.lists !== undefined) {
                 console.log("Found in storage " + $localStorage.lists);
                 self.lists = $localStorage.lists;
+                self.listIndex = self.lists.length - 1;
             } else {
                 console.log("Didn't find any in storage");
                 self.lists = [];
+                self.listIndex = 0;
             }
         }
 
