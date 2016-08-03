@@ -28,7 +28,6 @@
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"}];
         self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
         self.selectTask = function(task){
-            console.log(task);
             self.selectedTask = task;
         };
         function star(list,target){
@@ -48,16 +47,12 @@
 
         function getLists() {
             if ($localStorage.lists !== undefined) {
-                console.log("Found in storage " + $localStorage.lists);
                 self.lists = $localStorage.lists;
                 self.listIndex = self.lists.length;
             } else {
-                console.log("Didn't find any in storage");
                 self.lists = [];
                 self.listIndex = 0;
             }
-
-            console.log(self.listIndex);
         }
 
         function deleteButton(list,target){
@@ -74,14 +69,15 @@
             $(target).parent().slideToggle();
         }
         function editTask(target,task){
+            var target = target.path[2];
             self.lists[self.activeList].taskList[task].title = "New title";
-            console.log("This though Edit");
             $(target).parent().slideToggle();
         }
         function flagTask(target,task){
-            var important = self.lists[self.activeList].taskList[task].important
+            var target = target.path[2];
+            var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
-            $(target).slideToggle();
+            $(target).parent().slideToggle();
         }
 
 
