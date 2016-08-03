@@ -613,10 +613,10 @@ border: 2px solid rgba(255,155,0,0.70);
 
 
 /* ANIMATIONS
-============================================================================= */
+============================================================================= 
 
-/* leaving animations ----------------------------------------- */
-/* rotate and fall */
+ leaving animations ----------------------------------------- 
+ rotate and fall 
 @keyframes rotateFall {
     0%      { transform: rotateZ(0deg); }
     20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
@@ -625,34 +625,33 @@ border: 2px solid rgba(255,155,0,0.70);
     100%    { transform: translateY(100%) rotateZ(17deg); }
 }
 
-/* slide in from the bottom */
+/* slide in from the bottom 
 @keyframes slideOutLeft {
     to      { transform: translateX(-100%); }
 }
 
-/* rotate out newspaper */
+/* rotate out newspaper 
 @keyframes rotateOutNewspaper {
     to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
 
 /* entering animations --------------------------------------- */
-/* scale up */
+/* scale up 
 @keyframes scaleUp {
     from    { opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
-/* slide in from the right */
+/* slide in from the right 
 @keyframes slideInRight {
     from    { transform:translateX(100%); }
     to      { transform: translateX(0); }
 }
-
-/* slide in from the bottom */
+/* slide in from the bottom 
 @keyframes slideInUp {
     from    { transform:translateY(100%); }
     to      { transform: translateY(0); }
 }
-/* slide out from the bottom */
+/* slide out from the bottom 
 @keyframes slideInDown {
     from    { transform:translateY(100%); }
     to      { transform: translateY(200%); }
@@ -670,4 +669,51 @@ border: 2px solid rgba(255,155,0,0.70);
 
 
 .ng-enter           { animation: fadeIn 0.5s both ease-in; z-index: 8888; }
-.ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 9999; position: absolute; width: 79%; left: 10.5%;}
+.ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 9999; position: absolute; width: 79%; left: 10.5%;}*/
+
+
+.slide-left.ng-enter,
+.slide-left.ng-leave,
+.slide-right.ng-enter,
+.slide-right.ng-leave {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: inherit;
+  -ms-transition: .7s ease-in-out;
+  -webkit-transition: .7s ease-in-out;
+  transition:  .7s ease-in-out;
+}
+
+.slide-left.ng-enter {}
+.slide-left.ng-enter.ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.slide-left.ng-leave {
+  z-index: 100;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-left.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+
+.slide-right.ng-enter {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+} 
+
+.slide-right.ng-enter.ng-enter-active, 
+.slide-right.ng-leave {
+  position: absolute;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.slide-right.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
