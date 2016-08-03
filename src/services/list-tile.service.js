@@ -103,9 +103,8 @@
 
         function deleteTask(target,task){
             var target = target.path[1];
-            console.log(task);
             $(target).hide();
-            self.lists[self.activeList].taskList[self.selectedTask].done = true;
+            self.lists[self.activeList].taskList[task].done = true;
             $sessionStorage.list = self.lists;
         }
 
