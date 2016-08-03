@@ -70,17 +70,18 @@
         function finishTask(target,task){
             var target = target.path[2],
                 checked = self.lists[self.activeList].taskList[task].checked;
-            $(target).find(".flex-center").removeClass("flex-center");
             self.lists[self.activeList].taskList[task].checked = (!checked) ? true : false;
+            $(target).slideToggle();
         }
         function editTask(target,task){
             self.lists[self.activeList].taskList[task].title = "New title";
             console.log("This though Edit");
+            $(target).slideToggle();
         }
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important
             self.lists[self.activeList].taskList[task].important = (!important) ? true : false;
-            console.log(self.lists[self.activeList].taskList);
+            $(target).slideToggle();
         }
 
 
