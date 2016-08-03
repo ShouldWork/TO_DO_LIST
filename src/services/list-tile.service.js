@@ -27,7 +27,7 @@
         self.deleteButton = deleteButton;
         self.closeTaskOptions = closeTaskOptions;
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
-        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
+        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "list_button"}];
         self.selectTask = function(task){
             self.selectedTask = task;
         };
