@@ -51,12 +51,13 @@
 
 
 .add_button_small{
-    height: 3em;
+    position: relative;
     width: 3em;
-    background: transparent url('resources/add-mark.svg') center no-repeat;
-    background-size: cover;
-    overflow: hidden;
+    height: 3em;
+    border: none;
     cursor: pointer;
+    background: url("resources/add-mark.svg") center no-repeat;
+    background-size: contain;
     margin-right: 20px;
 }
 
@@ -310,13 +311,14 @@ float: right;
 }
 
 .lists_button{
-width: 3em;
-height: 3em;
-border: none;
-cursor: pointer;
-background: url("resources/lists.svg") center no-repeat;
-background-size: contain;
-margin-right: 20px;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    border: none;
+    cursor: pointer;
+    background: url("resources/lists.svg") center no-repeat;
+    background-size: contain;
+    margin-right: 20px;
 }
 
 .list_container{
