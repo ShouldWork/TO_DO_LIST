@@ -3,7 +3,7 @@
     angular.module("toDoApp",
             [
                 "ui.router",
-                "ngAnimate",
+                // "ngAnimate",
                 "ngStorage"
             ])
         .config(function($urlRouterProvider){
