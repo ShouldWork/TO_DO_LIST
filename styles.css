@@ -51,7 +51,7 @@
 
 
 .add_button_small{
-    position: absolute;
+    position: relative;
     width: 3em;
     height: 3em;
     border: none;
@@ -297,21 +297,21 @@ margin: 0;
     border-radius: 20px;
 }
 .done_button{
-z-index: 150;
-width: 20px;
-height: 20px;
+    z-index: 150;
+    width: 20px;
+    height: 20px;
 
-cursor: pointer;
+    cursor: pointer;
 
 
-display: none;
-background-size: contain;
-background: transparent url("resources/check-sign.svg") center no-repeat;
-float: right;
+    display: none;
+    background-size: contain;
+    background: transparent url("resources/check-sign.svg") center no-repeat;
+    float: right;
 }
 
 .lists_button{
-    position: absolute;
+    position: relative;
     width: 3em;
     height: 3em;
     border: none;
@@ -322,12 +322,12 @@ float: right;
 }
 
 .list_container{
-position: relative;
-text-align: center;
-margin-right: 10%;
-float: right;
-/*rgba(74,255,214,0.60);;*/
-/*rgba(55,255,100,0.60);*/
+    position: relative;
+    text-align: center;
+    margin-right: 10%;
+    float: right;
+    /*rgba(74,255,214,0.60);;*/
+    /*rgba(55,255,100,0.60);*/
 }
 
 #newTaskContainer{
@@ -488,43 +488,46 @@ align-items: center;
 }
 
 .list_nav{
-position: relative;
-/*bottom: 40%;*/
-display: flex;
-flex-flow: column nowrap;
-justify-content: flex-start;
+    position: relative;
+    /*bottom: 40%;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
 
 
-width: 20%;
-margin-left: 2%;
-background-color: rgba(0,0,0,0.30);
-text-shadow: 0 0 1px black;
-color: ghostwhite;
-border-radius: 20px;
-padding-top: 10px;
-padding-left: 10px;
+    width: 20%;
+    margin-left: 2%;
+    background-color: rgba(0,0,0,0.30);
+    text-shadow: 0 0 1px black;
+    color: ghostwhite;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 .list_nav_icon{
-padding: 5px;
-margin: 0;
-margin-bottom: 20px;
+    padding: 5px;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 .list_nav_icon h1{
-padding: 0;
-margin: 0;
-font-size: 1em;
-margin-left: 1%;
-cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    margin-left: 1%;
+    cursor: pointer;
 }
 
 .list_nav h1{
-padding: 0;
-margin: 0;
-font-size: 1em;
-margin-left: 1%;
-cursor: pointer;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    margin-left: 1%;
+    cursor: pointer;
+    bottom: -1.5em;
+    width: 5em;
 }
 
 .list{
@@ -614,11 +617,7 @@ border: 2px solid rgba(255,155,0,0.70);
 
 
 
-/* ANIMATIONS
-============================================================================= 
 
- leaving animations ----------------------------------------- 
- rotate and fall 
 @keyframes rotateFall {
     0%      { transform: rotateZ(0deg); }
     20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
@@ -627,38 +626,33 @@ border: 2px solid rgba(255,155,0,0.70);
     100%    { transform: translateY(100%) rotateZ(17deg); }
 }
 
-/* slide in from the bottom 
 @keyframes slideOutLeft {
     to      { transform: translateX(-100%); }
 }
 
-/* rotate out newspaper 
 @keyframes rotateOutNewspaper {
     to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
 }
 
-/* entering animations --------------------------------------- */
-/* scale up 
 @keyframes scaleUp {
     from    { opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
-/* slide in from the right 
+
 @keyframes slideInRight {
     from    { transform:translateX(100%); }
     to      { transform: translateX(0); }
 }
-/* slide in from the bottom 
+
 @keyframes slideInUp {
     from    { transform:translateY(100%); }
     to      { transform: translateY(0); }
 }
-/* slide out from the bottom 
+
 @keyframes slideInDown {
     from    { transform:translateY(100%); }
     to      { transform: translateY(200%); }
 }
-
 
 @keyframes fadeOut{
     from { opacity: 1}
@@ -673,7 +667,7 @@ border: 2px solid rgba(255,155,0,0.70);
 .ng-enter           { animation: fadeIn 0.5s both ease-in; z-index: 8888; }
 .ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 9999; position: absolute; width: 79%; left: 10.5%;}*/
 
-
+/*
 .slide-left.ng-enter,
 .slide-left.ng-leave,
 .slide-right.ng-enter,
@@ -718,4 +712,4 @@ border: 2px solid rgba(255,155,0,0.70);
 .slide-right.ng-leave.ng-leave-active {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-}
+}*/
