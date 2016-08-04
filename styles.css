@@ -327,6 +327,7 @@ margin: 0;
     position: absolute;
     text-align: center;
     right: 12%;
+    padding-top: 10px;
 }
 
 #newTaskContainer{
@@ -362,7 +363,7 @@ text-shadow: 0 0 1px white;
     position: relative;
     top: 0;
     min-height: 90px;
-    height: auto;
+    height: 10em;
     background-color: rgba(16,178,141,0.70);
     box-shadow: none;
     cursor: pointer;
@@ -431,8 +432,10 @@ text-shadow: 0 0 1px white;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-content: flex-start;
     width: 66%;
-    margin-bottom: 10%;
+    height: 60%;
+    overflow: auto;
 }
 
 #main div:nth-of-type(1) {flex-grow: 6;}
@@ -653,8 +656,8 @@ border: 2px solid rgba(255,155,0,0.70);
 }
 
 
-.ng-enter           { animation: fadeIn 0.5s both ease-in; z-index: 8888; }
-.ng-leave           { animation: fadeOut 0.5s both ease-in; z-index: 9999; position: absolute; display: none;}
+.ng-enter           { animation: fadeIn 0.5s both ease-in; z-index: 8888;  }
+.ng-leave           { animation: rotateFall 0.5s both ease-in; z-index: 9999; }
 
 /*
 .slide-left.ng-enter,
