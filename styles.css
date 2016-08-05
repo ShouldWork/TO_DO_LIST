@@ -679,7 +679,7 @@ border: 2px solid rgba(255,155,0,0.70);
 };
 
 
-div .ng-enter { animation: rotateFall 1s both ease-in; z-index: 8888;  }
+div .ng-enter { animation: rotateFall 1s both ease-in; z-index: 8888; position: absolute; }
 div .ng-leave { animation: rotateFall 1s both ease-in; z-index: 9999; }
 
 
