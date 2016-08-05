@@ -680,7 +680,7 @@ border: 2px solid rgba(255,155,0,0.70);
 
 
 div .ng-enter { animation: rotateFall 5s both ease-in; z-index: 8888;  }
-div .ng-leave { animation: fadeOut 5s both ease-in; z-index: 9999; }
+div .ng-leave { animation: rotateFall 5s both ease-in; z-index: 9999; }
 
 
 
