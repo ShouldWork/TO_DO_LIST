@@ -433,6 +433,7 @@ text-shadow: 0 0 1px white;
     width: 82%;
     height: 60%;
     overflow: auto;
+    right: 3%;
 }
 
 #main div:nth-of-type(1) {flex-grow: 2;}
