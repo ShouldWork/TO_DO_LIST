@@ -35,6 +35,7 @@
         self.deleteTask = taskListService.deleteTask;
         self.taskIconList = taskListService.taskIconList;
         self.closeTaskOptions = taskListService.closeTaskOptions;
+        self.updateTaskName = taskListService.updateTaskName;
         function showOptions(task){
             var icons = task.path[1].children[1],
                 isIcon = $(icons).hasClass("icon");

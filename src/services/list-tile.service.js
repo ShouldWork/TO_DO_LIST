@@ -6,6 +6,7 @@
 
     angular.module('toDoApp')
         .service('taskListService',taskListService);
+
     
     function taskListService($q, $log, $sessionStorage, $localStorage) {
         var self = this;
@@ -25,6 +26,7 @@
         self.checkList = checkList;
         self.star = star;
         self.deleteButton = deleteButton;
+        self.updateTaskName = updateTaskName;
         self.closeTaskOptions = closeTaskOptions;
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
         self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
@@ -70,19 +72,26 @@
             $(target).hide();
         }
         function editTask(target,task){
-            var el = target.path[2],
-                editing = self.lists[self.activeList].taskList[task].edit;
+            var editing = self.lists[self.activeList].taskList[task].edit;
             self.lists[self.activeList].taskList[task].edit = (!editing);
             var target = target.path[1];
             $(target).hide();
+
         }
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important);
             var target = target.path[1];
             $(target).hide();
+            setTimeout(function(){
+                $(".editTask").focus();
+            },1500);
         }
-
+        function updateTaskName(event,task) {
+            if (event.which === 13){
+                self.lists[self.activeList].taskList[task].edit = false;
+            }
+        }
 
         function clearAll(){
             for (var p = 0; p < self.lists.length; p++){
@@ -129,6 +138,7 @@
         }
         function updateName(keyEvent,list){
             self.activeList = list;
+            console.log("Key");
             if (keyEvent.which === 13) {
                 var newTitle = $("#newTitle");
                 if (newTitle.val() !== "") {

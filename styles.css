@@ -130,13 +130,24 @@
     border: 1px solid black;
 }
 
+.editTask{
+    font-size: 2em;
+    background-color: rgba(16,178,141,0.70);
+    border: none;
+    outline: 0;
+    text-align: center;
+    text-decoration: underline;
+
+    border-radius: 20px;
+
+}
+
 .iconContainer{
-    position: absolute;
-    bottom: -2em;
-    left: -3em;
-    width: 10.5em;
+    /* position: relative; */
+    right: -3em;
+    width: 9.5em;
     height: 2.25em;
-    /* padding-top: 3px; */
+    /* padding-left: 6px; */
     display: none;
     border: 3px solid rgba(16,178,141,0.70);
     border-radius: 1em;
@@ -217,7 +228,7 @@
 .task:hover{
 /*border: 2px solid black;*/
 text-shadow: 0 0 1px white;
-border-bottom: 2px solid rgba(16,178,141,0.80);
+/*border-bottom: 2px solid rgba(16,178,141,0.80);*/
 /*, 2px 15px 1px rgba(0,0,0,0.60);*/
 }
 .task:hover .icon{
@@ -583,6 +594,9 @@ text-shadow: 0 0 1px white;
 
 .taskContainer{
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .clear_button{
