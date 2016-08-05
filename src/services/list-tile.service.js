@@ -66,15 +66,21 @@
         function finishTask(target,task){
             var checked = self.lists[self.activeList].taskList[task].checked;
             self.lists[self.activeList].taskList[task].checked = (!checked);
+            var target = target.path[1];
+            $(target).hide();
         }
         function editTask(target,task){
             var el = target.path[2],
                 editing = self.lists[self.activeList].taskList[task].edit;
             self.lists[self.activeList].taskList[task].edit = (!editing);
+            var target = target.path[1];
+            $(target).hide();
         }
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important);
+            var target = target.path[1];
+            $(target).hide();
         }
 
 
@@ -100,7 +106,7 @@
             $sessionStorage.list = self.lists;
         }
         function closeTaskOptions(){
-            console.log($(".iconContainer").slideUp(100));
+            $(".iconContainer").slideUp(100);
         }
 
 

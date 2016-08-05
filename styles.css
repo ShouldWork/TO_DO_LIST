@@ -132,13 +132,15 @@
 
 .iconContainer{
     position: absolute;
-    top: -1em;
-    left: -4.75em;
-    width: 4.5em;
-    height: 5em;
+    bottom: -2em;
+    left: -3em;
+    width: 10.5em;
+    height: 2.25em;
+    /* padding-top: 3px; */
     display: none;
     border: 3px solid rgba(16,178,141,0.70);
     border-radius: 1em;
+    background-color: rgba(0,0,0,0.15);
 }
 
 .icon{
@@ -184,11 +186,11 @@
 }
 
 .icon_close{
-    left: -1.25em;
-    bottom: 5em;
+    left: 1em;
+    bottom: 0em;
     height: 1em;
     width: 1em;
-    background: transparent url("resources/delete_round.svg") center no-repeat;
+    background: yellow url("resources/delete_round.svg") center no-repeat;
     background-size: cover;
 }
 
@@ -361,7 +363,7 @@ text-shadow: 0 0 1px white;
     top: 0;
     min-height: 90px;
     height: 10em;
-    background-color: rgba(16,178,141,0.70);
+    background-color: rgba(16,178,141,0.85);
     box-shadow: none;
     cursor: pointer;
     overflow: hidden;
@@ -439,9 +441,11 @@ text-shadow: 0 0 1px white;
 #main div:nth-of-type(1) {flex-grow: 2;}
 #main div:nth-of-type(2) {flex-grow: 6;}
 #main div:nth-of-type(3) {flex-grow: 6;}
+#main div:nth-of-type(4) {flex-grow: 6;}
 #main div:nth-of-type(6) {flex-grow: 3;}
 #main div:nth-of-type(7) {flex-grow: 4;}
 #main div:nth-of-type(9) {flex-grow: 5;}
+#main div:nth-of-type(10) {flex-grow: 8;}
 #main div:nth-of-type(13) {flex-grow: 6;}
 
 
@@ -454,11 +458,11 @@ text-shadow: 0 0 1px white;
     background: transparent url("resources/coark.jpg") center repeat;
     background-size: cover;
 
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
+    /*-webkit-filter: blur(3px);*/
+    /*-moz-filter: blur(3px);*/
+    /*-o-filter: blur(3px);*/
+    /*-ms-filter: blur(3px);*/
+    /*filter: blur(3px);*/
 
     z-index: -1;
 
@@ -480,9 +484,11 @@ text-shadow: 0 0 1px white;
 }
 
 .flex-col{
+    width: 100%;
+    height: 61%;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -558,8 +564,8 @@ text-shadow: 0 0 1px white;
 
 .tasklist_container{
     position: absolute;
-    width: 65%;
-    right: 13.5%;
+    width: 86%;
+    right: 0.5%;
     height: 65%;
     display: flex;
     flex-flow: column nowrap;
@@ -567,6 +573,7 @@ text-shadow: 0 0 1px white;
     background: transparent url(resources/paper.jpg) center no-repeat;
     background-size: cover;
     transition: all .25s ease-in;
+    overflow: auto;
 }
 
 .tasklist_container h1{
