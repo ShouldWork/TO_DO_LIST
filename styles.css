@@ -639,6 +639,7 @@ background-color: rgba(0,0,0,0.50);
     40%     { transform: rotateZ(17deg); }
     60%     { transform: rotateZ(16deg); }
     100%    { transform: translateY(200%) rotateZ(17deg); }
+    to      {opacity: 0;}
 }
 
 @keyframes slideOutLeft {
