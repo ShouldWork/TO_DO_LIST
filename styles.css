@@ -226,31 +226,31 @@
 }
 
 .task:hover{
-/*border: 2px solid black;*/
-text-shadow: 0 0 1px white;
-/*border-bottom: 2px solid rgba(16,178,141,0.80);*/
-/*, 2px 15px 1px rgba(0,0,0,0.60);*/
+    /*border: 2px solid black;*/
+    text-shadow: 0 0 1px white;
+    /*border-bottom: 2px solid rgba(16,178,141,0.80);*/
+    /*, 2px 15px 1px rgba(0,0,0,0.60);*/
 }
 .task:hover .icon{
-display: none;
-background-color: blue;
+    display: none;
+    background-color: blue;
 }
 
 .task:hover #title_container{
-background-color: red;
+    background-color: red;
 }
 
 
 
 .task_done{
-text-decoration: line-through;
-font-style: italic;
-color: rgba(0,0,0,0.60);
+    text-decoration: line-through;
+    font-style: italic;
+    color: rgba(0,0,0,0.60);
 }
 
 .task_important{
-color: rgba(255,55,0,0.80);
-text-decoration: double;
+    color: rgba(255,55,0,0.80);
+    text-decoration: double;
 }
 
 .new_title , .new_title:active{
@@ -266,28 +266,28 @@ text-decoration: double;
 }
 
 .new_title:focus {
-background-color: transparent;
-border: none;
-text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
 }
 
 .edit_button {
 
-display: none;
-font-size: 5em;
-cursor: pointer;
+    display: none;
+    font-size: 5em;
+    cursor: pointer;
 
 
-text-align: center;
-content:  'url("resources/edit.svg")';
-color: red;
-/*center no-repeat;*/
-background-size: cover;
-z-index: 100;
+    text-align: center;
+    content:  'url("resources/edit.svg")';
+    color: red;
+    /*center no-repeat;*/
+    background-size: cover;
+    z-index: 100;
 
-float: right;
+    float: right;
 
-margin: 0;
+    margin: 0;
 }
 
 .category_button{
@@ -444,7 +444,7 @@ background-color: rgba(0,0,0,0.50);
     justify-content: space-between;
     align-content: flex-start;
     width: 82%;
-    height: 60%;
+    height: 51%;
     overflow: auto;
     right: 3%;
 }
@@ -600,10 +600,10 @@ background-color: rgba(0,0,0,0.50);
 }
 
 .clear_button{
-color: black;
-text-shadow: 0 0 1px white;
-background-color: transparent;
-border: 2px solid rgba(255,155,0,0.70);
+    color: black;
+    text-shadow: 0 0 1px white;
+    background-color: transparent;
+    border: 2px solid rgba(255,155,0,0.70);
     cursor: pointer;
 
     padding: 10px;
@@ -638,7 +638,8 @@ border: 2px solid rgba(255,155,0,0.70);
     20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
     40%     { transform: rotateZ(17deg); }
     60%     { transform: rotateZ(16deg); }
-    100%    { transform: translateY(100%) rotateZ(17deg); }
+    100%    { transform: translateY(200%) rotateZ(17deg); }
+    to      {opacity: 0;}
 }
 
 @keyframes slideOutLeft {
@@ -679,8 +680,8 @@ border: 2px solid rgba(255,155,0,0.70);
 };
 
 
-div .ng-enter { animation: rotateFall 5s both ease-in; z-index: 8888;  }
-div .ng-leave { animation: fadeOut 5s both ease-in; z-index: 9999; }
+div .ng-enter { animation: rotateFall 1s both ease-in; z-index: 8888; height: 500px; }
+div .ng-leave { animation: rotateFall 1s both ease-in; z-index: 9999; }
 
 
 
