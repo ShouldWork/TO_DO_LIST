@@ -4,6 +4,6 @@
 (function(){
     angular.module("toDoApp")
         .component("pageFooter", {
-            templateUrl: "page-footer/page-footer.component.html"
+            templateUrl: "src/page-footer/page-footer.component.html"
         })
 })();

@@ -2,7 +2,7 @@
     angular.module("toDoApp")
         .component('tasklist', {
             
-            templateUrl: "list-tasklist/list-tasklist.component.html",
+            templateUrl: "src/list-tasklist/list-tasklist.component.html",
             controller: tasklistController,
             bindings:{
                 task: "<"

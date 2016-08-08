@@ -6,7 +6,7 @@
         .config(function($stateProvider){
             $stateProvider.state("about-page",{
                 template: "<about-page></about-page>",
-                url: "/about"
+                url: "src/about"
             })
         });
 })();

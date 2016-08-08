@@ -1,7 +1,7 @@
 (function() {
     angular.module("toDoApp")
         .component('navbar', {
-            templateUrl: "nav-bar/nav-bar.component.html",
+            templateUrl: "src/nav-bar/nav-bar.component.html",
             controller: navbarController
         });
     function navbarController(taskListService){

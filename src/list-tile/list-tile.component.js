@@ -1,7 +1,7 @@
 (function(){
     angular.module("toDoApp")
         .component('listTile', {
-            templateUrl: "list-tile/list-tile.component.html",
+            templateUrl: "src/list-tile/list-tile.component.html",
             controller: activeListController,
             bindings:{
                 selectList: "&",

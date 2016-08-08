@@ -7,7 +7,7 @@
         .config(function($stateProvider){
             $stateProvider.state("blank",{
                 template: "<blank-page></blank-page>",
-                url: "/blank"
+                url: "src/blank"
             })
         });
 

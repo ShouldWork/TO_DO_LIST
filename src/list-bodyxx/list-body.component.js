@@ -1,9 +1,9 @@
 (function(){
     angular.module("toDoApp")
         .component("listBody" , {
-            templateUrl: "list-bodyxx/list-bodyxx.component.html",
+            templateUrl: "src/list-bodyxx/list-bodyxx.component.html",
             controller: listBodyController
-        })
+        });
     function listBodyController(taskListService){
         var self = this;
         self.sideMode = false;
