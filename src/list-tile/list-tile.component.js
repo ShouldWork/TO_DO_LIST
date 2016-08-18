@@ -22,7 +22,6 @@
         self.selectList = function(list){
             self.activeList = taskListService.activeList = list;
             $state.go('tasklist');
-            // $location.path("tasklist");
         };
         self.addList = taskListService.addList;
         self.checkList = taskListService.checkList;

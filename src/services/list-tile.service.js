@@ -8,8 +8,22 @@
         .service('taskListService',taskListService);
 
     
-    function taskListService($q, $log, $sessionStorage, $localStorage) {
+    function taskListService($q, $log, $sessionStorage, $localStorage,$state,$mdToast) {
         var self = this;
+        var last = {
+            bottom: false,
+            top: false,
+            left: false,
+            right: true
+        };
+
+        self.toastPos = angular.extend({},last);
+        self.getToastPos = function (){
+          cleanUp();
+            return Object.keys(self.toastPos)
+                .filter(function(pos) { return self.toastPos[pos]; })
+                .join(' ');
+        };
 
         self.addList = addList;
         self.editListTitle = editListTitle;
@@ -25,14 +39,61 @@
         self.deleteTask = deleteTask;
         self.checkList = checkList;
         self.star = star;
+        self.closeList = closeList;
         self.deleteButton = deleteButton;
         self.updateTaskName = updateTaskName;
         self.closeTaskOptions = closeTaskOptions;
+        self.showToast = showToast;
+        self.showActionToast = showActionToast;
+        self.closeToast = closeToast;
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
         self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
         self.selectTask = function(task){
             self.selectedTask = task;
         };
+        function closeToast(){
+            $mdToast.hide();
+        }
+        
+        function showToast(){
+            console.log("Showing toast");
+            var pinTo = self.getToastPos(),
+                el = $(".header");
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent('Simple Toast!')
+                    .position(pinTo)
+                    .hideDelay(3000)
+                    .parent(el)
+            );
+            console.log(pinTo);
+        }
+
+        function showActionToast() {
+            // var pinTo = self.getToastPos();
+            // var toast = $mdToast.simple()
+            //     .textContent('Marked as read')
+            //     .action('UNDO')
+            //     .highlightAction(true)
+            //     .highlightClass('md-accent')// Accent is used by default, this just demonstrates the usage.
+            //     .position(pinTo);
+            // $mdToast.show(toast).then(function(response) {
+            //     if ( response == 'ok' ) {
+            //         alert('You clicked the \'UNDO\' action.');
+            //     }
+            // });
+        };
+        function cleanUp(){
+            var current = self.toastPos;
+            if ( current.bottom && last.top ) current.top = false;
+            if ( current.top && last.bottom ) current.bottom = false;
+            if ( current.right && last.left ) current.left = false;
+            if ( current.left && last.right ) current.right = false;
+            last = angular.extend({},current);
+        }
+        function closeList(){
+            $state.go('list-tile');
+        }
         function star(list,target){
             var el = target.path[0],
                 favorite = self.lists[list].properties.favorite;
@@ -66,6 +127,7 @@
         }
 
         function finishTask(target,task){
+            showToast();
             var checked = self.lists[self.activeList].taskList[task].checked;
             self.lists[self.activeList].taskList[task].checked = (!checked);
             var target = target.path[1];

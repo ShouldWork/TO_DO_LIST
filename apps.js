@@ -4,8 +4,8 @@
             [
                 "ui.router",
                 "ngAnimate",
-                "ngStorage"
-                // "ngMaterial"
+                "ngStorage",
+                "ngMaterial"
             ])
         .config(function($urlRouterProvider){
             $urlRouterProvider.otherwise(function($injector){

@@ -1,10 +1,13 @@
 
+
+
 <div class="tasklist_container">
-    <div class="close_button" ui-sref="list-tile"></div>
+    <div class="close_button" ng-click="$ctrl.closeList()"></div>
     <div class="flex-center" ng-switch="$ctrl.lists[$ctrl.activeList].edit">
-        <span  id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-switch-default ng-click="$ctrl.lists[$ctrl.activeList].edit = true"></span>
+        <span  class="no-animate" id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-switch-default ng-click="$ctrl.lists[$ctrl.activeList].edit = true"></span>
         <input class="new_title no-animate" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} " ng-focus ng-keypress="$ctrl.updateName($event,$ctrl.activeList)" ng-switch-when="true" id='newTitle'/>
     </div>
+
 
     <div class="flex-col">
         <div class="taskContainer" ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList | orderBy: '-important'" ng-click="$ctrl.showOptions($event)" ng-switch="tasks.edit" ng-if="tasks.done === false">

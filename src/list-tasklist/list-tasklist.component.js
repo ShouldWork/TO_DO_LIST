@@ -15,7 +15,7 @@
             })
         });
     
-    function tasklistController(taskListService){
+    function tasklistController(taskListService,$state,$mdToast){
         var self = this;
         self.pageClass = 'tasklist';
         self.lists = taskListService.lists; 
@@ -36,6 +36,10 @@
         self.taskIconList = taskListService.taskIconList;
         self.closeTaskOptions = taskListService.closeTaskOptions;
         self.updateTaskName = taskListService.updateTaskName;
+        self.closeList = taskListService.closeList;
+        self.showToast = taskListService.showToast;
+        self.showActionToast = taskListService.showActionToast;
+        self.closeToast = taskListService.closeToast;
         function showOptions(task){
             var icons = task.path[1].children[1],
                 isIcon = $(icons).hasClass("icon");
