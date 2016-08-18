@@ -14,14 +14,15 @@
                 url: "/"
             })
         });
-    function activeListController (taskListService,$location){
+    function activeListController (taskListService,$location,$state){
         var self = this;
         self.pageClass = 'list-tile';
         self.lists = taskListService.lists;
         self.activeList = taskListService.activeList;
         self.selectList = function(list){
             self.activeList = taskListService.activeList = list;
-            $location.path("tasklist");
+            $state.go('tasklist');
+            // $location.path("tasklist");
         };
         self.addList = taskListService.addList;
         self.checkList = taskListService.checkList;

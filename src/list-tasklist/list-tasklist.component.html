@@ -8,7 +8,7 @@
 
     <div class="flex-col">
         <div class="taskContainer" ng-repeat="tasks in $ctrl.lists[$ctrl.activeList].taskList | orderBy: '-important'" ng-click="$ctrl.showOptions($event)" ng-switch="tasks.edit" ng-if="tasks.done === false">
-            <span ng-switch-default class="task"  ng-class="{task_done: tasks.checked,task_important: tasks.important}"  ng-animate="'animate'"  ng-model="tasks.title" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.taskIndex)"></span>
+            <span ng-switch-default class="task"  ng-class="{ task_done: tasks.checked,task_important: tasks.important }"  ng-animate="'animate'"  ng-model="tasks.title" ng-bind="tasks.title" ng-click="$ctrl.selectTask(tasks.taskIndex)"></span>
             <input placeholder="{{ $ctrl.lists[$ctrl.activeList].taskList[tasks.taskIndex].title }}" ng-switch-when="true"   ng-model="$ctrl.lists[$ctrl.activeList].taskList[tasks.taskIndex].title" class="editTask" ng-keypress="$ctrl.updateTaskName($event,tasks.taskIndex)">
             <div class="iconContainer">
                 <div ng-repeat="icons in $ctrl.taskIconList" class="icon {{ icons.class }}" ng-bind="icons.title" ng-click="icons.doThis($event,tasks.taskIndex)" ></div>
