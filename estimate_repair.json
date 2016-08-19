@@ -1,0 +1,368 @@
+[
+ {
+   "incident": "150701-000448",
+   "description": "Repaired Estimate - Hangs on trying to open estimate",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Lisa De Smet"
+ },
+ {
+   "incident": "150701-000663",
+   "description": "Chat Session- Estimate won't open in Online",
+   "repair_tech": "Blake Locke",
+   "customer": "Gerald (Duane) Hendrickson"
+ },
+ {
+   "incident": "150701-000727",
+   "description": "Chat Session - Other Structures are not showing on the estimate",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Jeff Lindstrom"
+ },
+ {
+   "incident": "150702-000224",
+   "description": "Repaired Estimate - Unable to upload estimate",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Ben Bass"
+ },
+ {
+   "incident": "150702-000289",
+   "description": "Repaired Estimate - Claim wont load, continual clocking",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Chris Parson"
+ },
+ {
+   "incident": "150702-000633",
+   "description": "Repaired Estimate - Estimate Stuck on Packaging",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Jimmie Evans"
+ },
+ {
+   "incident": "150703-000026",
+   "description": "Chat Session - Unable to open project",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Kathleen Monthei"
+ },
+ {
+   "incident": "150703-000135",
+   "description": "Repaired Estimate - Unable to open estimate in Xactimate Online",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Joseph Carbajal"
+ },
+ {
+   "incident": "150705-000010",
+   "description": "Repaired Estimate - Sketch errors.",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Danny Branham"
+ },
+ {
+   "incident": "150705-000132",
+   "description": "Chat Session",
+   "repair_tech": "Blake Locke",
+   "customer": "Daniel Haag"
+ },
+ {
+   "incident": "150706-000000",
+   "description": "Chat Session - Estimate repair for not completing",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Geoff Barnard"
+ },
+ {
+   "incident": "150706-000006",
+   "description": "Chat Session - Error when marking assignment Complete",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Wade Snyder"
+ },
+ {
+   "incident": "150706-000186",
+   "description": "FW: No Line Item Descriptions on PTWR and \"Replace\" in PT",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Blake Locke"
+ },
+ {
+   "incident": "150706-000241",
+   "description": "Chat Session - Unable to complete estimate",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Elaine Gagan"
+ },
+ {
+   "incident": "150706-000432",
+   "description": "Repaired Estimate - Estimate not loading in Xactimate Online",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Brandon boespflug"
+ },
+ {
+   "incident": "150706-000626",
+   "description": "Unable to upload assignment - Estimate Repair",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Karen Smith"
+ },
+ {
+   "incident": "150707-000078",
+   "description": "Estimate Repair - Unable to open estimate in Xactimate 28 Online",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Greg Renz"
+ },
+ {
+   "incident": "150707-000594",
+   "description": "Chat Session - Estimate Will Not Open.",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Wesley Smith"
+ },
+ {
+   "incident": "150707-000744",
+   "description": "Chat Session - Cannot open estimate in Xactimate Online.",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Randall Hendrix"
+ },
+ {
+   "incident": "150708-000242",
+   "description": "No Line Item Descriptions on PTWR and \"Replace\" in PT",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Blake Locke"
+ },
+ {
+   "incident": "150708-000334",
+   "description": "Repaired Estimate - Unable to open estimate in Xactimate Online",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Laura Higgins"
+ },
+ {
+   "incident": "150708-000598",
+   "description": "Unable to Open Estimate",
+   "repair_tech": "Brendan Stevens",
+   "customer": "greg green"
+ },
+ {
+   "incident": "150709-000641",
+   "description": "Repaired Estimate - Estimate locks up while repricing.",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Vi Duong"
+ },
+ {
+   "incident": "150709-000683",
+   "description": "Chat Session - Project loads indefinitely",
+   "repair_tech": "Blake Locke",
+   "customer": "Gerald (Duane) Hendrickson"
+ },
+ {
+   "incident": "150709-000700",
+   "description": "Chat Session - Unable to open Farmers estimate in Xactimate Online",
+   "repair_tech": "Blake Locke",
+   "customer": "Jon Grabowski"
+ },
+ {
+   "incident": "150709-000717",
+   "description": "Chat Session - I have an estimate that crashes every time we try to save as a pdf on the FInal Draft with or without removal of depreciation",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Brandon Baxter"
+ },
+ {
+   "incident": "150710-000206",
+   "description": "Chat Session - Unable to upload estimates",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Brett Heavener"
+ },
+ {
+   "incident": "150710-000564",
+   "description": "The attached estimate will not print or complete",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Ryan Golding"
+ },
+ {
+   "incident": "150710-000587",
+   "description": "Estimate Repair - Unable to open an estimate that gave an error in sketch.",
+   "repair_tech": "Blake Locke",
+   "customer": "Jeremy Andersen"
+ },
+ {
+   "incident": "150713-000071",
+   "description": "Will not print or complete",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Ryan Golding"
+ },
+ {
+   "incident": "150713-000323",
+   "description": "Chat Session - Error opening file in Xactimate Online",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Efe Ekpere"
+ },
+ {
+   "incident": "150713-000432",
+   "description": "Chat Session - Error when opening Assignment",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Travis Northup"
+ },
+ {
+   "incident": "150713-000570",
+   "description": "Chat Session - Xactimate Online hangs when opening estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Patrick Hill"
+ },
+ {
+   "incident": "150713-000500",
+   "description": "Chat Session - Error changing estimate to complete.",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Robert Spell"
+ },
+ {
+   "incident": "150713-000719",
+   "description": "Unable to open estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Caryetta O''Connor"
+ },
+ {
+   "incident": "150714-000098",
+   "description": "Chat Session - Cannot go to payment tracker.",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Mark Arrowsmith"
+ },
+ {
+   "incident": "150714-000140",
+   "description": "Labels and Measurements not printing with sketch",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Patrick Pelletier"
+ },
+ {
+   "incident": "150714-000853",
+   "description": "Chat Session - Getting error message when trying to login to Xactimate 28.",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Lauren Nashville"
+ },
+ {
+   "incident": "150715-000090",
+   "description": "Chat Session - Hangs on opening estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Dustin Horinek"
+ },
+ {
+   "incident": "150715-000134",
+   "description": "Unable to complete estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Ryan Golding"
+ },
+ {
+   "incident": "150715-000525",
+   "description": "Unable to open a claim",
+   "repair_tech": "Scott Thompson",
+   "customer": "Russel Henslee"
+ },
+ {
+   "incident": "150715-000698",
+   "description": "Chat Session - Error when opening estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Darren Clay"
+ },
+ {
+   "incident": "150715-000763",
+   "description": "Chat Session - Estimate not opening in Xacitmate online",
+   "repair_tech": "Philip Lundgren",
+   "customer": "James Foyil"
+ },
+ {
+   "incident": "150716-000001",
+   "description": "Chat Session - Error when working in Sketch",
+   "repair_tech": "Ryan Crimm",
+   "customer": "James Barta"
+ },
+ {
+   "incident": "150716-000231",
+   "description": "Chat Session - Unable to Open Project",
+   "repair_tech": "Philip Lundgren",
+   "customer": "William Parker"
+ },
+ {
+   "incident": "150716-000318",
+   "description": "Chat Session - Cannot Save PDF of Report",
+   "repair_tech": "Philip Lundgren",
+   "customer": "GREG DELEON"
+ },
+ {
+   "incident": "150716-000803",
+   "description": "Unable to print estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "David Hurt"
+ },
+ {
+   "incident": "150717-000005",
+   "description": "Chat Session - Unable to Package Estimate",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Sabine Schrammel"
+ },
+ {
+   "incident": "150717-000246",
+   "description": "Chat Session - Report Management Error",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Kelli Burney"
+ },
+ {
+   "incident": "150717-000496",
+   "description": "Chat Session - Xactimate locking up when clicking SmartList buttons",
+   "repair_tech": "Sharla Tucker",
+   "customer": "Louis Collisson"
+ },
+ {
+   "incident": "150717-000635",
+   "description": "Chat Session - Unable to open estimates in Xactimate Online",
+   "repair_tech": "Blake Locke",
+   "customer": "Gregory Dean"
+ },
+ {
+   "incident": "150718-000010",
+   "description": "Chat Session - Estimate Not Opening",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Mitzi Harrelson"
+ },
+ {
+   "incident": "150718-000018",
+   "description": "Chat Session - Unable to Open Project",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Joshua Sanders"
+ },
+ {
+   "incident": "150718-000088",
+   "description": "Chat Session - Estimate Constantly Loads Upon Viewing Report",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Brandon Baxter"
+ },
+ {
+   "incident": "150718-000175",
+   "description": "Chat Session - Farmers Assignment won't load",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Scott Carmack"
+ },
+ {
+   "incident": "150720-000345",
+   "description": "Chat Session - Cannot log into Service Center to obtain chat support",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Lee Risley"
+ },
+ {
+   "incident": "150720-000351",
+   "description": "Copy Scope including payments over.",
+   "repair_tech": "No Value",
+   "customer": "Kade Wood"
+ },
+ {
+   "incident": "150720-000777",
+   "description": "Chat Session - Estimate Does Not Open",
+   "repair_tech": "Blake Locke",
+   "customer": "Dustin Horinek"
+ },
+ {
+   "incident": "150721-000365",
+   "description": "Chat Session - Farmers Assignment Won't load",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Nikki Owen"
+ },
+ {
+   "incident": "150721-000820",
+   "description": "Chat Session - Claim Damaged and Doesn't Open",
+   "repair_tech": "Philip Lundgren",
+   "customer": "Timothy Alvarez"
+ },
+ {
+   "incident": "Record Count: 60",
+   "description": "",
+   "repair_tech": "",
+   "customer": ""
+ }
+]

@@ -8,7 +8,7 @@
         .service('taskListService',taskListService);
 
     
-    function taskListService($q, $log, $sessionStorage, $localStorage,$state,$mdToast) {
+    function taskListService($q, $log, $sessionStorage, $localStorage,$state,$mdToast,$firebaseObject,$firebaseArray,$firebaseAuth) {
         var self = this;
         var last = {
             bottom: true,
