@@ -63,7 +63,7 @@
                 $mdToast.simple()
                     .textContent('Simple Toast!')
                     .position(pinTo)
-                    .hideDelay(30000)
+                    .hideDelay(3000)
                     .parent(el)
             );
             console.log(pinTo);
@@ -92,6 +92,7 @@
             last = angular.extend({},current);
         }
         function closeList(){
+            event.stopPropagation();
             if (!self.lists[self.activeList].edit){
                 $state.go('list-tile');
             } else {
@@ -206,9 +207,10 @@
             self.activeList = list;
             console.log("Key");
             if (keyEvent.which === 13) {
-                var newTitle = $("#newTitle");
+                var newTitle = $("#newTitle"),
+                    title = $("#listTitle");
                 if (newTitle.val() !== "") {
-
+                    console.log(newTitle.val());
                     self.lists[self.activeList] = {
                         properties: self.lists[self.activeList].properties,
                         title: newTitle.val(),
@@ -217,8 +219,12 @@
                     };
                 }
                 newTitle.val("");
+                newTitle.hide();
+                title.show();
+                self.lists[list].edit=false;
             }
         }
+
         function addTask(keyEvent){
             if (keyEvent.which === 13){
                 if ($("#newTask").val() !==""){
@@ -236,19 +242,16 @@
                 }
             }
         }
+        function editListTitle(list){
+            self.activeList = list;
+            self.lists[list].edit = true;
+            var title = $("#listTitle"),
+                newTitle = $("#newTitle");
+            title.hide();
+            newTitle.show();
+            newTitle.focus();
+        }
         getLists();
-    }
-    function editListTitle(list){
-        // self.activeList = list;
-        // var title = $("#listTitle"),
-        //     edit_button = $(".edit_button"),
-        //     done_button = $(".done_button"),
-        //     newTitle = $("#newTitle");
-        // title.hide();
-        // edit_button.hide();
-        // newTitle.show();
-        // done_button.show();
-        // newTitle.focus();
     }
 }());
 

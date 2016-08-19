@@ -82,6 +82,7 @@
 
 .close_button{
     opacity: 1;
+    z-index: 2000;
 }
 
 
@@ -255,11 +256,9 @@
 }
 
 .new_title , .new_title:active{
+    display: none;
     border: none;
     outline: 0;
-    width: 80%;
-    /*background: transparent;*/
-    color: black;
     font-size: 5em;
     text-align: center;
     text-decoration: none;
@@ -272,22 +271,23 @@
     text-decoration: underline;
 }
 
+.new_title:not:focus{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
 .edit_button {
-
     display: none;
     font-size: 5em;
     cursor: pointer;
 
-
     text-align: center;
     content:  'url("resources/edit.svg")';
     color: red;
-    /*center no-repeat;*/
     background-size: cover;
     z-index: 100;
 
     float: right;
-
     margin: 0;
 }
 
@@ -307,7 +307,6 @@
     padding: 10px;
 
     color: white;
-
     border-radius: 20px;
 }
 .done_button{
@@ -357,8 +356,6 @@ background-color: rgba(0,0,0,0.50);
 }
 
 #listTitle{
-    margin: auto;
-    max-width: 100%;
     position: relative;
 
     text-decoration: double;
@@ -367,6 +364,17 @@ background-color: rgba(0,0,0,0.50);
 
     text-shadow: 0 0 1px white;
     transition: none !important;
+
+}
+
+.title_banner{
+    background-color: rgba(16,178,141,0.85);
+    color: black;
+    height: 10em;
+    width: 100vw;
+    text-align: center;
+    padding-top: 31px;
+    margin-bottom: 20px;
 }
 
 /*border: 1px rgba(0,0,0,1) solid;*/
@@ -375,14 +383,14 @@ background-color: rgba(0,0,0,0.50);
     top: 0;
     min-height: 90px;
     height: 10em;
-    background-color: rgba(16,178,141,0.85);
     box-shadow: none;
     cursor: pointer;
     overflow: hidden;
     transition: all .25s ease-in;
-    border-right: 1px rgba(0,0,0,1) solid;
+    border: 1px rgba(0,0,0,1) solid;
     margin: 1px;
     min-width: 30%;
+    background-color: rgba(255,138,99,0.90);
 }
 
 
@@ -391,7 +399,7 @@ background-color: rgba(0,0,0,0.50);
     border-left: 2px rgba(0,0,0,1) solid;
     border-right: 2px rgba(0,0,0,1) solid;
     box-shadow:  2px 5px 10px black, 2px 5px 5px rgba(255,155,0,0.70);
-    background-color: rgba(255,138,99,0.80);
+    background-color: rgba(16,178,141,0.85);
 }
 
 
@@ -577,10 +585,13 @@ background-color: rgba(0,0,0,0.50);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background: transparent url(resources/paper.jpg) center no-repeat;
-    background-size: cover;
+    /*background: transparent url(resources/paper.jpg) center no-repeat;*/
+    /*background-size: cover;*/
+    background-color: antiquewhite;
     transition: all .25s ease-in;
     overflow: auto;
+
+    border-radius: 20px;
 }
 
 .tasklist_container h1{

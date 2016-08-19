@@ -4,8 +4,10 @@
 <div class="tasklist_container">
     <div class="close_button" ng-click="$ctrl.closeList()"></div>
     <div class="flex-center" ng-switch="$ctrl.lists[$ctrl.activeList].edit">
-        <span  class="no-animate" id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-switch-default ng-click="$ctrl.lists[$ctrl.activeList].edit = true"></span>
-        <input class="new_title no-animate" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} " ng-focus ng-keypress="$ctrl.updateName($event,$ctrl.activeList)" ng-switch-when="true" id='newTitle'/>
+        <div class="title_banner">
+            <span  class="no-animate" id="listTitle" ng-bind="$ctrl.lists[$ctrl.activeList].title" ng-click="$ctrl.editListTitle($ctrl.activeList)"></span>
+            <input ng-blur="$ctrl.updateName({which: 13},$ctrl.activeList)" type="text" class="new_title no-animate" placeholder=" {{ $ctrl.lists[$ctrl.activeList].title }} " ng-focus ng-keypress="$ctrl.updateName($event,$ctrl.activeList)" id='newTitle'/>
+        </div>
     </div>
 
 
@@ -31,3 +33,12 @@
     </div>
 
 </div>
+
+
+
+
+
+
+
+<!--ng-switch-default ng-click="$ctrl.lists[$ctrl.activeList].edit = true"-->
+<!--ng-switch-when="true"-->
