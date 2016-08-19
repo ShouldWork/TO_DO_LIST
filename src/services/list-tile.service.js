@@ -11,7 +11,7 @@
     function taskListService($q, $log, $sessionStorage, $localStorage,$state,$mdToast) {
         var self = this;
         var last = {
-            bottom: false,
+            bottom: true,
             top: false,
             left: false,
             right: true
@@ -58,12 +58,12 @@
         function showToast(){
             console.log("Showing toast");
             var pinTo = self.getToastPos(),
-                el = $(".header");
+                el = $(".tasklist_container");
             $mdToast.show(
                 $mdToast.simple()
                     .textContent('Simple Toast!')
                     .position(pinTo)
-                    .hideDelay(3000)
+                    .hideDelay(30000)
                     .parent(el)
             );
             console.log(pinTo);
@@ -92,7 +92,11 @@
             last = angular.extend({},current);
         }
         function closeList(){
-            $state.go('list-tile');
+            if (!self.lists[self.activeList].edit){
+                $state.go('list-tile');
+            } else {
+                showToast();
+            }
         }
         function star(list,target){
             var el = target.path[0],

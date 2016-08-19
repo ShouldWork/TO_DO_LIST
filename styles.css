@@ -462,23 +462,17 @@ background-color: rgba(0,0,0,0.50);
 
 
 .page-container{
-    position: fixed;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     top: 0;
-    /*background-color: rgba(178,70,34,0.70);*/
     background: transparent url("resources/coark.jpg") center repeat;
     background-size: cover;
-
-    /*-webkit-filter: blur(3px);*/
-    /*-moz-filter: blur(3px);*/
-    /*-o-filter: blur(3px);*/
-    /*-ms-filter: blur(3px);*/
-    /*filter: blur(3px);*/
-
-    z-index: -1;
-
-    transition: all .25s ease-in;
+     /*-webkit-filter: blur(1px);*/
+     /*-moz-filter: blur(1px);*/
+     /*-o-filter: blur(1px);*/
+     /*-ms-filter: blur(1px);*/
+    transition: all .25s;
 }
 
 .flex-start{
