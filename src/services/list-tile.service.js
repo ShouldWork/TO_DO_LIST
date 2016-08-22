@@ -49,7 +49,7 @@
 
         // Arrays
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
-        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"},{title: "Favorites",route: "list-tile", doThis: self.doNothing, class: 'fav_list_button'}];
+        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"},{title: "Favorites",route: "fav-list", doThis: self.doNothing, class: 'fav_list_button'}];
         self.finToastMsg = ['You got this!','One more down!','Don\'t have to worry about that!','Another one bites the dust!'];
         self.unfinToastMsg = ['What happened there?','Maybe next time, Tiger.','Tough luck bud.','Why\'d you check it in the first place?!'];
         self.imptToastMsg = ['That does sound important!','Topp of the list it goes!','I\'ll remember that!'];

@@ -5,9 +5,10 @@
             controller: favoritesList
         })
         .config(function($stateProvider){
-        $stateProvider.state("list-tile",{
+        $stateProvider.state("fav-list",{
             template: "<fav-list></fav-list>",
             url: "/"
+            });
         });
     function favoritesList (taskListService,$location,$state){
         var self = this;
