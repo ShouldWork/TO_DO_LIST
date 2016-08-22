@@ -342,7 +342,7 @@
     height: 3em;
     border: none;
     cursor: pointer;
-    background: url("resources/lists.svg") center no-repeat;
+    background: url("resources/tiles-view.svg") center no-repeat;
     background-size: contain;
     margin-right: 20px;
 }
