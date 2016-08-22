@@ -337,14 +337,8 @@
 }
 
 .lists_button{
-    position: relative;
-    width: 3em;
-    height: 3em;
-    border: none;
-    cursor: pointer;
     background: url("resources/tiles-view.svg") center no-repeat;
     background-size: contain;
-    margin-right: 20px;
 }
 
 .list_container{
