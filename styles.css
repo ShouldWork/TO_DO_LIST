@@ -50,14 +50,8 @@
 
 
 .add_button_small{
-    position: relative;
-    width: 3em;
-    height: 3em;
-    border: none;
-    cursor: pointer;
     background: url("resources/add-mark.svg") center no-repeat;
     background-size: contain;
-    margin-right: 20px;
 }
 
 .delete_button , .close_button{
@@ -97,13 +91,6 @@
 }
 
 .fav_list_button{
-    position: relative;
-    width: 3em;
-    height: 3em;
-    border: none;
-    cursor: pointer;
-    margin-right: 20px;
-
     background: transparent url("resources/star.svg");
     background-size: cover;
 }
@@ -337,7 +324,13 @@
 }
 
 .lists_button{
-    background: url("resources/tiles_list.svg") center no-repeat;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    background: url("resources/tiles-view.svg") center no-repeat;
     background-size: contain;
 }
 
@@ -529,8 +522,12 @@ background-color: rgba(0,0,0,0.50);
 }
 
 .list_nav_icon{
-    padding: 5px;
-    margin: 0;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
     margin-bottom: 20px;
 }
 
