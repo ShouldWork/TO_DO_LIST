@@ -262,6 +262,7 @@
                     self.lists[self.activeList].taskList.push(task);
                     self.selectedTask = self.lists[self.activeList].properties.totalTasks++;
                     self.selectedTask = self.lists[self.activeList].properties.taskDisplayCount++;
+                    showToast("Added to the list!");
                 }
             }
         }
