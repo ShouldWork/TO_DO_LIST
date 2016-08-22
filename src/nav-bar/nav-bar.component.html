@@ -1,7 +1,7 @@
 
 <div class="list_nav">
-    <div class="flex-start list_nav_icon" ng-repeat="item in $ctrl.buttonlist"  ng-click="item.doThis()" ui-sref="{{ item.route }}" >
-        <div ng-class="item.class"><h1 ng-bind="item.title"></h1></div>
+    <div class="flex-start" ng-repeat="item in $ctrl.buttonlist"  ng-click="item.doThis()" ui-sref="{{ item.route }}" >
+        <div ng-class="item.class" class="list_nav_icon"><h1 ng-bind="item.title"></h1></div>
     </div>
 </div>
 
