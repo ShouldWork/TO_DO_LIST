@@ -337,7 +337,7 @@
 }
 
 .lists_button{
-    background: url("resources/tiles-view.svg") center no-repeat;
+    background: url("resources/tiles_list.svg") center no-repeat;
     background-size: contain;
 }
 
