@@ -1,0 +1,10 @@
+
+<div id="main" class="list_container">
+    <div ng-repeat=" list in $ctrl.lists | orderBy: '-properties.index'" ng-if="list.properties.display === true" class="list_tile" ng-click="$ctrl.selectList(list.properties.index)">
+        <div class="delete_button" ng-click="$ctrl.deleteButton(list.properties.index,$event)"></div>
+        <div ng-class="{check_mark: list.properties.staged,uncheck_mark: !list.properties.staged}" ng-click="$ctrl.checkList(list.properties.index,$event)"></div>
+        <div ng-class="{star: list.properties.favorite,unstar: !list.properties.favorite}" ng-click="$ctrl.star(list.properties.index,$event)"></div>
+        <h1 ng-bind="list.title"></h1>
+        <h3 ng-bind="list.properties.totalTasks">Total tasks: </h3>
+    </div>
+</div>
