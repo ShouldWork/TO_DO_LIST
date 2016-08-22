@@ -368,10 +368,10 @@ background-color: rgba(0,0,0,0.50);
 }
 
 .title_banner{
-    background-color: rgba(16,178,141,0.85);
+    /*background-color: rgba(16,178,141,0.85);*/
     color: black;
     height: 10em;
-    width: 100vw;
+    /*width: 100vw;*/
     text-align: center;
     padding-top: 31px;
     margin-bottom: 20px;

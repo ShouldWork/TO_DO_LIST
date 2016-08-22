@@ -46,8 +46,19 @@
         self.showToast = showToast;
         self.showActionToast = showActionToast;
         self.closeToast = closeToast;
+
+        // Arrays
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
         self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
+        self.finToastMsg = ['You got this!','One more down!','Don\'t have to worry about that!','Another one bites the dust!'];
+        self.unfinToastMsg = ['What happened there?','Maybe next time, Tiger.','Tough luck bud.','Why\'d you check it in the first place?!'];
+        self.imptToastMsg = ['That does sound important!','Topp of the list it goes!','I\'ll remember that!'];
+        self.unimptToastMsg = ['I agree it does not sound needed','That is not important to me either!','Never meant that much to me either.','That sounded important...'];
+        self.delToastMsg = ['In the waste basket','Deleted!','Never to be thought of again!','I\'s a goner!','Not Recycled. Burned.','Kill it with fire!'];
+
+
+        self.errToastMsg = {unFinished: "Please finishing editing.",warnNoTask: "There are no tasks! Please, add a task.", warnNoChange: "No change made!"};
+
         self.selectTask = function(task){
             self.selectedTask = task;
         };
@@ -55,18 +66,43 @@
             $mdToast.hide();
         }
         
-        function showToast(){
-            console.log("Showing toast");
+        function showToast(message){
             var pinTo = self.getToastPos(),
-                el = $(".tasklist_container");
+                el = $(".tasklist_container"),
+                msg = getToastMsg(message);
             $mdToast.show(
                 $mdToast.simple()
-                    .textContent('Simple Toast!')
+                    .textContent(msg)
                     .position(pinTo)
                     .hideDelay(3000)
                     .parent(el)
             );
-            console.log(pinTo);
+        }
+
+        function getToastMsg(whatGet){
+            switch(whatGet){
+                case 'taskFin':
+                   var msg = getToastMsg(self.finToastMsg[Math.floor((Math.random() * self.finToastMsg.length - 1) + 1)]);
+                    break;
+                case 'taskunFin':
+                    msg = getToastMsg( self.unfinToastMsg[Math.floor((Math.random() * self.unfinToastMsg.length - 1) + 1)]);
+                    break;
+                case "taskErr":
+                    msg = getToastMsg( self.errToastMsg[Math.floor((Math.random() * self.errToastMsg.length - 1) + 1)]);
+                    break;
+                case "taskImp":
+                    msg = getToastMsg( self.imptToastMsg[Math.floor((Math.random() * self.imptToastMsg.length - 1) + 1)]);
+                    break;
+                case "taskunImp":
+                    msg = getToastMsg( self.unimptToastMsg[Math.floor((Math.random() * self.unimptToastMsg.length - 1) + 1)]);
+                    break;
+                case "taskDel":
+                    msg = getToastMsg( self.delToastMsg[Math.floor((Math.random() * self.delToastMsg.length - 1) + 1)]);
+                    break;
+                default:
+                    msg = whatGet;
+            }
+            return msg;
         }
 
         function showActionToast() {
@@ -93,11 +129,11 @@
         }
         function closeList(){
             event.stopPropagation();
-            if (!self.lists[self.activeList].edit){
-                $state.go('list-tile');
-            } else {
-                showToast();
-            }
+            var edit = self.lists[self.activeList].edit,
+                taskListLength = self.lists[self.activeList].taskList.length;
+            if ( !edit && taskListLength > 0 ){ $state.go('list-tile'); }
+            if ( edit ){ showToast(self.errToastMsg.unFinished); }
+            if ( taskListLength === 0 ){ showToast(self.errToastMsg.warnNoTask); }
         }
         function star(list,target){
             var el = target.path[0],
@@ -128,13 +164,14 @@
             var el = target.path[0];
             event.stopPropagation();
             self.activeList = list;
-            deleteList()
+            deleteList();
         }
 
         function finishTask(target,task){
-            showToast();
-            var checked = self.lists[self.activeList].taskList[task].checked;
-            self.lists[self.activeList].taskList[task].checked = (!checked);
+            var list = self.lists[self.activeList].taskList[task];
+            list.checked = (list.checked) ? false : true;
+            if (list.checked){showToast("taskFin");
+            }else{showToast("taskunFin")}
             var target = target.path[1];
             $(target).hide();
         }
@@ -148,6 +185,8 @@
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important);
+            if (!important) {showToast("taskImp")
+            }else{showToast("taskunImp")};
             var target = target.path[1];
             $(target).hide();
             setTimeout(function(){
@@ -180,6 +219,7 @@
             $(target).hide();
             self.lists[self.activeList].taskList[task].done = true;
             $sessionStorage.list = self.lists;
+            showToast("taskDel");
         }
         function closeTaskOptions(){
             $(".iconContainer").slideUp(100);
@@ -204,19 +244,19 @@
             self.listIndex++;
         }
         function updateName(keyEvent,list){
+            var newTitle = $("#newTitle"),
+                title = $("#listTitle");
             self.activeList = list;
-            console.log("Key");
-            if (keyEvent.which === 13) {
-                var newTitle = $("#newTitle"),
-                    title = $("#listTitle");
+            if (keyEvent.which == 13) {
                 if (newTitle.val() !== "") {
-                    console.log(newTitle.val());
                     self.lists[self.activeList] = {
                         properties: self.lists[self.activeList].properties,
                         title: newTitle.val(),
                         edit: false,
                         taskList: self.lists[self.activeList].taskList
                     };
+                } else {
+                    showToast(self.errToastMsg.warnNoChange);
                 }
                 newTitle.val("");
                 newTitle.hide();
