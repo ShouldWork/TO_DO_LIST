@@ -583,9 +583,9 @@ background-color: rgba(0,0,0,0.50);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    /*background: transparent url(resources/paper.jpg) center no-repeat;*/
-    /*background-size: cover;*/
-    background-color: antiquewhite;
+    background: transparent url(resources/paper.jpg) center no-repeat;
+    background-size: cover;
+    /*background-color: antiquewhite;*/
     transition: all .25s ease-in;
     overflow: auto;
 
