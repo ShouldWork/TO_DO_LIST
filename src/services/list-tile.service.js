@@ -49,7 +49,7 @@
 
         // Arrays
         self.taskIconList = [{title: "", doThis: self.finishTask, class: "icon_finish"},{title: "", doThis: self.editTask, class: "icon_edit"},{title: "", doThis: self.flagTask, class: "icon_flag"},{title: "", doThis: self.deleteTask, class: "icon_delete"},{title: "", doThis: self.closeTaskOptions, class: "icon_close"}];
-        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"}];
+        self.buttonlist = [{title: "Lists",route: "list-tile", doThis: self.doNothing,class: "lists_button"},{title: "New List", route: "list-tile", doThis: self.addList, class: "add_button_small"},{title: "Favorites",route: "list-tile", doThis: self.doNothing, class: 'fav_list_button'}];
         self.finToastMsg = ['You got this!','One more down!','Don\'t have to worry about that!','Another one bites the dust!'];
         self.unfinToastMsg = ['What happened there?','Maybe next time, Tiger.','Tough luck bud.','Why\'d you check it in the first place?!'];
         self.imptToastMsg = ['That does sound important!','Topp of the list it goes!','I\'ll remember that!'];
@@ -74,35 +74,13 @@
                 $mdToast.simple()
                     .textContent(msg)
                     .position(pinTo)
-                    .hideDelay(30000)
+                    .hideDelay(2500)
                     .parent(el)
             );
         }
 
         function getToastMsg(whatGet){
-            switch(whatGet){
-                case 'taskFin':
-                   var msg = getToastMsg(self.finToastMsg[Math.floor((Math.random() * self.finToastMsg.length - 1) + 1)]);
-                    break;
-                case 'taskunFin':
-                    msg = getToastMsg( self.unfinToastMsg[Math.floor((Math.random() * self.unfinToastMsg.length - 1) + 1)]);
-                    break;
-                case "taskErr":
-                    msg = getToastMsg( self.errToastMsg[Math.floor((Math.random() * self.errToastMsg.length - 1) + 1)]);
-                    break;
-                case "taskImp":
-                    msg = getToastMsg( self.imptToastMsg[Math.floor((Math.random() * self.imptToastMsg.length - 1) + 1)]);
-                    break;
-                case "taskunImp":
-                    msg = getToastMsg( self.unimptToastMsg[Math.floor((Math.random() * self.unimptToastMsg.length - 1) + 1)]);
-                    break;
-                case "taskDel":
-                    msg = getToastMsg( self.delToastMsg[Math.floor((Math.random() * self.delToastMsg.length - 1) + 1)]);
-                    break;
-                default:
-                    msg = whatGet;
-            }
-            return msg;
+            return ($.isArray(whatGet)) ? getToastMsg(whatGet[Math.floor((Math.random() * whatGet.length - 1) + 1)]) : whatGet;
         }
 
         function showActionToast() {
@@ -118,7 +96,7 @@
             //         alert('You clicked the \'UNDO\' action.');
             //     }
             // });
-        };
+        }
         function cleanUp(){
             var current = self.toastPos;
             if ( current.bottom && last.top ) current.top = false;
@@ -170,24 +148,24 @@
         function finishTask(target,task){
             var list = self.lists[self.activeList].taskList[task];
             list.checked = (list.checked) ? false : true;
-            if (list.checked){showToast("taskFin");
-            }else{showToast("taskunFin")}
-            var target = target.path[1];
+            if (list.checked){showToast(self.finToastMsg);
+            }else{showToast(self.unfinToastMsg)}
+            target = target.path[1];
             $(target).hide();
         }
         function editTask(target,task){
             var editing = self.lists[self.activeList].taskList[task].edit;
             self.lists[self.activeList].taskList[task].edit = (!editing);
-            var target = target.path[1];
+            target = target.path[1];
             $(target).hide();
 
         }
         function flagTask(target,task){
             var important = self.lists[self.activeList].taskList[task].important;
             self.lists[self.activeList].taskList[task].important = (!important);
-            if (!important) {showToast("taskImp")
-            }else{showToast("taskunImp")};
-            var target = target.path[1];
+            if (!important) {showToast(self.imptToastMsg)
+            }else{showToast(self.unimptToastMsg);}
+            target = target.path[1];
             $(target).hide();
             setTimeout(function(){
                 $(".editTask").focus();
@@ -207,6 +185,7 @@
                     }
                 }
             }
+            showToast("All marked tasks complete!");
         }
 
         function deleteList(){
@@ -219,7 +198,7 @@
             $(target).hide();
             self.lists[self.activeList].taskList[task].done = true;
             $sessionStorage.list = self.lists;
-            showToast("taskDel");
+            showToast(self.delToastMsg);
         }
         function closeTaskOptions(){
             $(".iconContainer").slideUp(100);
