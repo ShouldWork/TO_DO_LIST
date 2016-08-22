@@ -8,11 +8,21 @@
                 task: "<"
             }
         })
+        .filter('toUpper', function() {
+            return function(token) {
+                var str = token.toLowerCase().split(' ');
+                for (var i = 0; i < str.length; i++){
+                    str[i] = str[i].charAt(0).toUpperCase() + str[i].substring(1);
+                }
+                return str.join(' ');
+            }
+        })
         .config(function($stateProvider){
             $stateProvider.state("tasklist",{
                 template: "<tasklist></tasklist>",
                 url: "/tasklist"
             })
+
         });
     
     function tasklistController(taskListService,$state,$mdToast){
