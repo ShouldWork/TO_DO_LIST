@@ -93,6 +93,7 @@
     transition: all .25s ease-in;
     opacity: 0;
     border: none;
+    z-index: 1000;
 }
 
 .fav_list_button{
