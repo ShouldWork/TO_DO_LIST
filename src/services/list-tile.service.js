@@ -191,6 +191,8 @@
         function deleteList(){
             self.lists[self.activeList].properties.display = false;
             $sessionStorage.list = self.lists;
+            self.selectedTask = self.lists[self.activeList].properties.taskDisplayCount--;
+
         }
 
         function deleteTask(target,task){
@@ -212,6 +214,7 @@
                     display: true,
                     staged: false,
                     totalTasks: 0,
+                    taskDisplayCount: 0,
                     favorite: false
                 },
                 title: "New List",
@@ -258,6 +261,7 @@
                     $("#newTask").val("");
                     self.lists[self.activeList].taskList.push(task);
                     self.selectedTask = self.lists[self.activeList].properties.totalTasks++;
+                    self.selectedTask = self.lists[self.activeList].properties.taskDisplayCount++;
                 }
             }
         }

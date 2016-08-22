@@ -7,12 +7,11 @@
         .config(function($stateProvider){
         $stateProvider.state("fav-list",{
             template: "<fav-list></fav-list>",
-            url: "/"
+            url: "/favorites"
             });
         });
     function favoritesList (taskListService,$location,$state){
         var self = this;
-        self.pageClass = 'list-tile';
         self.lists = taskListService.lists;
         self.activeList = taskListService.activeList;
         self.selectList = function(list){
