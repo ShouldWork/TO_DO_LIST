@@ -10,7 +10,7 @@
             url: "/favorites"
             });
         });
-    function favoritesList (taskListService,$location,$state){
+    function favoritesList (taskListService,$state){
         var self = this;
         self.lists = taskListService.lists;
         self.activeList = taskListService.activeList;

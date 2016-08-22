@@ -191,7 +191,6 @@
         function deleteList(){
             self.lists[self.activeList].properties.display = false;
             $sessionStorage.list = self.lists;
-            self.selectedTask = self.lists[self.activeList].properties.taskDisplayCount--;
 
         }
 
@@ -201,6 +200,7 @@
             self.lists[self.activeList].taskList[task].done = true;
             $sessionStorage.list = self.lists;
             showToast(self.delToastMsg);
+            self.selectedTask = self.lists[self.activeList].properties.taskDisplayCount--;
         }
         function closeTaskOptions(){
             $(".iconContainer").slideUp(100);
