@@ -74,7 +74,7 @@
                 $mdToast.simple()
                     .textContent(msg)
                     .position(pinTo)
-                    .hideDelay(3000)
+                    .hideDelay(30000)
                     .parent(el)
             );
         }
